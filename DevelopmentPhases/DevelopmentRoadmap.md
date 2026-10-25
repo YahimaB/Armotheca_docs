@@ -9,13 +9,30 @@ Design references: [Master GDD](../GDD/MasterGDD.md) · Technical references: [T
 
 ---
 
+## Networking-First Principle
+
+Adding networking to finished single-player code is harder and more expensive than building it networked from the start, so **every feature in every phase is developed and accepted as networked from its first version**. There is no separate "make it multiplayer" phase.
+
+- **One code path:** Single-player is a FishNet host with no clients. No feature has a single-player-only implementation.
+- **Authority from day one:** Follow the [Technical Overview §3](../TechnicalDesign/TechnicalOverview.md): the host owns game state (items, stations, orders, doors, nodes, mobs, damage); clients send intents through `[ServerRpc]` and receive results through `SyncVar` / `SyncList` / `[ObserversRpc]`; only movement is owner-authoritative.
+- **Thin network layer:** Rules (quality, assembly, verification, drops) are plain C# without `MonoBehaviour` or FishNet dependencies; `NetworkBehaviour`s only validate intents and replicate results.
+- **Deterministic and tick-based:** Randomness uses a host-seeded `System.Random`; timers use FishNet `TimeManager` ticks, never local `Time`.
+- **Definition of Done for every feature:**
+  - Works with host + at least 1 client (Multiplayer Play Mode / ParrelSync).
+  - A late-joining client sees the correct current state.
+  - A client disconnecting mid-action leaves no stuck state (locks, sockets, held items).
+  - Bandwidth cost is noted when it adds per-tick traffic.
+- **Phases 2–4 extend and harden** the network layer (drop-in/out, scale, latency resilience) instead of retrofitting it.
+
+---
+
 ## Phase Breakdown
 
 ```
-[Phase 1: Core Loop Prototype] (Months 1–3)
+[Phase 1: Networked Core Loop Prototype] (Months 1–3)
        |
        v
-[Phase 2: Co-op Networking & Client System] (Months 4–6)
+[Phase 2: Co-op Hardening & Client System] (Months 4–6)
        |
        v
 [Phase 3: Multi-Realms & Full Progression] (Months 7–10)
@@ -27,10 +44,13 @@ Design references: [Master GDD](../GDD/MasterGDD.md) · Technical references: [T
 ---
 
 ## Phase 1: Core Loop & Workshop Prototype
-**Duration:** Months 1–3
-**Focus:** Proving the common mechanics, physical crafting and 2-piece assembly in single-player.
+**Duration:** Months 1–3 (13 weeks)
+**Focus:** Proving the common mechanics, physical crafting and 2-piece assembly in networked co-op (host + clients) from the first week.
+
+**Weekly plan, required sources per week and acceptance checks:** [Phase 1 Weekly Plan](Phase1CoreLoop.md).
 
 ### Deliverables:
+0. **Networking Foundation (Weeks 1–3):** FishNet host mode over FishySteamworks on Unity 6.3 LTS, Steam lobby join, disconnect/rejoin, networked player movement, and the networking spike (latency and bandwidth with 4 players, see [Technical Overview](../TechnicalDesign/TechnicalOverview.md)) as a go/no-go gate before gameplay work.
 1. **Common Mechanics:**
    - [Movement](../GDD/Common/Movement.md): kinematic third-person walk, sprint, jump, roll.
    - [Object Interaction](../GDD/Common/ObjectInteraction.md): instant (pick up, drop, place, take, use) and continuous (hold-to-work, harvest) interactions; hands / weapon slot / backpack carry model.
@@ -45,23 +65,25 @@ Design references: [Master GDD](../GDD/MasterGDD.md) · Technical references: [T
    - 2 harvestable node types (Arcane Oak, Iron Vein).
    - 1 hostile creature type (Bramble Stalker).
 5. **Basic Letter Mailbox:** Generates standard Adventurers Guild letters with verification of delivered items.
-6. **Networking Spike:** Host a FishNet session over FishySteamworks on Unity 6.3 LTS, join via a Steam lobby, disconnect/rejoin, and measure latency and bandwidth with 4 players (see [Technical Overview](../TechnicalDesign/TechnicalOverview.md)). Gameplay code is written host-authoritative from day one even while testing single-player.
+
+Every deliverable above is synchronized for host and clients as it is built (see [Networking-First Principle](#networking-first-principle)).
 
 ### Success Criteria:
-- A player can take a letter, step into a door, chop wood, mine ore, kill 1 mob, return to the shop, smelt a blade, carve a hilt, assemble a sword, and deliver it for gold in under 5 minutes.
+- A team can take a letter, step into a door, chop wood, mine ore, kill 1 mob, return to the shop, smelt a blade, carve a hilt, assemble a sword, and deliver it for gold in under 5 minutes — in a 2-player Steam session, with a 4-player session completing the same loop without desync.
 
 ---
 
-## Phase 2: Multiplayer Netcode & Customer Archetypes
+## Phase 2: Co-op Hardening & Customer Archetypes
 **Duration:** Months 4–6
-**Focus:** 2–4 player cooperative synchronization and full commission mechanics.
+**Focus:** Hardening the 2–4 player co-op built in Phase 1 and full commission mechanics. Synchronization of movement, items, stations, sockets, combat and door transitions already exists from Phase 1; this phase makes it robust at scale.
 
 ### Deliverables:
-1. **Multiplayer Architecture (FishNet host mode over Steam):**
-   - Steam lobby flow: host, invite friends, join, drop-in / drop-out.
-   - Network synchronization for movement, carried items, station states, workbench sockets and combat.
-   - Seamless Magic Door transitions between workshop and realm instances.
-   - Cooperative continuous interactions (multiple helpers) and revive.
+1. **Co-op Hardening (FishNet host mode over Steam):**
+   - Drop-in / drop-out mid-session with full late-join state for every system (workshop, open realms, letters, treasury).
+   - Polished Steam lobby flow: invites, join-in-progress, reconnect after a dropped connection.
+   - Several realms open at once with players split between the workshop and different realms.
+   - Latency resilience: playtests under simulated 150 ms / packet loss; decide on FishNet prediction or lag compensation for combat if needed.
+   - Bandwidth and desync audit with 4 players across all Phase 1 and Phase 2 systems.
 2. **Customer Archetype Engine:**
    - Implementation of all 5 archetypes (Adventurers Guild, Arcane Academy, City Garrison, SOS Emergency, Collectors).
    - Expiration timers, dynamic reputation changes, and failure penalties.
