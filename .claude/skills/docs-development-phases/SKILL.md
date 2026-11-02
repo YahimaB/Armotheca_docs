@@ -1,21 +1,21 @@
 ---
 name: docs-development-phases
-description: Write and maintain Armotheca production plans in DevelopmentPhases/: the Development Roadmap and per-phase weekly plans with required sources, networking work and done criteria. Use for scheduling, milestones, scope cuts, progress tracking and phase acceptance.
+description: Write and maintain Armotheca production plans in Development_Phases/: the Development Roadmap and per-phase weekly plans with required sources, networking work and done criteria. Use for scheduling, milestones, scope cuts, progress tracking and phase acceptance.
 ---
 
-# DevelopmentPhases documents
+# Development Phases documents
 
-A DevelopmentPhases document says **when and in what order** work happens and how
-each step is accepted. It schedules GDD and TechnicalDesign content; it does not
+A Development_Phases document says **when and in what order** work happens and how
+each step is accepted. It schedules GDD and Technical_Design content; it does not
 specify it. If a week needs a rule or class that no spec describes, route that
 spec through `docs-routing` first and link it from the plan.
 
 ## Layout
 
 ```
-DevelopmentPhases/
-├── DevelopmentRoadmap.md          # All phases, Networking-First Principle, milestones
-└── Phase<N><ShortName>.md         # Weekly plan for one phase (e.g. Phase1CoreLoop.md)
+Development_Phases/
+├── Development_Roadmap.md    # All phases, Networking-First Principle, milestones
+└── Phase_<N>_<Short_Name>.md # Weekly plan for one phase (e.g. Phase_1_Core_Loop.md)
 ```
 
 One roadmap; one weekly-plan file per phase, created when that phase is planned
@@ -27,7 +27,7 @@ links to its weekly plan.
 ```markdown
 # Phase <N>: <Name> — Weekly Plan
 
-> Part of the [Development Roadmap](DevelopmentRoadmap.md) · Design: [Master GDD](../GDD/MasterGDD.md) · Tech: [Technical Overview](../TechnicalDesign/TechnicalOverview.md) · Naming: [Assets Naming](../Guidelines/AssetsNaming.md) · Art specs: [Modeling Guidelines](../Guidelines/ModelingGuidelines.md)
+> Part of the [Development Roadmap](Development_Roadmap.md) · Design: [Master GDD](../GDD/Master_GDD.md) · Tech: [Technical Overview](../Technical_Design/Technical_Overview.md) · Naming: [Assets Naming](../Guidelines/Assets_Naming.md) · Art specs: [Modeling Guidelines](../Guidelines/Modeling_Guidelines.md)
 
 **Duration:** <weeks> (Months <a–b>)
 **Focus:** <one sentence>

@@ -9,7 +9,7 @@ status: Draft
 
 <!-- Links below assume GDD/03_Entities/<Category>/<Subcategory>/; adjust ../ depth to the file's location. -->
 
-> **Roster:** [_<Category>Roster](../_<Category>Roster.md) · **Technical:** <TechnicalDesign counterpart>
+> **Roster:** [_<Category>_Roster](../_<Category>_Roster.md) · **Technical:** <Technical_Design counterpart>
 
 ## Description & Role
 
@@ -39,7 +39,7 @@ status: Draft
 
 ## Art & Audio References
 
-<!-- Concept art and references in Guidelines/ArtDirection; sound intent. -->
+<!-- Concept art and references in Guidelines/Art_Direction; sound intent. -->
 
 ## Appears In
 

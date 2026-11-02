@@ -8,46 +8,46 @@
 
 ## Documentation Structure
 
-Files and folders use CamelCase. Mechanics are split by **zone** and documented twice: the game-design side in `GDD/` and the implementation side in `TechnicalDesign/`, at the same relative path.
+Files and folders use `Capitalized_Words` separated by underscores, with an underscore after any prefix (`Order_System.md`, `Technical_Design/`, `Phase_1_Core_Loop.md`); acronyms stay uppercase (`Master_GDD.md`). Mechanics are split by **zone** and documented twice: the game-design side in `GDD/` and the implementation side in `Technical_Design/`, at the same relative path.
 
 ```
 Armotheca_docs/
 ├── README.md                          # Documentation hub (this file)
 ├── GDD/                               # Game design: what & why
-│   ├── MasterGDD.md                   # Vision, core loop, pillars, mechanics index
+│   ├── Master_GDD.md                  # Vision, core loop, pillars, mechanics index
 │   ├── Common/                        # Applies everywhere
 │   │   ├── Movement.md                # Walk, sprint, jump, roll
-│   │   ├── ObjectInteraction.md       # Instant & continuous interactions, carry model
+│   │   ├── Object_Interaction.md      # Instant & continuous interactions, carry model
 │   │   └── Combat.md                  # Sword swings, wand/staff magic orb, health & downed
 │   ├── Shop/                          # The workshop
-│   │   ├── WeaponCrafting.md          # 2-piece assembly, Quality + Base Damage
-│   │   ├── ResourceProcessing.md      # Manual workstations & mini-games
-│   │   ├── OrderSystem.md             # Letters, criteria, customer archetypes
-│   │   ├── ShopProgression.md         # Workshop tiers & currencies
-│   │   └── UberWeapon.md              # Catalysts & the 4-phase ritual
+│   │   ├── Weapon_Crafting.md         # 2-piece assembly, Quality + Base Damage
+│   │   ├── Resource_Processing.md     # Manual workstations & mini-games
+│   │   ├── Order_System.md            # Letters, criteria, customer archetypes
+│   │   ├── Shop_Progression.md        # Workshop tiers & currencies
+│   │   └── Uber_Weapon.md             # Catalysts & the 4-phase ritual
 │   └── Exploration/                   # Behind the Magic Doors
-│       ├── MagicDoors.md              # Door purchase, entry window, exit portal, drop-chute
+│       ├── Magic_Doors.md             # Door purchase, entry window, exit portal, drop-chute
 │       ├── Realms.md                  # Realm directory & structure
-│       ├── ResourceGathering.md       # Node spawning & harvesting
+│       ├── Resource_Gathering.md      # Node spawning & harvesting
 │       └── Mobs.md                    # Creatures, spawning, drops, Apex Guardians
-├── TechnicalDesign/                   # Implementation: how
-│   ├── TechnicalOverview.md           # Targets, architecture principles, shared types
-│   ├── Common/                        # Movement.md · ObjectInteraction.md · Combat.md
-│   ├── Shop/                          # WeaponCrafting.md · ResourceProcessing.md · OrderSystem.md
-│   │                                  # ShopProgression.md · UberWeapon.md
-│   └── Exploration/                   # MagicDoors.md · Realms.md · ResourceGathering.md · Mobs.md
+├── Technical_Design/                  # Implementation: how
+│   ├── Technical_Overview.md          # Targets, architecture principles, shared types
+│   ├── Common/                        # Movement.md · Object_Interaction.md · Combat.md
+│   ├── Shop/                          # Weapon_Crafting.md · Resource_Processing.md · Order_System.md
+│   │                                  # Shop_Progression.md · Uber_Weapon.md
+│   └── Exploration/                   # Magic_Doors.md · Realms.md · Resource_Gathering.md · Mobs.md
 ├── Guidelines/
-│   ├── AssetsNaming.md                # Unity Assets folder structure, asset prefixes, UI element vocabulary
-│   └── ModelingGuidelines.md          # 3D style, poly budgets, textures, export rules for artists
-├── VisualDesign/
-│   └── References/                    # Reference screenshots (AlchemyFactory, GoblinCleanup)
-├── UIDesign/
+│   ├── Assets_Naming.md               # Unity Assets folder structure, asset prefixes, UI element vocabulary
+│   └── Modeling_Guidelines.md         # 3D style, poly budgets, textures, export rules for artists
+├── Visual_Design/
+│   └── References/                    # Reference screenshots (Alchemy_Factory, Goblin_Cleanup)
+├── UI_Design/
 │   ├── Mailbox/
-│   │   └── LetterCommissionBoard.md   # Nexus dispatch & order ticket UI
+│   │   └── Letter_Commission_Board.md # Nexus dispatch & order ticket UI
 │   └── Workstations/
-│       └── AssemblyBenchUI.md         # Diegetic 2-piece assembly bench UI
-└── DevelopmentPhases/
-    └── DevelopmentRoadmap.md          # 4-phase production plan & milestones
+│       └── Assembly_Bench_UI.md       # Diegetic 2-piece assembly bench UI
+└── Development_Phases/
+    └── Development_Roadmap.md         # 4-phase production plan & milestones
 ```
 
 ---
@@ -70,46 +70,46 @@ Armotheca_docs/
 
 ## Quick Navigation
 
-### 📋 [Master Game Design Document](GDD/MasterGDD.md)
+### 📋 [Master Game Design Document](GDD/Master_GDD.md)
 Game overview, design philosophy, core loop, pillars and the mechanics index.
 
 ### 🧭 Common Mechanics
 | Mechanic | Design | Technical |
 |---|---|---|
-| Movement | [GDD](GDD/Common/Movement.md) | [Tech](TechnicalDesign/Common/Movement.md) |
-| Object Interaction | [GDD](GDD/Common/ObjectInteraction.md) | [Tech](TechnicalDesign/Common/ObjectInteraction.md) |
-| Combat | [GDD](GDD/Common/Combat.md) | [Tech](TechnicalDesign/Common/Combat.md) |
+| Movement | [GDD](GDD/Common/Movement.md) | [Tech](Technical_Design/Common/Movement.md) |
+| Object Interaction | [GDD](GDD/Common/Object_Interaction.md) | [Tech](Technical_Design/Common/Object_Interaction.md) |
+| Combat | [GDD](GDD/Common/Combat.md) | [Tech](Technical_Design/Common/Combat.md) |
 
 ### 🔨 Shop Mechanics
 | Mechanic | Design | Technical |
 |---|---|---|
-| Weapon Crafting | [GDD](GDD/Shop/WeaponCrafting.md) | [Tech](TechnicalDesign/Shop/WeaponCrafting.md) |
-| Resource Processing | [GDD](GDD/Shop/ResourceProcessing.md) | [Tech](TechnicalDesign/Shop/ResourceProcessing.md) |
-| Order System | [GDD](GDD/Shop/OrderSystem.md) | [Tech](TechnicalDesign/Shop/OrderSystem.md) |
-| Shop Progression | [GDD](GDD/Shop/ShopProgression.md) | [Tech](TechnicalDesign/Shop/ShopProgression.md) |
-| Uber-Weapon | [GDD](GDD/Shop/UberWeapon.md) | [Tech](TechnicalDesign/Shop/UberWeapon.md) |
+| Weapon Crafting | [GDD](GDD/Shop/Weapon_Crafting.md) | [Tech](Technical_Design/Shop/Weapon_Crafting.md) |
+| Resource Processing | [GDD](GDD/Shop/Resource_Processing.md) | [Tech](Technical_Design/Shop/Resource_Processing.md) |
+| Order System | [GDD](GDD/Shop/Order_System.md) | [Tech](Technical_Design/Shop/Order_System.md) |
+| Shop Progression | [GDD](GDD/Shop/Shop_Progression.md) | [Tech](Technical_Design/Shop/Shop_Progression.md) |
+| Uber-Weapon | [GDD](GDD/Shop/Uber_Weapon.md) | [Tech](Technical_Design/Shop/Uber_Weapon.md) |
 
 ### 🚪 Exploration Mechanics
 | Mechanic | Design | Technical |
 |---|---|---|
-| Magic Doors | [GDD](GDD/Exploration/MagicDoors.md) | [Tech](TechnicalDesign/Exploration/MagicDoors.md) |
-| Realms | [GDD](GDD/Exploration/Realms.md) | [Tech](TechnicalDesign/Exploration/Realms.md) |
-| Resource Gathering | [GDD](GDD/Exploration/ResourceGathering.md) | [Tech](TechnicalDesign/Exploration/ResourceGathering.md) |
-| Mobs | [GDD](GDD/Exploration/Mobs.md) | [Tech](TechnicalDesign/Exploration/Mobs.md) |
+| Magic Doors | [GDD](GDD/Exploration/Magic_Doors.md) | [Tech](Technical_Design/Exploration/Magic_Doors.md) |
+| Realms | [GDD](GDD/Exploration/Realms.md) | [Tech](Technical_Design/Exploration/Realms.md) |
+| Resource Gathering | [GDD](GDD/Exploration/Resource_Gathering.md) | [Tech](Technical_Design/Exploration/Resource_Gathering.md) |
+| Mobs | [GDD](GDD/Exploration/Mobs.md) | [Tech](Technical_Design/Exploration/Mobs.md) |
 
-### ⚙️ [Technical Overview](TechnicalDesign/TechnicalOverview.md)
+### ⚙️ [Technical Overview](Technical_Design/Technical_Overview.md)
 Tech stack (Unity 6.3 LTS · GameObjects, no ECS · FishNet + FishySteamworks, player-hosted · uGUI), performance targets, networking setup, architecture principles, shared types, engine upgrade plan.
 
 ### 📐 Guidelines
-- **[Assets Structure & Naming](Guidelines/AssetsNaming.md)** - `Assets/` folder layout, zone tokens, asset and data-asset prefixes, code naming, UI element vocabulary (Screen, Window, Panel, Container, Card, Label, Value...) and UI layers.
-- **[3D Modeling Guidelines](Guidelines/ModelingGuidelines.md)** - Target look, reference breakdown (`VisualDesign/References`), polygon budgets, LODs, textures, pivots, modular weapon sockets and delivery checklist.
+- **[Assets Structure & Naming](Guidelines/Assets_Naming.md)** - `Assets/` folder layout, zone tokens, asset and data-asset prefixes, code naming, UI element vocabulary (Screen, Window, Panel, Container, Card, Label, Value...) and UI layers.
+- **[3D Modeling Guidelines](Guidelines/Modeling_Guidelines.md)** - Target look, reference breakdown (`Visual_Design/References`), polygon budgets, LODs, textures, pivots, modular weapon sockets and delivery checklist.
 
 ### 🖥️ UI & Interaction Design
-- **[Letter Commission Board UI](UIDesign/Mailbox/LetterCommissionBoard.md)** - Mailbox layout, ticket queue, archetype styling, urgency feedback.
-- **[Assembly Bench Diegetic UI](UIDesign/Workstations/AssemblyBenchUI.md)** - World-space sockets, live Quality / Base Damage preview, incompatibility cues.
+- **[Letter Commission Board UI](UI_Design/Mailbox/Letter_Commission_Board.md)** - Mailbox layout, ticket queue, archetype styling, urgency feedback.
+- **[Assembly Bench Diegetic UI](UI_Design/Workstations/Assembly_Bench_UI.md)** - World-space sockets, live Quality / Base Damage preview, incompatibility cues.
 
 ### 🚀 Production & Milestones
-- **[Development Roadmap](DevelopmentPhases/DevelopmentRoadmap.md)** - Phased plan from Phase 1 prototype through Phase 4 polish and launch.
+- **[Development Roadmap](Development_Phases/Development_Roadmap.md)** - Phased plan from Phase 1 prototype through Phase 4 polish and launch.
 
 ---
 
@@ -122,7 +122,7 @@ Tech stack (Unity 6.3 LTS · GameObjects, no ECS · FishNet + FishySteamworks, p
 4. **Open Questions**
 5. A link to the matching technical document
 
-**TechnicalDesign documents** contain:
+**Technical_Design documents** (implementation side) contain:
 1. **Technical Specifications & Performance Targets** (tick rates, memory, netcode budget)
 2. **Architecture & Implementation Approaches** with trade-offs (SOLID/GRASP, MonoBehaviour vs ScriptableObject)
 3. **Networking** (authority and synchronization)

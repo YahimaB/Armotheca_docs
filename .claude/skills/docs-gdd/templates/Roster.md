@@ -1,5 +1,5 @@
 ---
-id: _<Category>Roster       # or _<Category>List for Items and Props
+id: _<Category>_Roster       # or _<Category>_List for Items and Props
 type: roster
 status: Draft
 ---

@@ -7,7 +7,7 @@ status: Draft
 
 # <Screen Name>
 
-> **Flow:** [_UIFlow](../_UIFlow.md) · **Technical:** <TechnicalDesign counterpart>
+> **Flow:** [_UI_Flow](../_UI_Flow.md) · **Technical:** <Technical_Design counterpart>
 
 ## Purpose
 
@@ -19,7 +19,7 @@ status: Draft
 
 ## Elements
 
-<!-- Element types use the vocabulary in Guidelines/AssetsNaming.md §7. -->
+<!-- Element types use the vocabulary in Guidelines/Assets_Naming.md §7. -->
 
 | Element | Type | Shows | Data source |
 | --- | --- | --- | --- |
@@ -31,7 +31,7 @@ status: Draft
 
 ## Input & Navigation
 
-<!-- Open / close, focus order, keyboard and gamepad actions, screens it leads to (keep _UIFlow in sync). -->
+<!-- Open / close, focus order, keyboard and gamepad actions, screens it leads to (keep _UI_Flow in sync). -->
 
 ## Feedback
 

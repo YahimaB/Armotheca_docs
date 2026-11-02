@@ -7,7 +7,7 @@ status: Draft
 
 # <System> Balancing
 
-> **System:** [_<System>System](../02_Systems/<System>/_<System>System.md)
+> **System:** [_<System>_System](../02_Systems/<System>/_<System>_System.md)
 
 Rows are keyed by doc ID; columns are parameters. Values marked `*` are initial
 values not yet validated by playtest. Docs link here by table anchor and never

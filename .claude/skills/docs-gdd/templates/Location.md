@@ -7,7 +7,7 @@ status: Draft
 
 # <Location Name>
 
-> **World:** [_WorldMap](../_WorldMap.md) · **Technical:** <TechnicalDesign counterpart>
+> **World:** [_World_Map](../_World_Map.md) · **Technical:** <Technical_Design counterpart>
 
 ## Purpose in Progression
 
@@ -35,7 +35,7 @@ status: Draft
 
 ## Mood & Lighting
 
-<!-- Intent only; references live in Guidelines/ArtDirection. -->
+<!-- Intent only; references live in Guidelines/Art_Direction. -->
 
 ## Connections
 

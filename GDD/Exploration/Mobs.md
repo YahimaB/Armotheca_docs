@@ -1,6 +1,6 @@
 # Mobs (Realm Creatures)
 
-> **Zone:** Exploration · **Technical counterpart:** [TechnicalDesign/Exploration/Mobs](../../TechnicalDesign/Exploration/Mobs.md) · **Combat rules:** [Combat](../Common/Combat.md)
+> **Zone:** Exploration · **Technical counterpart:** [Technical_Design/Exploration/Mobs](../../Technical_Design/Exploration/Mobs.md) · **Combat rules:** [Combat](../Common/Combat.md)
 
 ## Design Intent
 
@@ -96,7 +96,7 @@ The HUD shows the current pressure level as a growing distortion around the scre
 
 ## Apex Guardians
 
-- One per realm, in the Apex Arena, guarding that realm's Primordial Catalyst (see [Uber-Weapon](../Shop/UberWeapon.md)).
+- One per realm, in the Apex Arena, guarding that realm's Primordial Catalyst (see [Uber-Weapon](../Shop/Uber_Weapon.md)).
 - Multi-phase fights with telegraphed area attacks designed for 1–4 players; health scales with player count.
 - Defeating a Guardian drops its catalyst; Guardians do not respawn once their catalyst is taken (except in Prestige mode).
 

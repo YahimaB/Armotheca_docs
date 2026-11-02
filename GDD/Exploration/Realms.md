@@ -1,10 +1,10 @@
 # Realms (Dimensional Biomes)
 
-> **Zone:** Exploration · **Technical counterpart:** [TechnicalDesign/Exploration/Realms](../../TechnicalDesign/Exploration/Realms.md) · **Entered via:** [Magic Doors](MagicDoors.md)
+> **Zone:** Exploration · **Technical counterpart:** [Technical_Design/Exploration/Realms](../../Technical_Design/Exploration/Realms.md) · **Entered via:** [Magic Doors](Magic_Doors.md)
 
 ## Design Intent
 
-Each Magic Door opens onto a **separate realm** — a compact, hand-crafted pocket dimension with its own look, resources and monsters. There is no time limit inside a realm (see [Magic Doors](MagicDoors.md)), but the Outer Grounds are kept small enough to cross in under a minute so that quick supply runs stay quick, while the Deep Grounds and the Apex Arena reward teams who commit to a longer dive. Variety comes from four strongly themed realms, each with a fresh resource and mob arrangement every time its door opens.
+Each Magic Door opens onto a **separate realm** — a compact, hand-crafted pocket dimension with its own look, resources and monsters. There is no time limit inside a realm (see [Magic Doors](Magic_Doors.md)), but the Outer Grounds are kept small enough to cross in under a minute so that quick supply runs stay quick, while the Deep Grounds and the Apex Arena reward teams who commit to a longer dive. Variety comes from four strongly themed realms, each with a fresh resource and mob arrangement every time its door opens.
 
 ---
 
@@ -74,7 +74,7 @@ Every realm follows the same three-band layout:
 ## Per-Opening Variation
 
 Each time a door opens, the realm keeps its hand-made layout but re-rolls:
-- Which resource nodes appear and where (see [Resource Gathering](ResourceGathering.md)).
+- Which resource nodes appear and where (see [Resource Gathering](Resource_Gathering.md)).
 - Which mob groups appear and where (see [Mobs](Mobs.md)).
 - Optional realm modifiers in Prestige mode (e.g. denser mobs, doubled rare nodes).
 

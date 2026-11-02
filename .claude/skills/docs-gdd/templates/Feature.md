@@ -10,7 +10,7 @@ pillars: []             # pillar names from Vision.md
 
 # <Feature Name>
 
-> **Hub:** [_FeatureList](_FeatureList.md) · **Technical:** <TechnicalDesign counterpart>
+> **Hub:** [_Feature_List](_Feature_List.md) · **Technical:** <Technical_Design counterpart>
 
 ## Purpose
 

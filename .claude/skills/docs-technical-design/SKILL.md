@@ -1,28 +1,28 @@
 ---
 name: docs-technical-design
-description: Write and maintain Armotheca technical-design documents in TechnicalDesign/: the Technical Overview and per-mechanic implementation docs mirroring the GDD. Use for architecture, networking authority, performance targets, data models and Unity C# reference code.
+description: Write and maintain Armotheca technical-design documents in Technical_Design/: the Technical Overview and per-mechanic implementation docs mirroring the GDD. Use for architecture, networking authority, performance targets, data models and Unity C# reference code.
 ---
 
-# TechnicalDesign documents
+# Technical Design documents
 
-A TechnicalDesign document says **how a GDD mechanic is built** in Unity. It
+A Technical_Design document says **how a GDD mechanic is built** in Unity. It
 implements the matching GDD doc and never redefines its rules; when they differ,
 the GDD wins and the tech doc is updated (or the conflict is raised to the user).
-Read `TechnicalDesign/TechnicalOverview.md` first: its stack, architecture
+Read `Technical_Design/Technical_Overview.md` first: its stack, architecture
 principles, networking model and shared types apply to every doc here.
 
 ## Layout
 
 ```
-TechnicalDesign/
-├── TechnicalOverview.md       # Stack, targets, architecture, shared types, upgrades
+Technical_Design/
+├── Technical_Overview.md # Stack, targets, architecture, shared types, upgrades
 ├── Common/<Mechanic>.md
 ├── Shop/<Mechanic>.md
 └── Exploration/<Mechanic>.md
 ```
 
-The path mirrors `GDD/` exactly: `GDD/Shop/OrderSystem.md` ↔
-`TechnicalDesign/Shop/OrderSystem.md`. UI screens have no separate tech doc; their
+The path mirrors `GDD/` exactly: `GDD/Shop/Order_System.md` ↔
+`Technical_Design/Shop/Order_System.md`. UI screens have no separate tech doc; their
 view and binding notes live in the mechanic's tech doc.
 
 ## Mechanic document template
@@ -51,7 +51,7 @@ view and binding notes live in the mechanic's tech doc.
 - Randomness uses a host-seeded `System.Random`; timers use FishNet ticks.
 - Reference code is illustrative but compilable in spirit: real namespaces
   (`Armotheca.*`), types from Technical Overview §5, names per
-  `Guidelines/AssetsNaming.md` §6.
+  `Guidelines/Assets_Naming.md` §6.
 - Show at least two approaches when the choice is not obvious; mark one
   Recommended and say why.
 - Stack-wide decisions (engine, netcode, UI framework) belong in Technical

@@ -1,6 +1,6 @@
 # Movement
 
-> **Zone:** Common · **Technical counterpart:** [TechnicalDesign/Common/Movement](../../TechnicalDesign/Common/Movement.md)
+> **Zone:** Common · **Technical counterpart:** [Technical_Design/Common/Movement](../../Technical_Design/Common/Movement.md)
 
 ## Design Intent
 
@@ -49,7 +49,7 @@ Movement is the one verb every player uses every second, in the workshop and in 
 - Quick directional burst on a single press, in the input direction (or facing direction with no input).
 - Grants a short **invulnerability window** at the start of the roll — the main defensive tool in combat.
 - Short cooldown prevents chaining rolls as a faster-than-sprint travel method.
-- **Not available while carrying an item** (hands are busy — see [Object Interaction](ObjectInteraction.md)).
+- **Not available while carrying an item** (hands are busy — see [Object Interaction](Object_Interaction.md)).
 - Can be used to cancel the recovery of a sword swing (see [Combat](Combat.md)).
 
 ---

@@ -1,6 +1,6 @@
 # Combat
 
-> **Zone:** Common · **Technical counterpart:** [TechnicalDesign/Common/Combat](../../TechnicalDesign/Common/Combat.md)
+> **Zone:** Common · **Technical counterpart:** [Technical_Design/Common/Combat](../../Technical_Design/Common/Combat.md)
 
 ## Design Intent
 
@@ -9,7 +9,7 @@ Combat in *Armotheca* is a means to an end: it protects the team while they harv
 - **Sword:** simple melee swings.
 - **Wand / Staff:** a magic orb projectile.
 
-Damage comes directly from the weapon's **Base Damage**. Weapon stats are locked to Quality and Base Damage (see [Weapon Crafting](../Shop/WeaponCrafting.md)), so combat has no hidden modifiers to learn.
+Damage comes directly from the weapon's **Base Damage**. Weapon stats are locked to Quality and Base Damage (see [Weapon Crafting](../Shop/Weapon_Crafting.md)), so combat has no hidden modifiers to learn.
 
 ---
 
@@ -86,8 +86,8 @@ Damage comes directly from the weapon's **Base Damage**. Weapon stats are locked
 - **Players** have a health pool (initial value: 100). Mobs deal fixed damage per attack defined in mob data (see [Mobs](../Exploration/Mobs.md)).
 - **Invulnerability:** Players are invulnerable during the first part of a roll and briefly after taking a hit (initial value: 0.5 s).
 - **Downed:** At 0 health a player becomes *Downed*: they cannot act and a bleed-out timer starts (initial value: 20 s).
-  - A teammate can **revive** them with a 3 s continuous interaction (see [Object Interaction](ObjectInteraction.md)). Revived players return at 50% health.
-  - If the timer runs out (or a solo player goes down), the player is **ejected to the workshop**: their backpack and hands contents are dropped in the realm; the equipped weapon is kept. As an expedition member they can re-enter to recover the cargo while a teammate is still inside; if nobody is left, the realm and its dropped cargo are gone (see [Magic Doors](../Exploration/MagicDoors.md)).
+  - A teammate can **revive** them with a 3 s continuous interaction (see [Object Interaction](Object_Interaction.md)). Revived players return at 50% health.
+  - If the timer runs out (or a solo player goes down), the player is **ejected to the workshop**: their backpack and hands contents are dropped in the realm; the equipped weapon is kept. As an expedition member they can re-enter to recover the cargo while a teammate is still inside; if nobody is left, the realm and its dropped cargo are gone (see [Magic Doors](../Exploration/Magic_Doors.md)).
 - **Workshop safety:** No combat happens inside the workshop. Health regenerates fully on returning through a door.
 - **Friendly fire:** Off.
 

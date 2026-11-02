@@ -13,47 +13,47 @@ are hubs that tie those pieces together.
 Read `00_Overview/Vision.md` first. Its pillars and locked constraints (exactly 2
 components per weapon, only Quality and Base Damage, manual labour at launch)
 override any single doc. Until the layout reform is done, the vision lives in
-`MasterGDD.md`; see [Migration](#migration).
+`Master_GDD.md`; see [Migration](#migration).
 
 ## Layout
 
 ```
 GDD/
 ├── 00_Overview/
-│   ├── Vision.md                 # pitch, pillars, player fantasy, locked constraints
-│   ├── CoreLoop.md               # moment-to-moment, session and meta loops
-│   ├── Glossary.md               # term → definition → canonical doc
-│   └── Changelog.md              # dated rule/number changes in Approved docs
+│   ├── Vision.md               # pitch, pillars, player fantasy, locked constraints
+│   ├── Core_Loop.md            # moment-to-moment, session and meta loops
+│   ├── Glossary.md             # term → definition → canonical doc
+│   └── Changelog.md            # dated rule/number changes in Approved docs
 ├── 01_Features/
-│   ├── _FeatureList.md           # ID, priority (MoSCoW), status, owner, milestone
-│   └── F<NN>_<Name>.md           # hubs: F01_Commissions.md, F03_Expeditions.md
+│   ├── _Feature_List.md        # ID, priority (MoSCoW), status, owner, milestone
+│   └── F<NN>_<Name>.md         # hubs: F01_Commissions.md, F03_Expeditions.md
 ├── 02_Systems/
-│   └── <System>/                 # Movement, Interaction, Combat, Crafting, Orders, ...
-│       ├── _<System>System.md    # overview + how its mechanics interact
-│       └── M_<Name>.md           # M_Roll.md, M_Assembly.md
+│   └── <System>/               # Movement, Interaction, Combat, Crafting, Orders, ...
+│       ├── _<System>_System.md # overview + how its mechanics interact
+│       └── M_<Name>.md         # M_Roll.md, M_Assembly.md
 ├── 03_Entities/
-│   ├── Player/                   # Player.md, Camera.md
-│   ├── Mobs/                     # _MobRoster.md, Common/, ApexGuardians/
-│   ├── NPCs/Clients/             # _ClientRoster.md, E_AdventurersGuild.md, ...
-│   ├── Items/                    # _ItemList.md, Weapons/, Components/, Materials/, Catalysts/
-│   └── Props/                    # _PropList.md, Interactive/, Workstations/, ResourceNodes/
+│   ├── Player/                 # Player.md, Camera.md
+│   ├── Mobs/                   # _Mob_Roster.md, Common/, Apex_Guardians/
+│   ├── NPCs/Clients/           # _Client_Roster.md, E_Adventurers_Guild.md, ...
+│   ├── Items/                  # _Item_List.md, Weapons/, Components/, Materials/, Catalysts/
+│   └── Props/                  # _Prop_List.md, Interactive/, Workstations/, Resource_Nodes/
 ├── 04_Locations/
-│   ├── _WorldMap.md              # structure, unlock order, connections
-│   └── L<NN>_<Name>/             # L00_Workshop/, L01_VerdantCorruption/
+│   ├── _World_Map.md           # structure, unlock order, connections
+│   └── L<NN>_<Name>/           # L00_Workshop/, L01_Verdant_Corruption/
 │       ├── L<NN>_<Name>.md
-│       └── Maps/                 # layout sketches, blockout captures
+│       └── Maps/               # layout sketches, blockout captures
 ├── 05_UI/
-│   ├── _UIFlow.md                # screen-to-screen navigation (Mermaid flowchart)
+│   ├── _UI_Flow.md             # screen-to-screen navigation (Mermaid flowchart)
 │   ├── Hud/  Menus/  Screens/  World/  Widgets/
-│   └── UI_<Name>.md              # inside the category folder; mockups next to it
+│   └── UI_<Name>.md            # inside the category folder; mockups next to it
 └── 06_Balancing/
-    └── <System>.md               # all numbers, one table per kind of thing
+    └── <System>.md             # all numbers, one table per kind of thing
 ```
 
-UI categories follow `Prefabs/UI/` in `Guidelines/AssetsNaming.md` §3; `World/`
+UI categories follow `Prefabs/UI/` in `Guidelines/Assets_Naming.md` §3; `World/`
 holds diegetic, world-space UI. Art references, mood boards and the UI visual
 style guide (fonts, colours, icons) are standards owned by `docs-guidelines`
-(`Guidelines/ArtDirection/`), not GDD content. Add a new system, entity category
+(`Guidelines/Art_Direction/`), not GDD content. Add a new system, entity category
 or UI category only when no existing one fits, and register it in the matching
 hub.
 
@@ -62,22 +62,24 @@ hub.
 | Type | ID / file | Folder | Template |
 | --- | --- | --- | --- |
 | Feature | `F<NN>_<Name>` | `01_Features/` | [Feature](templates/Feature.md) |
-| System hub | `_<System>System` | `02_Systems/<System>/` | [SystemHub](templates/SystemHub.md) |
+| System hub | `_<System>_System` | `02_Systems/<System>/` | [SystemHub](templates/SystemHub.md) |
 | Mechanic | `M_<Name>` | `02_Systems/<System>/` | [Mechanic](templates/Mechanic.md) |
 | Entity | `E_<Name>` (`Player`, `Camera` unprefixed) | `03_Entities/<Category>/` | [Entity](templates/Entity.md) |
-| Roster / list | `_<Category>Roster`, `_<Category>List` | category root | [Roster](templates/Roster.md) |
+| Roster / list | `_<Category>_Roster`, `_<Category>_List` | category root | [Roster](templates/Roster.md) |
 | Location | `L<NN>_<Name>` | `04_Locations/L<NN>_<Name>/` | [Location](templates/Location.md) |
 | UI | `UI_<Name>` | `05_UI/<Category>/` | [UI](templates/UI.md) |
 | Balancing sheet | `<System>` | `06_Balancing/` | [Balancing](templates/Balancing.md) |
 
-- The ID is the file name without `.md`, CamelCase after the prefix. It never
-  changes once other docs link to it; rename only with the user's approval and a
-  full link update.
+- The ID is the file name without `.md`, in the docs naming rule from
+  `docs-routing` (`M_Sword_Swing`, `E_Bramble_Stalker`, `_Combat_System`). It
+  never changes once other docs link to it; rename only with the user's approval
+  and a full link update.
 - `F` numbers are stable identifiers, not priority. `L` numbers follow unlock
   order (`L00_Workshop`, then realms by the tier that sells their door).
-- Doc IDs exist only in the docs. `M_` and `UI_` are also asset prefixes
-  (`AssetsNaming.md` §4); asset names always carry a zone or element token
-  (`M_Shop_AssemblyBench`), doc IDs never do (`M_Assembly`).
+- Doc IDs exist only in the docs and are never used as asset names. `M_` and `UI_`
+  are also asset prefixes (`Assets_Naming.md` §4), but assets join CamelCase words
+  after a zone token (`M_Shop_AssemblyBench`) while doc IDs separate every word and
+  carry no zone (`M_Assembly`, `UI_Assembly_Bench`).
 - Every doc starts with YAML properties (`id`, `type`, `status`, plus the
   template's extra fields), then `# <Title>`, then a `>` line with its parent hub
   and technical counterpart.
@@ -86,7 +88,7 @@ hub.
 ## Rules
 
 1. **One thing, one place.** A rule, stat block or behaviour is written only in its
-   owner doc: the Roll in `M_Roll`, the Bramble Stalker in `E_BrambleStalker`.
+   owner doc: the Roll in `M_Roll`, the Bramble Stalker in `E_Bramble_Stalker`.
    Other docs link to it with one line of context and never paraphrase it. When
    you find the same content in two places, keep the owner's version and replace
    the other with a link.
@@ -102,24 +104,24 @@ hub.
    entity doc.
 5. **Every doc has a UI section.** Features, mechanics, entities and locations link
    the `UI_` docs that show them, or write `None`. A missing screen is a gap, not
-   an omission: add it to `_UIFlow.md` as `Draft`.
+   an omission: add it to `_UI_Flow.md` as `Draft`.
 6. **Numbers live in balancing sheets.** Docs state the rule ("damage scales with
    Quality tier") and link the sheet row or table; the sheet holds the value. The
    only numbers allowed in prose are locked constraints from the Vision (1–100
    Quality, 2 components, 1–4 players).
 7. **Links:** relative Markdown links using the ID as text
    (`[M_Roll](../Movement/M_Roll.md)`), so Obsidian's graph and Git hosts both work.
-   Inside a sentence: "uses [M_Parry](…), appears in [L02_PyroclasticTrench](…),
-   shown in [UI_HudStamina](…)".
+   Inside a sentence: "uses [M_Parry](…), appears in [L02_Pyroclastic_Trench](…),
+   shown in [UI_Hud_Stamina](…)".
 8. **Hubs are kept current.** Adding, renaming or cutting a doc updates its hub
-   (`_FeatureList`, system hub, roster, `_WorldMap` or `_UIFlow`) in the same change,
+   (`_Feature_List`, system hub, roster, `_World_Map` or `_UI_Flow`) in the same change,
    plus the README hub (see `docs-routing`).
 
 ## Overview files
 
 - **Vision.md:** pitch, setting, player fantasy, pillars, locked constraints,
   USP. Links to features by ID; no mechanics.
-- **CoreLoop.md:** the three loops, each step linking the feature or mechanic that
+- **Core_Loop.md:** the three loops, each step linking the feature or mechanic that
   owns it.
 - **Glossary.md:** a table of `Term | Definition | Canonical doc`. Defines Feature,
   System, Mechanic, Entity, Location and every project term (Quality, Payload,
@@ -138,8 +140,8 @@ hub.
    leaving headings, except `UI` and `Open Questions`, which stay.
 4. **Link both ways.** The new doc links its hub and dependencies; the hub, the
    features that use it and the locations where it appears link back.
-5. **Propagate.** When a rule or value changes, search TechnicalDesign and
-   DevelopmentPhases for the old wording or value and update or flag each hit.
+5. **Propagate.** When a rule or value changes, search Technical_Design and
+   Development_Phases for the old wording or value and update or flag each hit.
    New or changed mechanics hand off to `docs-technical-design` for the
    counterpart.
 6. **Resolve questions.** An answered open question becomes a rule and is
@@ -158,8 +160,8 @@ hub.
 
 ## Migration
 
-The current GDD is organised by zone (`MasterGDD.md`, `Common/`, `Shop/`,
-`Exploration/`) and UI lives in the legacy `UIDesign/` folder. Edit those files in
+The current GDD is organised by zone (`Master_GDD.md`, `Common/`, `Shop/`,
+`Exploration/`) and UI lives in the legacy `UI_Design/` folder. Edit those files in
 place until the user approves the reform. The planned split of each current
 document is in [references/MigrationMap.md](references/MigrationMap.md). Migrate
 one source document at a time, then run the link check.

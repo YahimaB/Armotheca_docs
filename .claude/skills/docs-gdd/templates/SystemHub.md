@@ -1,12 +1,12 @@
 ---
-id: _<System>System
+id: _<System>_System
 type: system
 status: Draft
 ---
 
 # <System> System
 
-> **Glossary:** [System](../../00_Overview/Glossary.md) · **Balancing:** [<System>](../../06_Balancing/<System>.md) · **Technical:** <TechnicalDesign counterpart>
+> **Glossary:** [System](../../00_Overview/Glossary.md) · **Balancing:** [<System>](../../06_Balancing/<System>.md) · **Technical:** <Technical_Design counterpart>
 
 ## Overview
 

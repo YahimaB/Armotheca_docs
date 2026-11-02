@@ -8,22 +8,22 @@ description: Write and maintain Armotheca production standards in Guidelines/: a
 A Guidelines document says **how any contributor must produce assets or code**,
 independent of a specific mechanic. It is normative: write rules, budgets and
 checklists, not discussion. A rule that applies to one feature belongs in that
-feature's GDD or TechnicalDesign doc instead.
+feature's GDD or Technical_Design doc instead.
 
 ## Layout
 
 ```
 Guidelines/
-├── AssetsNaming.md            # Assets/ folder layout, prefixes, code naming, UI vocabulary
-├── ModelingGuidelines.md      # 3D style, poly budgets, LODs, textures, export, delivery
-└── ArtDirection/              # Target of legacy VisualDesign/
-    ├── References/<Source>/   # Reference screenshots, prefixed per source (AF_1.jpg)
-    ├── ConceptArts/<Subject>/ # Approved concept images
-    └── Prompts/<Subject>.md   # Image-generation prompts and settings per subject
+├── Assets_Naming.md            # Assets/ folder layout, prefixes, code naming, UI vocabulary
+├── Modeling_Guidelines.md      # 3D style, poly budgets, LODs, textures, export, delivery
+└── Art_Direction/              # Target of legacy Visual_Design/
+    ├── References/<Source>/    # Reference screenshots, prefixed per source (AF_1.jpg)
+    ├── Concept_Arts/<Subject>/ # Approved concept images
+    └── Prompts/<Subject>.md    # Image-generation prompts and settings per subject
 ```
 
-Add a new guideline file only for a new discipline (e.g. `AudioGuidelines.md`,
-`CodeStyle.md`); otherwise extend an existing one.
+Add a new guideline file only for a new discipline (e.g. `Audio_Guidelines.md`,
+`Code_Style.md`); otherwise extend an existing one.
 
 ## Guideline document template
 
@@ -31,18 +31,18 @@ Add a new guideline file only for a new discipline (e.g. `AudioGuidelines.md`,
 # <Discipline> Guidelines
 
 > <One line: who must follow this and what it guarantees.>
-> **Naming:** [Assets Naming](AssetsNaming.md) · **Game context:** [Master GDD](../GDD/MasterGDD.md) · **Tech stack:** [Technical Overview](../TechnicalDesign/TechnicalOverview.md)
+> **Naming:** [Assets Naming](Assets_Naming.md) · **Game context:** [Master GDD](../GDD/Master_GDD.md) · **Tech stack:** [Technical Overview](../Technical_Design/Technical_Overview.md)
 
 ## 1. <Numbered sections: rules, budgets, conventions>
 ## <n>. Quick Reference or Delivery Checklist
 ## <n+1>. Open Questions
 ```
 
-- Number top-level sections so other docs can cite them (`AssetsNaming.md` §7).
+- Number top-level sections so other docs can cite them (`Assets_Naming.md` §7).
 - Prefer tables for budgets, prefixes and per-asset rules; give one correct and,
   where useful, one incorrect example.
 
-## Prompt document template (ArtDirection/Prompts)
+## Prompt document template (Art_Direction/Prompts)
 
 ```markdown
 # <Subject> — Image Prompts
@@ -54,7 +54,7 @@ Add a new guideline file only for a new discipline (e.g. `AudioGuidelines.md`,
 ## Notes
 ```
 
-Store the accepted outputs under `ConceptArts/<Subject>/` and link them from the
+Store the accepted outputs under `Concept_Arts/<Subject>/` and link them from the
 prompt doc.
 
 ## Workflow
@@ -71,6 +71,6 @@ prompt doc.
 ## Checks
 
 - Rules are stated as requirements with concrete values, not preferences.
-- No feature-specific rules that belong in GDD/TechnicalDesign.
+- No feature-specific rules that belong in GDD/Technical_Design.
 - Images referenced from docs exist; links resolve (run the `docs-routing` link
   check).

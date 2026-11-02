@@ -7,7 +7,7 @@ status: Draft
 
 # <Mechanic Name>
 
-> **System:** [_<System>System](_<System>System.md) · **Technical:** <TechnicalDesign counterpart>
+> **System:** [_<System>_System](_<System>_System.md) · **Technical:** <Technical_Design counterpart>
 
 ## Summary
 
@@ -35,7 +35,7 @@ status: Draft
 
 ## Feedback
 
-<!-- VFX, SFX, animation, camera. Reference effects by intent; asset names follow AssetsNaming. -->
+<!-- VFX, SFX, animation, camera. Reference effects by intent; asset names follow Assets_Naming. -->
 
 ## UI
 
