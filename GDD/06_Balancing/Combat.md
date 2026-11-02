@@ -52,13 +52,13 @@ Owner: [_Mob_Roster](../03_Entities/Mobs/_Mob_Roster.md)
 
 | ID | Health | Attack damage | Notes |
 | --- | --- | --- | --- |
-| [E_Bramble_Stalker](../03_Entities/Mobs/Minor_Fauna/E_Bramble_Stalker.md) | — | — |  |
-| [E_Void_Slime](../03_Entities/Mobs/Minor_Fauna/E_Void_Slime.md) | — | — |  |
-| [E_Fire_Salamander](../03_Entities/Mobs/Elemental_Beasts/E_Fire_Salamander.md) | — | — |  |
-| [E_Frost_Wraith](../03_Entities/Mobs/Elemental_Beasts/E_Frost_Wraith.md) | — | — |  |
-| [E_Verdant_Elder](../03_Entities/Mobs/Apex_Guardians/E_Verdant_Elder.md) | — | — | Health scales with player count |
-| [E_Pyroclastic_Apex](../03_Entities/Mobs/Apex_Guardians/E_Pyroclastic_Apex.md) | — | — | Health scales with player count |
-| [E_Astral_Sovereign](../03_Entities/Mobs/Apex_Guardians/E_Astral_Sovereign.md) | — | — | Health scales with player count |
-| [E_Frost_Wyrm](../03_Entities/Mobs/Apex_Guardians/E_Frost_Wyrm.md) | — | — | Health scales with player count |
+| [E_Bramble_Stalker](../03_Entities/Mobs/Minor_Fauna/E_Bramble_Stalker/E_Bramble_Stalker.md) | — | — |  |
+| [E_Void_Slime](../03_Entities/Mobs/Minor_Fauna/E_Void_Slime/E_Void_Slime.md) | — | — |  |
+| [E_Fire_Salamander](../03_Entities/Mobs/Elemental_Beasts/E_Fire_Salamander/E_Fire_Salamander.md) | — | — |  |
+| [E_Frost_Wraith](../03_Entities/Mobs/Elemental_Beasts/E_Frost_Wraith/E_Frost_Wraith.md) | — | — |  |
+| [E_Verdant_Elder](../03_Entities/Mobs/Apex_Guardians/E_Verdant_Elder/E_Verdant_Elder.md) | — | — | Health scales with player count |
+| [E_Pyroclastic_Apex](../03_Entities/Mobs/Apex_Guardians/E_Pyroclastic_Apex/E_Pyroclastic_Apex.md) | — | — | Health scales with player count |
+| [E_Astral_Sovereign](../03_Entities/Mobs/Apex_Guardians/E_Astral_Sovereign/E_Astral_Sovereign.md) | — | — | Health scales with player count |
+| [E_Frost_Wyrm](../03_Entities/Mobs/Apex_Guardians/E_Frost_Wyrm/E_Frost_Wyrm.md) | — | — | Health scales with player count |
 
 Not yet defined.

@@ -21,17 +21,17 @@ Follows the shared band layout (Entry → Outer Grounds → Deep Grounds → Ape
 
 | Mob | Where | Notes |
 | --- | --- | --- |
-| [E_Bramble_Stalker](../../03_Entities/Mobs/Minor_Fauna/E_Bramble_Stalker.md) | Outer Grounds; also hidden next to nodes as ambushers | |
-| [E_Verdant_Elder](../../03_Entities/Mobs/Apex_Guardians/E_Verdant_Elder.md) | Apex Arena | Guards the *Sylvan Spire* |
+| [E_Bramble_Stalker](../../03_Entities/Mobs/Minor_Fauna/E_Bramble_Stalker/E_Bramble_Stalker.md) | Outer Grounds; also hidden next to nodes as ambushers | |
+| [E_Verdant_Elder](../../03_Entities/Mobs/Apex_Guardians/E_Verdant_Elder/E_Verdant_Elder.md) | Apex Arena | Guards the *Sylvan Spire* |
 
 ## Props & Nodes
 
 | Entity | Where | Notes |
 | --- | --- | --- |
-| [E_Arcane_Flora](../../03_Entities/Props/Resource_Nodes/E_Arcane_Flora.md) | Outer / Deep Grounds | Bog Oak, Ironwood |
-| [E_Mineral_Vein](../../03_Entities/Props/Resource_Nodes/E_Mineral_Vein.md) | Outer / Deep Grounds | Iron Vein |
-| [E_Exit_Portal](../../03_Entities/Props/Interactive/E_Exit_Portal.md) | Entry | |
-| [E_Aether_Chute](../../03_Entities/Props/Interactive/E_Aether_Chute.md) | Entry | |
+| [E_Arcane_Flora](../../03_Entities/Props/Resource_Nodes/E_Arcane_Flora/E_Arcane_Flora.md) | Outer / Deep Grounds | Bog Oak, Ironwood |
+| [E_Mineral_Vein](../../03_Entities/Props/Resource_Nodes/E_Mineral_Vein/E_Mineral_Vein.md) | Outer / Deep Grounds | Iron Vein |
+| [E_Exit_Portal](../../03_Entities/Props/Interactive/E_Exit_Portal/E_Exit_Portal.md) | Entry | |
+| [E_Aether_Chute](../../03_Entities/Props/Interactive/E_Aether_Chute/E_Aether_Chute.md) | Entry | |
 
 Node types per band are rolled per opening ([M_Node_Spawning](../../02_Systems/Exploration/M_Node_Spawning.md)).
 
@@ -41,7 +41,7 @@ Overgrown corrupted grove. Realms are darker and moodier than the workshop, lit 
 
 ## Connections
 
-- Entered through its [E_Magic_Door](../../03_Entities/Props/Interactive/E_Magic_Door.md) in [L00_Workshop](../L00_Workshop/L00_Workshop.md); left through the [E_Exit_Portal](../../03_Entities/Props/Interactive/E_Exit_Portal.md).
+- Entered through its [E_Magic_Door](../../03_Entities/Props/Interactive/E_Magic_Door/E_Magic_Door.md) in [L00_Workshop](../L00_Workshop/L00_Workshop.md); left through the [E_Exit_Portal](../../03_Entities/Props/Interactive/E_Exit_Portal/E_Exit_Portal.md).
 
 ## UI
 

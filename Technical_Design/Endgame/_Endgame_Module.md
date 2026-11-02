@@ -15,8 +15,8 @@ status: Draft
 | GDD doc | Implemented in |
 | --- | --- |
 | [M_Forging_Ritual](../../GDD/02_Systems/Endgame/M_Forging_Ritual.md) | [Architecture](#architecture--implementation-approaches) — `UberRitualDirector`, `RitualPhase`; [Networking](#networking) |
-| [E_Primordial_Catalyst](../../GDD/03_Entities/Items/Catalysts/E_Primordial_Catalyst.md) | [Technical Specifications](#technical-specifications) — catalyst tracking |
-| [E_Great_Crucible](../../GDD/03_Entities/Props/Workstations/E_Great_Crucible.md) | Ritual start interaction |
+| [E_Primordial_Catalyst](../../GDD/03_Entities/Items/Catalysts/E_Primordial_Catalyst/E_Primordial_Catalyst.md) | [Technical Specifications](#technical-specifications) — catalyst tracking |
+| [E_Great_Crucible](../../GDD/03_Entities/Props/Workstations/E_Great_Crucible/E_Great_Crucible.md) | Ritual start interaction |
 
 ---
 

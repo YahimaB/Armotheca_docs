@@ -45,8 +45,8 @@ creating a new document of one of these kinds, ask whether to start the reform.
 | Current | Proposed target | Owner skill |
 | --- | --- | --- |
 | `Visual_Design/References/` | `Guidelines/Art_Direction/References/` | `docs-guidelines` |
-| `Visual_Design/Concept_Arts/` | `Guidelines/Art_Direction/Concept_Arts/` | `docs-guidelines` |
-| `Visual_Design/Prompts/` | `Guidelines/Art_Direction/Prompts/` | `docs-guidelines` |
+| `Visual_Design/Concept_Arts/<Subject>/` | the entity's `Art/` folder (`Main_Character` → `GDD/03_Entities/Player/`) | `docs-gdd` |
+| `Visual_Design/Prompts/<Subject>.md` | History entries in the entity's Art doc (`Player_Art.md`) | `docs-gdd` |
 
 ## Shared rules (every route)
 

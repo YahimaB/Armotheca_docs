@@ -20,7 +20,7 @@ The campaign ends when the team forges the Uber-Weapon from the four Primordial 
 
 ## Interactions
 
-Catalysts come from Apex Guardians ([_Mob_Roster](../../03_Entities/Mobs/_Mob_Roster.md)) and are shown on a pedestal in the workshop ([E_Primordial_Catalyst](../../03_Entities/Items/Catalysts/E_Primordial_Catalyst.md)). The ritual needs Tier 3 ([M_Workshop_Tiers](../Progression/M_Workshop_Tiers.md)) and reuses the processing stations at higher intensity ([_Processing_System](../Processing/_Processing_System.md)).
+Catalysts come from Apex Guardians ([_Mob_Roster](../../03_Entities/Mobs/_Mob_Roster.md)) and are shown on a pedestal in the workshop ([E_Primordial_Catalyst](../../03_Entities/Items/Catalysts/E_Primordial_Catalyst/E_Primordial_Catalyst.md)). The ritual needs Tier 3 ([M_Workshop_Tiers](../Progression/M_Workshop_Tiers.md)) and reuses the processing stations at higher intensity ([_Processing_System](../Processing/_Processing_System.md)).
 
 ## Shared State
 

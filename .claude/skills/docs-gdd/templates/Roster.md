@@ -16,7 +16,7 @@ status: Draft
 
 | ID | Name | Group | Appears In | Status |
 | --- | --- | --- | --- | --- |
-| [E_<Name>](<Group>/E_<Name>.md) |  |  |  | Draft |
+| [E_<Name>](<Group>/E_<Name>/E_<Name>.md) |  |  |  | Draft |
 
 ## Gaps
 

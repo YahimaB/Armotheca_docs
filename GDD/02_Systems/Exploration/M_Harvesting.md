@@ -45,7 +45,7 @@ Every strike has a crunch, a chip effect and visible damage on the node.
 
 ## Dependencies
 
-- Nodes: [E_Mineral_Vein](../../03_Entities/Props/Resource_Nodes/E_Mineral_Vein.md), [E_Arcane_Flora](../../03_Entities/Props/Resource_Nodes/E_Arcane_Flora.md)
+- Nodes: [E_Mineral_Vein](../../03_Entities/Props/Resource_Nodes/E_Mineral_Vein/E_Mineral_Vein.md), [E_Arcane_Flora](../../03_Entities/Props/Resource_Nodes/E_Arcane_Flora/E_Arcane_Flora.md)
 
 ## Used By
 

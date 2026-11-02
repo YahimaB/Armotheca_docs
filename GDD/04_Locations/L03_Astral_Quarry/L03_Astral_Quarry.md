@@ -21,16 +21,16 @@ Follows the shared band layout (Entry → Outer Grounds → Deep Grounds → Ape
 
 | Mob | Where | Notes |
 | --- | --- | --- |
-| [E_Void_Slime](../../03_Entities/Mobs/Minor_Fauna/E_Void_Slime.md) | Outer Grounds, in swarms | |
-| [E_Astral_Sovereign](../../03_Entities/Mobs/Apex_Guardians/E_Astral_Sovereign.md) | Apex Arena | Guards the *Astral Prism* |
+| [E_Void_Slime](../../03_Entities/Mobs/Minor_Fauna/E_Void_Slime/E_Void_Slime.md) | Outer Grounds, in swarms | |
+| [E_Astral_Sovereign](../../03_Entities/Mobs/Apex_Guardians/E_Astral_Sovereign/E_Astral_Sovereign.md) | Apex Arena | Guards the *Astral Prism* |
 
 ## Props & Nodes
 
 | Entity | Where | Notes |
 | --- | --- | --- |
-| [E_Mineral_Vein](../../03_Entities/Props/Resource_Nodes/E_Mineral_Vein.md) | Outer / Deep Grounds | Quartz, Star Metal |
-| [E_Exit_Portal](../../03_Entities/Props/Interactive/E_Exit_Portal.md) | Entry | |
-| [E_Aether_Chute](../../03_Entities/Props/Interactive/E_Aether_Chute.md) | Entry | |
+| [E_Mineral_Vein](../../03_Entities/Props/Resource_Nodes/E_Mineral_Vein/E_Mineral_Vein.md) | Outer / Deep Grounds | Quartz, Star Metal |
+| [E_Exit_Portal](../../03_Entities/Props/Interactive/E_Exit_Portal/E_Exit_Portal.md) | Entry | |
+| [E_Aether_Chute](../../03_Entities/Props/Interactive/E_Aether_Chute/E_Aether_Chute.md) | Entry | |
 
 Node types per band are rolled per opening ([M_Node_Spawning](../../02_Systems/Exploration/M_Node_Spawning.md)).
 
@@ -40,7 +40,7 @@ Floating starlit rock. Realms are darker and moodier than the workshop, lit by s
 
 ## Connections
 
-- Entered through its [E_Magic_Door](../../03_Entities/Props/Interactive/E_Magic_Door.md) in [L00_Workshop](../L00_Workshop/L00_Workshop.md); left through the [E_Exit_Portal](../../03_Entities/Props/Interactive/E_Exit_Portal.md).
+- Entered through its [E_Magic_Door](../../03_Entities/Props/Interactive/E_Magic_Door/E_Magic_Door.md) in [L00_Workshop](../L00_Workshop/L00_Workshop.md); left through the [E_Exit_Portal](../../03_Entities/Props/Interactive/E_Exit_Portal/E_Exit_Portal.md).
 
 ## UI
 

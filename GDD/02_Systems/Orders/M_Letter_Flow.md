@@ -15,7 +15,7 @@ How a letter arrives, is worked on, dispatched and verified.
 
 ## Rules
 
-1. **Arrival:** a letter drops out of the Mailbox Nexus tube onto the board ([E_Mailbox_Nexus](../../03_Entities/Props/Interactive/E_Mailbox_Nexus.md)). The board holds a limited number of letters at once.
+1. **Arrival:** a letter drops out of the Mailbox Nexus tube onto the board ([E_Mailbox_Nexus](../../03_Entities/Props/Interactive/E_Mailbox_Nexus/E_Mailbox_Nexus.md)). The board holds a limited number of letters at once.
 2. **Review and pin:** players read the letter (instant interaction) and may pin it to the HUD.
 3. **Fulfilment:** the team gathers, processes and assembles the requested weapon.
 4. **Dispatch:** a player holding the finished weapon uses the Outgoing Tube (instant interaction) and chooses the target letter.

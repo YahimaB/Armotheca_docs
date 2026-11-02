@@ -23,7 +23,7 @@ Each player has three places to hold things: hands, a weapon slot and a backpack
 
 1. Any weapon picked up from the world goes into the **hands** first (it may be a commission to deliver). A secondary action moves it into the weapon slot, swapping the previously equipped weapon into the hands.
 2. Loose drops from nodes and mobs go into the backpack automatically when the harvester walks over them, or can be picked up into hands by anyone.
-3. The backpack can be emptied into the [E_Aether_Chute](../../03_Entities/Props/Interactive/E_Aether_Chute.md) in a realm or into a storage crate in the workshop, one item per press or all at once with a hold.
+3. The backpack can be emptied into the [E_Aether_Chute](../../03_Entities/Props/Interactive/E_Aether_Chute/E_Aether_Chute.md) in a realm or into a storage crate in the workshop, one item per press or all at once with a hold.
 4. When a player bleeds out, backpack and hands contents are dropped in the realm; they can be recovered while the realm is still occupied ([M_Health_And_Downed](../Combat/M_Health_And_Downed.md)).
 
 ## Player Input

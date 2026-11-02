@@ -31,11 +31,15 @@ GDD/
 │       ├── _<System>_System.md # overview + how its mechanics interact
 │       └── M_<Name>.md         # M_Roll.md, M_Assembly.md
 ├── 03_Entities/
-│   ├── Player/                 # Player.md, Camera.md
-│   ├── Mobs/                   # _Mob_Roster.md, Common/, Apex_Guardians/
-│   ├── NPCs/Clients/           # _Client_Roster.md, E_Adventurers_Guild.md, ...
-│   ├── Items/                  # _Item_List.md, Weapons/, Components/, Materials/, Catalysts/
+│   ├── Player/                 # Player.md (the only entity in its category: this is its folder)
+│   ├── Mobs/                   # _Mob_Roster.md, Minor_Fauna/, Elemental_Beasts/, Apex_Guardians/
+│   ├── NPCs/Clients/           # _Client_Roster.md, E_Adventurers_Guild/, ...
+│   ├── Items/                  # _Item_List.md, Weapons/, Components/, Catalysts/
 │   └── Props/                  # _Prop_List.md, Interactive/, Workstations/, Resource_Nodes/
+│       └── <Group>/E_<Name>/   # one folder per entity
+│           ├── E_<Name>.md
+│           ├── E_<Name>_Art.md # optional: concept art description and history
+│           └── Art/            # E_<Name>_Art_<NN>_<Short_Name>.png
 ├── 04_Locations/
 │   ├── _World_Map.md           # structure, unlock order, connections
 │   └── L<NN>_<Name>/           # L00_Workshop/, L01_Verdant_Corruption/
@@ -50,8 +54,9 @@ GDD/
 ```
 
 UI categories follow `Prefabs/UI/` in `Guidelines/Assets_Naming.md` §3; `World/`
-holds diegetic, world-space UI. Art references, mood boards and the UI visual
-style guide (fonts, colours, icons) are standards owned by `docs-guidelines`
+holds diegetic, world-space UI. An entity's own concept art belongs to the entity
+(its Art doc); art references, mood boards and the UI visual style guide (fonts,
+colours, icons) are standards owned by `docs-guidelines`
 (`Guidelines/Art_Direction/`), not GDD content. Add a new system, entity category
 or UI category only when no existing one fits, and register it in the matching
 hub.
@@ -68,7 +73,8 @@ points to a module doc section, or to `_Module_Map.md` for features.
 | Feature | `F<NN>_<Name>` | `01_Features/` | [Feature](templates/Feature.md) |
 | System hub | `_<System>_System` | `02_Systems/<System>/` | [System_Hub](templates/System_Hub.md) |
 | Mechanic | `M_<Name>` | `02_Systems/<System>/` | [Mechanic](templates/Mechanic.md) |
-| Entity | `E_<Name>` (`Player`, `Camera` unprefixed) | `03_Entities/<Category>/` | [Entity](templates/Entity.md) |
+| Entity | `E_<Name>` (`Player`, `Camera` unprefixed) | `03_Entities/<Category>/<Group>/E_<Name>/` | [Entity](templates/Entity.md) |
+| Entity art | `E_<Name>_Art` | the entity's folder | [Entity_Art](templates/Entity_Art.md) |
 | Roster / list | `_<Category>_Roster`, `_<Category>_List` | category root | [Roster](templates/Roster.md) |
 | Location | `L<NN>_<Name>` | `04_Locations/L<NN>_<Name>/` | [Location](templates/Location.md) |
 | UI | `UI_<Name>` | `05_UI/<Category>/` | [UI](templates/UI.md) |
@@ -120,6 +126,21 @@ points to a module doc section, or to `_Module_Map.md` for features.
 8. **Hubs are kept current.** Adding, renaming or cutting a doc updates its hub
    (`_Feature_List`, system hub, roster, `_World_Map` or `_UI_Flow`) in the same change,
    plus the README hub (see `docs-routing`).
+9. **Entity art lives with the entity.** Every entity has its own folder. Its
+   concept art goes in an optional `E_<Name>_Art.md` beside the entity doc, which
+   links it from Art & Audio References. The Art doc holds:
+   - **Description:** the look in a few sentences plus a list of key visual
+     elements; behaviour and role stay in the entity doc.
+   - **Palette:** key colours as hex values only.
+   - **Selected:** the heading names of the chosen History versions.
+   - **History:** one `### <NN> <Short Name>` entry per kept image, oldest first,
+     with the image, the AI model and the prompt. A version is one image that was
+     kept; rejected variants are not recorded. Numbers are two digits and never
+     reused. A generated image records its full prompt; an edited one records the
+     prompt that changed the version it was made from.
+   - **Images** live in the entity's `Art/` folder, named
+     `E_<Name>_Art_<NN>_<Short_Name>.png` so the file matches its History heading
+     (`### 02 Glowing Core` → `E_Void_Slime_Art_02_Glowing_Core.png`).
 
 ## Overview files
 
@@ -158,6 +179,9 @@ points to a module doc section, or to `_Module_Map.md` for features.
   listed in its system hub and in at least one feature.
 - Every entity and location has a UI section and appears in its roster or the
   world map.
+- Every entity sits in its own folder; every Art doc's Selected entries match
+  History headings, and every History image exists in `Art/` under the matching
+  name.
 - No tuning value in prose outside `06_Balancing/`.
 - Properties block, title and `>` line present; links resolve (run the
   `docs-routing` link check).

@@ -15,9 +15,9 @@ The home base: an ancient extradimensional emporium floating in the ethereal voi
 
 ## Layout
 
-- **The Mailbox Nexus:** where commission letters arrive ([E_Mailbox_Nexus](../../03_Entities/Props/Interactive/E_Mailbox_Nexus.md)).
+- **The Mailbox Nexus:** where commission letters arrive ([E_Mailbox_Nexus](../../03_Entities/Props/Interactive/E_Mailbox_Nexus/E_Mailbox_Nexus.md)).
 - **The Workshop Hall:** processing stations (furnaces, arcane distillation apparatus, grinding wheels, assembly benches) where materials are refined and joined.
-- **The Threshold of Portals:** an archway hall of Magic Doors that open into realms ([E_Magic_Door](../../03_Entities/Props/Interactive/E_Magic_Door.md)).
+- **The Threshold of Portals:** an archway hall of Magic Doors that open into realms ([E_Magic_Door](../../03_Entities/Props/Interactive/E_Magic_Door/E_Magic_Door.md)).
 
 Each tier upgrade adds rooms, more station slots and a larger Threshold of Portals. The layout never requires jumping to reach a station.
 
@@ -33,10 +33,10 @@ None: no combat happens inside the workshop. Health regenerates fully on returni
 
 | Entity | Where | Notes |
 | --- | --- | --- |
-| [E_Mailbox_Nexus](../../03_Entities/Props/Interactive/E_Mailbox_Nexus.md) | Mailbox Nexus | |
-| [E_Magic_Door](../../03_Entities/Props/Interactive/E_Magic_Door.md) | Threshold of Portals | One per realm, by tier |
+| [E_Mailbox_Nexus](../../03_Entities/Props/Interactive/E_Mailbox_Nexus/E_Mailbox_Nexus.md) | Mailbox Nexus | |
+| [E_Magic_Door](../../03_Entities/Props/Interactive/E_Magic_Door/E_Magic_Door.md) | Threshold of Portals | One per realm, by tier |
 | Workstations ([_Prop_List](../../03_Entities/Props/_Prop_List.md)) | Workshop Hall | Tier-gated |
-| [E_Great_Crucible](../../03_Entities/Props/Workstations/E_Great_Crucible.md) | Workshop Hall | Tier 3 |
+| [E_Great_Crucible](../../03_Entities/Props/Workstations/E_Great_Crucible/E_Great_Crucible.md) | Workshop Hall | Tier 3 |
 | Storage crates, receiving basket, catalyst pedestal, upgrade ledger | Workshop Hall | No docs yet ([_Prop_List › Gaps](../../03_Entities/Props/_Prop_List.md#gaps)) |
 
 ## Mood & Lighting
@@ -45,7 +45,7 @@ Cozy and daylit; references in [Modeling Guidelines](../../../Guidelines/Modelin
 
 ## Connections
 
-- Each owned [E_Magic_Door](../../03_Entities/Props/Interactive/E_Magic_Door.md) leads to its realm; [E_Exit_Portal](../../03_Entities/Props/Interactive/E_Exit_Portal.md)s lead back.
+- Each owned [E_Magic_Door](../../03_Entities/Props/Interactive/E_Magic_Door/E_Magic_Door.md) leads to its realm; [E_Exit_Portal](../../03_Entities/Props/Interactive/E_Exit_Portal/E_Exit_Portal.md)s lead back.
 
 ## UI
 

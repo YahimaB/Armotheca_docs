@@ -64,7 +64,7 @@ Socket pulses, glyph lighting, locking animation; low magical repulsion hum on i
 
 ## Used By
 
-- [F02_Weapon_Crafting](../../01_Features/F02_Weapon_Crafting.md), [E_Assembly_Bench](../../03_Entities/Props/Workstations/E_Assembly_Bench.md)
+- [F02_Weapon_Crafting](../../01_Features/F02_Weapon_Crafting.md), [E_Assembly_Bench](../../03_Entities/Props/Workstations/E_Assembly_Bench/E_Assembly_Bench.md)
 
 ## Open Questions
 

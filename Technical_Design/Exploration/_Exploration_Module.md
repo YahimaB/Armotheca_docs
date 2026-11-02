@@ -20,8 +20,8 @@ status: Draft
 | [M_Harvesting](../../GDD/02_Systems/Exploration/M_Harvesting.md), [M_Node_Spawning](../../GDD/02_Systems/Exploration/M_Node_Spawning.md) | [Resource_Nodes](Resource_Nodes.md) |
 | [M_Mob_Spawning](../../GDD/02_Systems/Exploration/M_Mob_Spawning.md), [M_Realm_Pressure](../../GDD/02_Systems/Exploration/M_Realm_Pressure.md) | [Mob_AI](Mob_AI.md) |
 | [_Mob_Roster](../../GDD/03_Entities/Mobs/_Mob_Roster.md) and its mobs | [Mob_AI](Mob_AI.md) |
-| [E_Magic_Door](../../GDD/03_Entities/Props/Interactive/E_Magic_Door.md), [E_Exit_Portal](../../GDD/03_Entities/Props/Interactive/E_Exit_Portal.md), [E_Aether_Chute](../../GDD/03_Entities/Props/Interactive/E_Aether_Chute.md) | [Door_Instances](Door_Instances.md) |
-| [E_Mineral_Vein](../../GDD/03_Entities/Props/Resource_Nodes/E_Mineral_Vein.md), [E_Arcane_Flora](../../GDD/03_Entities/Props/Resource_Nodes/E_Arcane_Flora.md) | [Resource_Nodes](Resource_Nodes.md) |
+| [E_Magic_Door](../../GDD/03_Entities/Props/Interactive/E_Magic_Door/E_Magic_Door.md), [E_Exit_Portal](../../GDD/03_Entities/Props/Interactive/E_Exit_Portal/E_Exit_Portal.md), [E_Aether_Chute](../../GDD/03_Entities/Props/Interactive/E_Aether_Chute/E_Aether_Chute.md) | [Door_Instances](Door_Instances.md) |
+| [E_Mineral_Vein](../../GDD/03_Entities/Props/Resource_Nodes/E_Mineral_Vein/E_Mineral_Vein.md), [E_Arcane_Flora](../../GDD/03_Entities/Props/Resource_Nodes/E_Arcane_Flora/E_Arcane_Flora.md) | [Resource_Nodes](Resource_Nodes.md) |
 | [_World_Map](../../GDD/04_Locations/_World_Map.md) and realms L01–L04 | [Realm_Loading](Realm_Loading.md) |
 
 Topics:

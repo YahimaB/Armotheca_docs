@@ -26,7 +26,7 @@ Two attacks, one per weapon family — a sword swing chain and a magic orb — p
 - **Roll is the defence.** [M_Roll](../Movement/M_Roll.md) cancels sword recovery and its invulnerability window answers telegraphed mob attacks.
 - **Quality does not change damage at this stage.** A Crude and a Flawless sword with the same blade material hit equally hard; Quality matters for commissions and payouts.
 - **Element has no combat effect at this stage.** It is a material identity used by orders and visuals (a fire core makes an orange orb).
-- **Wand and staff share the orb attack**; their difference is handedness and visuals ([E_Wand](../../03_Entities/Items/Weapons/E_Wand.md), [E_Staff](../../03_Entities/Items/Weapons/E_Staff.md)).
+- **Wand and staff share the orb attack**; their difference is handedness and visuals ([E_Wand](../../03_Entities/Items/Weapons/E_Wand/E_Wand.md), [E_Staff](../../03_Entities/Items/Weapons/E_Staff/E_Staff.md)).
 - **Friendly fire:** off.
 - **Workshop safety:** no combat happens inside the workshop.
 - Mob health, damage, drops and stagger rules: [_Mob_Roster](../../03_Entities/Mobs/_Mob_Roster.md).

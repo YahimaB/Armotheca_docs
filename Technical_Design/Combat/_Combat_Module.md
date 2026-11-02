@@ -17,7 +17,7 @@ status: Draft
 | [M_Sword_Swing](../../GDD/02_Systems/Combat/M_Sword_Swing.md) | [Technical Specifications](#technical-specifications) — sword hit detection, `SwordSwingProfile` |
 | [M_Magic_Orb](../../GDD/02_Systems/Combat/M_Magic_Orb.md) | [Technical Specifications](#technical-specifications) — orb projectile, `MagicOrbProfile` |
 | [M_Health_And_Downed](../../GDD/02_Systems/Combat/M_Health_And_Downed.md) | [Player Downed Flow](#player-downed-flow-host); `Health` |
-| [E_Sword](../../GDD/03_Entities/Items/Weapons/E_Sword.md), [E_Wand](../../GDD/03_Entities/Items/Weapons/E_Wand.md), [E_Staff](../../GDD/03_Entities/Items/Weapons/E_Staff.md) | [Architecture](#architecture--implementation-approaches) — executor per category |
+| [E_Sword](../../GDD/03_Entities/Items/Weapons/E_Sword/E_Sword.md), [E_Wand](../../GDD/03_Entities/Items/Weapons/E_Wand/E_Wand.md), [E_Staff](../../GDD/03_Entities/Items/Weapons/E_Staff/E_Staff.md) | [Architecture](#architecture--implementation-approaches) — executor per category |
 
 ---
 

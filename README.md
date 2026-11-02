@@ -22,7 +22,7 @@ Armotheca_docs/
 │   ├── 00_Overview/              # Vision, Core_Loop, Glossary, Changelog
 │   ├── 01_Features/              # _Feature_List + F01–F07 feature hubs
 │   ├── 02_Systems/               # One folder per system: _<System>_System hub + M_ mechanics
-│   ├── 03_Entities/              # Player, Mobs, NPCs/Clients, Items, Props (E_ docs + rosters)
+│   ├── 03_Entities/              # Player, Mobs, NPCs/Clients, Items, Props (a folder per entity + rosters)
 │   ├── 04_Locations/             # _World_Map, L00_Workshop, L01–L04 realms
 │   ├── 05_UI/                    # _UI_Flow + Hud/, Screens/, World/ (UI_ docs)
 │   └── 06_Balancing/             # All tuning values, one sheet per system
@@ -35,7 +35,7 @@ Armotheca_docs/
 ├── Guidelines/
 │   ├── Assets_Naming.md          # Unity Assets folder structure, asset prefixes, UI element vocabulary
 │   └── Modeling_Guidelines.md    # 3D style, poly budgets, textures, export rules for artists
-├── Visual_Design/                # References, concept art, prompts (moving to Guidelines/Art_Direction)
+├── Visual_Design/                # Legacy: references → Guidelines/Art_Direction, concept art and prompts → entity Art docs
 └── Development_Phases/
     ├── Development_Roadmap.md    # 4-phase production plan & milestones
     └── Phase_1_Core_Loop.md      # Phase 1 weekly plan

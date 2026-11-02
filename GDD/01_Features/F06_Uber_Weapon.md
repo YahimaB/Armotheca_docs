@@ -35,9 +35,9 @@ The Uber-Weapon — **The Primordial Armament** — is the legendary magnum opus
 
 ## Entities
 
-- [E_Primordial_Catalyst](../03_Entities/Items/Catalysts/E_Primordial_Catalyst.md): the four ingredients.
+- [E_Primordial_Catalyst](../03_Entities/Items/Catalysts/E_Primordial_Catalyst/E_Primordial_Catalyst.md): the four ingredients.
 - Apex Guardians that guard them: see [_Mob_Roster](../03_Entities/Mobs/_Mob_Roster.md).
-- [E_Great_Crucible](../03_Entities/Props/Workstations/E_Great_Crucible.md) and the catalyst display pedestal (planned in [_Prop_List](../03_Entities/Props/_Prop_List.md)).
+- [E_Great_Crucible](../03_Entities/Props/Workstations/E_Great_Crucible/E_Great_Crucible.md) and the catalyst display pedestal (planned in [_Prop_List](../03_Entities/Props/_Prop_List.md)).
 
 ## Locations
 

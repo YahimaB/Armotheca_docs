@@ -17,9 +17,9 @@ status: Draft
 | [M_Assembly](../../GDD/02_Systems/Crafting/M_Assembly.md) | [Category Resolution](#category-resolution); `WeaponAssembler`, `AssemblyBench` |
 | [M_Quality](../../GDD/02_Systems/Crafting/M_Quality.md) | [Weapon Stat Model](#weapon-stat-model-locked); [Quality Tiers](#quality-tiers) |
 | [M_Weapon_Naming](../../GDD/02_Systems/Crafting/M_Weapon_Naming.md) | [Unity C# Reference Code](#unity-c-reference-code) — `AssembledWeapon` name |
-| [E_Assembly_Bench](../../GDD/03_Entities/Props/Workstations/E_Assembly_Bench.md) | [Architecture](#architecture--implementation-approaches) — `AssemblyBench` |
-| Components ([E_Blade](../../GDD/03_Entities/Items/Components/E_Blade.md), [E_Core](../../GDD/03_Entities/Items/Components/E_Core.md), [E_Hilt](../../GDD/03_Entities/Items/Components/E_Hilt.md), [E_Short_Shaft](../../GDD/03_Entities/Items/Components/E_Short_Shaft.md), [E_Long_Shaft](../../GDD/03_Entities/Items/Components/E_Long_Shaft.md)) | `WeaponComponentData` |
-| Weapons ([E_Sword](../../GDD/03_Entities/Items/Weapons/E_Sword.md), [E_Wand](../../GDD/03_Entities/Items/Weapons/E_Wand.md), [E_Staff](../../GDD/03_Entities/Items/Weapons/E_Staff.md)) | `AssembledWeapon` |
+| [E_Assembly_Bench](../../GDD/03_Entities/Props/Workstations/E_Assembly_Bench/E_Assembly_Bench.md) | [Architecture](#architecture--implementation-approaches) — `AssemblyBench` |
+| Components ([E_Blade](../../GDD/03_Entities/Items/Components/E_Blade/E_Blade.md), [E_Core](../../GDD/03_Entities/Items/Components/E_Core/E_Core.md), [E_Hilt](../../GDD/03_Entities/Items/Components/E_Hilt/E_Hilt.md), [E_Short_Shaft](../../GDD/03_Entities/Items/Components/E_Short_Shaft/E_Short_Shaft.md), [E_Long_Shaft](../../GDD/03_Entities/Items/Components/E_Long_Shaft/E_Long_Shaft.md)) | `WeaponComponentData` |
+| Weapons ([E_Sword](../../GDD/03_Entities/Items/Weapons/E_Sword/E_Sword.md), [E_Wand](../../GDD/03_Entities/Items/Weapons/E_Wand/E_Wand.md), [E_Staff](../../GDD/03_Entities/Items/Weapons/E_Staff/E_Staff.md)) | `AssembledWeapon` |
 | [UI_Assembly_Bench](../../GDD/05_UI/World/UI_Assembly_Bench.md) | Events below; view in [_UI_Module](../UI/_UI_Module.md) |
 
 ---

@@ -28,7 +28,7 @@ An owned door opens into a fresh realm, accepts entrants for a short window, the
 
 ### Leaving a realm
 
-6. An [E_Exit_Portal](../../03_Entities/Props/Interactive/E_Exit_Portal.md) stands in every realm's Entry area and is **always open**. Using it (instant interaction) returns the player to the workshop in front of the door.
+6. An [E_Exit_Portal](../../03_Entities/Props/Interactive/E_Exit_Portal/E_Exit_Portal.md) stands in every realm's Entry area and is **always open**. Using it (instant interaction) returns the player to the workshop in front of the door.
 7. Being **downed and bleeding out** also returns the player to the workshop, dropping backpack and hands contents in the realm ([M_Health_And_Downed](../Combat/M_Health_And_Downed.md)). As an expedition member they may re-enter to recover the cargo as long as at least one teammate is still inside.
 8. If a solo player (or the last member inside) steps out, the realm empties and the expedition ends.
 

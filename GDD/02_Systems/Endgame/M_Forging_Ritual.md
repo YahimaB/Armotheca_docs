@@ -15,7 +15,7 @@ A four-phase, synchronised co-op forging event that turns the four catalysts int
 
 ## Rules
 
-1. **Requirements:** Tier 3 ([E_Great_Crucible](../../03_Entities/Props/Workstations/E_Great_Crucible.md)) and all four catalysts ([E_Primordial_Catalyst](../../03_Entities/Items/Catalysts/E_Primordial_Catalyst.md)). Players start the ritual from the Crucible (instant interaction).
+1. **Requirements:** Tier 3 ([E_Great_Crucible](../../03_Entities/Props/Workstations/E_Great_Crucible/E_Great_Crucible.md)) and all four catalysts ([E_Primordial_Catalyst](../../03_Entities/Items/Catalysts/E_Primordial_Catalyst/E_Primordial_Catalyst.md)). Players start the ritual from the Crucible (instant interaction).
 2. **Phase 1 — Harmonic Smelting (furnace team):** the Ignis Core and Astral Prism are melted in the Great Crucible. Temperature must be held in range through synchronised bellows pumping (cooperative continuous interaction).
 3. **Phase 2 — Arcane Turning (carpentry team):** the Sylvan Spire is carved into an Adamantine Shaft on the high-speed lathe.
 4. **Phase 3 — The Glacial Quench (dual action):** the molten celestial blade is plunged into the Glacial Heart solution at the exact moment the temperature needle aligns.

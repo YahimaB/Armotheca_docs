@@ -40,7 +40,7 @@ Commissions are the commercial pulse and narrative context of *Armotheca*. Inste
 ## Entities
 
 - [_Client_Roster](../03_Entities/NPCs/Clients/_Client_Roster.md): the five client archetypes.
-- [E_Mailbox_Nexus](../03_Entities/Props/Interactive/E_Mailbox_Nexus.md): incoming tube, board and outgoing tube.
+- [E_Mailbox_Nexus](../03_Entities/Props/Interactive/E_Mailbox_Nexus/E_Mailbox_Nexus.md): incoming tube, board and outgoing tube.
 
 ## Locations
 

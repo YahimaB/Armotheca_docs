@@ -34,7 +34,7 @@ Every realm follows the same layout:
  (safe zone)
 ```
 
-- **Entry:** arrival point, the always-open [E_Exit_Portal](../03_Entities/Props/Interactive/E_Exit_Portal.md) and the [E_Aether_Chute](../03_Entities/Props/Interactive/E_Aether_Chute.md). No mobs spawn here.
+- **Entry:** arrival point, the always-open [E_Exit_Portal](../03_Entities/Props/Interactive/E_Exit_Portal/E_Exit_Portal.md) and the [E_Aether_Chute](../03_Entities/Props/Interactive/E_Aether_Chute/E_Aether_Chute.md). No mobs spawn here.
 - **Outer Grounds:** close to the entry; common nodes and minor fauna. Suited to short supply runs and kept small enough to cross quickly.
 - **Deep Grounds:** further away; rare nodes and elemental beasts that drop cores. Reaching them means staying longer under rising Realm Pressure ([M_Realm_Pressure](../02_Systems/Exploration/M_Realm_Pressure.md)).
 - **Apex Arena:** gated area holding the realm's Apex Guardian. Since realms have no time limit, the fight fits in a normal expedition; the gate opens once the shop reaches Tier 3.

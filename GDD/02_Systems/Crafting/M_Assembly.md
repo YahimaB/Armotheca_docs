@@ -24,7 +24,7 @@ A weapon is assembled on the bench from exactly one foundation and one payload, 
 1. The **payload** (Blade or Core) defines the weapon's Base Damage and Element.
 2. The **foundation** (Hilt or Shaft) defines the weapon category and contributes to Quality.
 3. Any other pairing (e.g. Short Shaft + Blade) is incompatible and rejected by the bench; the last-inserted item returns to the player's hands, or onto the floor if hands are occupied.
-4. Flow on the [E_Assembly_Bench](../../03_Entities/Props/Workstations/E_Assembly_Bench.md):
+4. Flow on the [E_Assembly_Bench](../../03_Entities/Props/Workstations/E_Assembly_Bench/E_Assembly_Bench.md):
    1. A player snaps a processed payload (e.g. *Sun-Forged Blade*) into the Payload socket.
    2. A player snaps a foundation (e.g. *Ebony Hilt*) into the Foundation socket.
    3. Either player strikes the bench with the *Runed Mallet* (instant interaction), triggering a short locking animation.
@@ -51,7 +51,7 @@ Mallet strike, locking animation, output riser; Flawless glow ([M_Quality](M_Qua
 ## Dependencies
 
 - [M_Quality](M_Quality.md), [M_Weapon_Naming](M_Weapon_Naming.md)
-- Components: [E_Blade](../../03_Entities/Items/Components/E_Blade.md), [E_Core](../../03_Entities/Items/Components/E_Core.md), [E_Hilt](../../03_Entities/Items/Components/E_Hilt.md), [E_Short_Shaft](../../03_Entities/Items/Components/E_Short_Shaft.md), [E_Long_Shaft](../../03_Entities/Items/Components/E_Long_Shaft.md)
+- Components: [E_Blade](../../03_Entities/Items/Components/E_Blade/E_Blade.md), [E_Core](../../03_Entities/Items/Components/E_Core/E_Core.md), [E_Hilt](../../03_Entities/Items/Components/E_Hilt/E_Hilt.md), [E_Short_Shaft](../../03_Entities/Items/Components/E_Short_Shaft/E_Short_Shaft.md), [E_Long_Shaft](../../03_Entities/Items/Components/E_Long_Shaft/E_Long_Shaft.md)
 
 ## Used By
 

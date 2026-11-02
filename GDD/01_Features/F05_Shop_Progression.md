@@ -37,8 +37,8 @@ Progression bridges everyday shop management and the campaign's climactic object
 
 ## Entities
 
-- [E_Magic_Door](../03_Entities/Props/Interactive/E_Magic_Door.md): doors become available by tier.
-- Tier-gated workstations: [E_Woodworking_Lathe](../03_Entities/Props/Workstations/E_Woodworking_Lathe.md), [E_Arcane_Extractor](../03_Entities/Props/Workstations/E_Arcane_Extractor.md), [E_Quenching_Basin](../03_Entities/Props/Workstations/E_Quenching_Basin.md), [E_Great_Crucible](../03_Entities/Props/Workstations/E_Great_Crucible.md).
+- [E_Magic_Door](../03_Entities/Props/Interactive/E_Magic_Door/E_Magic_Door.md): doors become available by tier.
+- Tier-gated workstations: [E_Woodworking_Lathe](../03_Entities/Props/Workstations/E_Woodworking_Lathe/E_Woodworking_Lathe.md), [E_Arcane_Extractor](../03_Entities/Props/Workstations/E_Arcane_Extractor/E_Arcane_Extractor.md), [E_Quenching_Basin](../03_Entities/Props/Workstations/E_Quenching_Basin/E_Quenching_Basin.md), [E_Great_Crucible](../03_Entities/Props/Workstations/E_Great_Crucible/E_Great_Crucible.md).
 
 ## Locations
 

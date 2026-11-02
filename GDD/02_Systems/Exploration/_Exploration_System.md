@@ -37,7 +37,7 @@ There is no expedition timer. Instead:
 
 ### Anti-downtime
 
-1. **Aether Drop-Chute:** near the entry point, a chute instantly sends deposited resources to the workshop. With entry sealed after the window, the chute is the main way to supply the workshop mid-run without ending anyone's expedition ([E_Aether_Chute](../../03_Entities/Props/Interactive/E_Aether_Chute.md)).
+1. **Aether Drop-Chute:** near the entry point, a chute instantly sends deposited resources to the workshop. With entry sealed after the window, the chute is the main way to supply the workshop mid-run without ending anyone's expedition ([E_Aether_Chute](../../03_Entities/Props/Interactive/E_Aether_Chute/E_Aether_Chute.md)).
 2. **Member re-entry:** expedition members can step out and back in while a teammate holds the realm, so carrying cargo home or grabbing a better weapon does not end the run.
 3. **Multiple owned doors:** each owned door runs its own expedition; a workshop player who missed one entry window can open a different owned door.
 4. **Self-paced length:** teams can make quick supply runs or long deep dives; letter deadlines naturally keep most runs short.

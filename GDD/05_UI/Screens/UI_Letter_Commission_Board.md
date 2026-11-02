@@ -76,7 +76,7 @@ Faction trims: Adventurers Guild brown / bronze, Arcane Academy blue / silver, C
 
 ## Used By
 
-- [F01_Commissions](../../01_Features/F01_Commissions.md), [E_Mailbox_Nexus](../../03_Entities/Props/Interactive/E_Mailbox_Nexus.md)
+- [F01_Commissions](../../01_Features/F01_Commissions.md), [E_Mailbox_Nexus](../../03_Entities/Props/Interactive/E_Mailbox_Nexus/E_Mailbox_Nexus.md)
 
 ## Open Questions
 

@@ -28,11 +28,11 @@ Clients never appear in person; they are factions that send commission letters (
 
 | ID | Name | Preferred Weaponry | Key Demand | Reward Profile | Penalty for Failure | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| [E_Adventurers_Guild](E_Adventurers_Guild.md) | Adventurers Guild | Standard swords & wands | Standard or better quality | Moderate gold, Guild rep | Low (mild rep loss) | Draft |
-| [E_Arcane_Academy](E_Arcane_Academy.md) | Arcane Academy | High-tier wands & staves | High-quality cores, zero defects | High gold, rare blueprints | High (heavy rep loss) | Draft |
-| [E_City_Garrison](E_City_Garrison.md) | City Garrison | Bulk uniform swords | Exact identical batches | Bulk gold bonus | Medium | Draft |
-| [E_SOS_Dispatch](E_SOS_Dispatch.md) | SOS Emergency Dispatch | Any (elemental counters) | Very tight timer | Gold multiplier, Emergency Tokens | None (order expires) | Draft |
-| [E_Eccentric_Collectors](E_Eccentric_Collectors.md) | Eccentric Collectors | Exotic / hybrid combos | Rare mob parts, unusual materials | Uber-Weapon blueprints and catalysts | Rejection of weapon | Draft |
+| [E_Adventurers_Guild](E_Adventurers_Guild/E_Adventurers_Guild.md) | Adventurers Guild | Standard swords & wands | Standard or better quality | Moderate gold, Guild rep | Low (mild rep loss) | Draft |
+| [E_Arcane_Academy](E_Arcane_Academy/E_Arcane_Academy.md) | Arcane Academy | High-tier wands & staves | High-quality cores, zero defects | High gold, rare blueprints | High (heavy rep loss) | Draft |
+| [E_City_Garrison](E_City_Garrison/E_City_Garrison.md) | City Garrison | Bulk uniform swords | Exact identical batches | Bulk gold bonus | Medium | Draft |
+| [E_SOS_Dispatch](E_SOS_Dispatch/E_SOS_Dispatch.md) | SOS Emergency Dispatch | Any (elemental counters) | Very tight timer | Gold multiplier, Emergency Tokens | None (order expires) | Draft |
+| [E_Eccentric_Collectors](E_Eccentric_Collectors/E_Eccentric_Collectors.md) | Eccentric Collectors | Exotic / hybrid combos | Rare mob parts, unusual materials | Uber-Weapon blueprints and catalysts | Rejection of weapon | Draft |
 
 ## Gaps
 

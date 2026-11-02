@@ -66,7 +66,7 @@ Players who stay in the workshop are never stranded waiting for expedition playe
 
 1. **Self-paced but pressured expeditions:** no time limit inside realms; letter deadlines, backpack capacity and rising Realm Pressure push teams home, so most runs stay short while deep dives remain possible. → [_Exploration_System](../02_Systems/Exploration/_Exploration_System.md)
 2. **Entry window:** a door accepts new entrants only for a short window after opening; teams decide together who goes in. → [M_Door_Lifecycle](../02_Systems/Exploration/M_Door_Lifecycle.md)
-3. **Shop preparation and asynchronous work:** while combatants gather mob drops, workshop players refine stockpiled wood, smelt ores or prepare standard hilts and shafts. The [E_Aether_Chute](../03_Entities/Props/Interactive/E_Aether_Chute.md) keeps raw materials flowing mid-run.
+3. **Shop preparation and asynchronous work:** while combatants gather mob drops, workshop players refine stockpiled wood, smelt ores or prepare standard hilts and shafts. The [E_Aether_Chute](../03_Entities/Props/Interactive/E_Aether_Chute/E_Aether_Chute.md) keeps raw materials flowing mid-run.
 4. **Omni-role flexibility:** any player can work any bench at any time, or open another owned door after missing an entry window.
 
 ## Open Questions

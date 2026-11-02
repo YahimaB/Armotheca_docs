@@ -43,7 +43,7 @@ Orb colour from the core's element, small burst on impact, enemy flash.
 
 ## Dependencies
 
-- [E_Wand](../../03_Entities/Items/Weapons/E_Wand.md), [E_Staff](../../03_Entities/Items/Weapons/E_Staff.md)
+- [E_Wand](../../03_Entities/Items/Weapons/E_Wand/E_Wand.md), [E_Staff](../../03_Entities/Items/Weapons/E_Staff/E_Staff.md)
 
 ## Used By
 

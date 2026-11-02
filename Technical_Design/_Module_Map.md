@@ -39,11 +39,11 @@ Where each GDD entity, location and screen is implemented.
 | Mobs ([_Mob_Roster](../GDD/03_Entities/Mobs/_Mob_Roster.md)) | Exploration | [Mob_AI](Exploration/Mob_AI.md) |
 | Clients ([_Client_Roster](../GDD/03_Entities/NPCs/Clients/_Client_Roster.md)) | Orders | [_Orders_Module › Data](Orders/_Orders_Module.md#data) |
 | Weapons and components ([_Item_List](../GDD/03_Entities/Items/_Item_List.md)) | Crafting | [_Crafting_Module](Crafting/_Crafting_Module.md#architecture--implementation-approaches) |
-| [E_Primordial_Catalyst](../GDD/03_Entities/Items/Catalysts/E_Primordial_Catalyst.md) | Endgame | [_Endgame_Module](Endgame/_Endgame_Module.md#technical-specifications) |
+| [E_Primordial_Catalyst](../GDD/03_Entities/Items/Catalysts/E_Primordial_Catalyst/E_Primordial_Catalyst.md) | Endgame | [_Endgame_Module](Endgame/_Endgame_Module.md#technical-specifications) |
 | Workstations ([_Prop_List](../GDD/03_Entities/Props/_Prop_List.md)) | Processing; Crafting (bench); Endgame (crucible) | [_Processing_Module](Processing/_Processing_Module.md#technical-specifications) |
 | Doors, Exit Portal, Aether Chute | Exploration | [Door_Instances](Exploration/Door_Instances.md) |
 | Resource nodes | Exploration | [Resource_Nodes](Exploration/Resource_Nodes.md) |
-| [E_Mailbox_Nexus](../GDD/03_Entities/Props/Interactive/E_Mailbox_Nexus.md) | Orders | [_Orders_Module › Networking](Orders/_Orders_Module.md#networking) |
+| [E_Mailbox_Nexus](../GDD/03_Entities/Props/Interactive/E_Mailbox_Nexus/E_Mailbox_Nexus.md) | Orders | [_Orders_Module › Networking](Orders/_Orders_Module.md#networking) |
 | [L00_Workshop](../GDD/04_Locations/L00_Workshop/L00_Workshop.md) | Progression | [_Progression_Module](Progression/_Progression_Module.md#technical-specifications) |
 | Realms ([_World_Map](../GDD/04_Locations/_World_Map.md)) | Exploration | [Realm_Loading](Exploration/Realm_Loading.md) |
 | All `UI_` screens ([_UI_Flow](../GDD/05_UI/_UI_Flow.md)) | UI | [_UI_Module](UI/_UI_Module.md) |

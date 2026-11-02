@@ -45,7 +45,7 @@ Short hit-stop, enemy flash, light knockback, impact sound tied to blade materia
 
 ## Dependencies
 
-- [E_Sword](../../03_Entities/Items/Weapons/E_Sword.md), [M_Roll](../Movement/M_Roll.md)
+- [E_Sword](../../03_Entities/Items/Weapons/E_Sword/E_Sword.md), [M_Roll](../Movement/M_Roll.md)
 
 ## Used By
 

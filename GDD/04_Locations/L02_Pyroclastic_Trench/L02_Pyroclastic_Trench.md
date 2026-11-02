@@ -21,16 +21,16 @@ Follows the shared band layout (Entry → Outer Grounds → Deep Grounds → Ape
 
 | Mob | Where | Notes |
 | --- | --- | --- |
-| [E_Fire_Salamander](../../03_Entities/Mobs/Elemental_Beasts/E_Fire_Salamander.md) | Deep Grounds | |
-| [E_Pyroclastic_Apex](../../03_Entities/Mobs/Apex_Guardians/E_Pyroclastic_Apex.md) | Apex Arena | Guards the *Ignis Core* |
+| [E_Fire_Salamander](../../03_Entities/Mobs/Elemental_Beasts/E_Fire_Salamander/E_Fire_Salamander.md) | Deep Grounds | |
+| [E_Pyroclastic_Apex](../../03_Entities/Mobs/Apex_Guardians/E_Pyroclastic_Apex/E_Pyroclastic_Apex.md) | Apex Arena | Guards the *Ignis Core* |
 
 ## Props & Nodes
 
 | Entity | Where | Notes |
 | --- | --- | --- |
-| [E_Mineral_Vein](../../03_Entities/Props/Resource_Nodes/E_Mineral_Vein.md) | Outer / Deep Grounds | Obsidian, Brimstone |
-| [E_Exit_Portal](../../03_Entities/Props/Interactive/E_Exit_Portal.md) | Entry | |
-| [E_Aether_Chute](../../03_Entities/Props/Interactive/E_Aether_Chute.md) | Entry | |
+| [E_Mineral_Vein](../../03_Entities/Props/Resource_Nodes/E_Mineral_Vein/E_Mineral_Vein.md) | Outer / Deep Grounds | Obsidian, Brimstone |
+| [E_Exit_Portal](../../03_Entities/Props/Interactive/E_Exit_Portal/E_Exit_Portal.md) | Entry | |
+| [E_Aether_Chute](../../03_Entities/Props/Interactive/E_Aether_Chute/E_Aether_Chute.md) | Entry | |
 
 Node types per band are rolled per opening ([M_Node_Spawning](../../02_Systems/Exploration/M_Node_Spawning.md)).
 
@@ -40,7 +40,7 @@ Volcanic chasm. Realms are darker and moodier than the workshop, lit by strong c
 
 ## Connections
 
-- Entered through its [E_Magic_Door](../../03_Entities/Props/Interactive/E_Magic_Door.md) in [L00_Workshop](../L00_Workshop/L00_Workshop.md); left through the [E_Exit_Portal](../../03_Entities/Props/Interactive/E_Exit_Portal.md).
+- Entered through its [E_Magic_Door](../../03_Entities/Props/Interactive/E_Magic_Door/E_Magic_Door.md) in [L00_Workshop](../L00_Workshop/L00_Workshop.md); left through the [E_Exit_Portal](../../03_Entities/Props/Interactive/E_Exit_Portal/E_Exit_Portal.md).
 
 ## UI
 

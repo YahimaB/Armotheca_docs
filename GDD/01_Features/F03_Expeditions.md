@@ -47,8 +47,8 @@ Magic Doors are the resource lifeline of *Armotheca*. Each door opens onto a com
 
 ## Entities
 
-- [E_Magic_Door](../03_Entities/Props/Interactive/E_Magic_Door.md), [E_Exit_Portal](../03_Entities/Props/Interactive/E_Exit_Portal.md), [E_Aether_Chute](../03_Entities/Props/Interactive/E_Aether_Chute.md)
-- [E_Mineral_Vein](../03_Entities/Props/Resource_Nodes/E_Mineral_Vein.md), [E_Arcane_Flora](../03_Entities/Props/Resource_Nodes/E_Arcane_Flora.md)
+- [E_Magic_Door](../03_Entities/Props/Interactive/E_Magic_Door/E_Magic_Door.md), [E_Exit_Portal](../03_Entities/Props/Interactive/E_Exit_Portal/E_Exit_Portal.md), [E_Aether_Chute](../03_Entities/Props/Interactive/E_Aether_Chute/E_Aether_Chute.md)
+- [E_Mineral_Vein](../03_Entities/Props/Resource_Nodes/E_Mineral_Vein/E_Mineral_Vein.md), [E_Arcane_Flora](../03_Entities/Props/Resource_Nodes/E_Arcane_Flora/E_Arcane_Flora.md)
 - [_Mob_Roster](../03_Entities/Mobs/_Mob_Roster.md)
 
 ## Locations

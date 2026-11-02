@@ -15,7 +15,7 @@ A Magic Door is unlocked when the workshop reaches its tier **and** the team pay
 
 ## Rules
 
-1. When the workshop reaches a door's **required tier**, the door appears in the Threshold of Portals, sealed, with a price plaque ([E_Magic_Door](../../03_Entities/Props/Interactive/E_Magic_Door.md)).
+1. When the workshop reaches a door's **required tier**, the door appears in the Threshold of Portals, sealed, with a price plaque ([E_Magic_Door](../../03_Entities/Props/Interactive/E_Magic_Door/E_Magic_Door.md)).
 2. The team **pays the door's gold price** from the shared treasury with a hold-to-confirm interaction on the plaque, to avoid accidental purchases.
 3. The first door (Verdant Corruption) is owned at the start.
 4. Tier 3 makes two doors available at once, so the team chooses which realm to invest in first.

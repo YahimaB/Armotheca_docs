@@ -48,9 +48,9 @@ Crafting is the tactile core of workshop life. Raw materials hauled from expedit
 
 ## Entities
 
-- Workstations: [E_Smelting_Forge](../03_Entities/Props/Workstations/E_Smelting_Forge.md), [E_Anvil](../03_Entities/Props/Workstations/E_Anvil.md), [E_Quenching_Basin](../03_Entities/Props/Workstations/E_Quenching_Basin.md), [E_Woodworking_Lathe](../03_Entities/Props/Workstations/E_Woodworking_Lathe.md), [E_Carving_Bench](../03_Entities/Props/Workstations/E_Carving_Bench.md), [E_Arcane_Extractor](../03_Entities/Props/Workstations/E_Arcane_Extractor.md), [E_Purity_Distiller](../03_Entities/Props/Workstations/E_Purity_Distiller.md), [E_Assembly_Bench](../03_Entities/Props/Workstations/E_Assembly_Bench.md).
-- Components: [E_Blade](../03_Entities/Items/Components/E_Blade.md), [E_Core](../03_Entities/Items/Components/E_Core.md), [E_Hilt](../03_Entities/Items/Components/E_Hilt.md), [E_Short_Shaft](../03_Entities/Items/Components/E_Short_Shaft.md), [E_Long_Shaft](../03_Entities/Items/Components/E_Long_Shaft.md).
-- Weapons: [E_Sword](../03_Entities/Items/Weapons/E_Sword.md), [E_Wand](../03_Entities/Items/Weapons/E_Wand.md), [E_Staff](../03_Entities/Items/Weapons/E_Staff.md).
+- Workstations: [E_Smelting_Forge](../03_Entities/Props/Workstations/E_Smelting_Forge/E_Smelting_Forge.md), [E_Anvil](../03_Entities/Props/Workstations/E_Anvil/E_Anvil.md), [E_Quenching_Basin](../03_Entities/Props/Workstations/E_Quenching_Basin/E_Quenching_Basin.md), [E_Woodworking_Lathe](../03_Entities/Props/Workstations/E_Woodworking_Lathe/E_Woodworking_Lathe.md), [E_Carving_Bench](../03_Entities/Props/Workstations/E_Carving_Bench/E_Carving_Bench.md), [E_Arcane_Extractor](../03_Entities/Props/Workstations/E_Arcane_Extractor/E_Arcane_Extractor.md), [E_Purity_Distiller](../03_Entities/Props/Workstations/E_Purity_Distiller/E_Purity_Distiller.md), [E_Assembly_Bench](../03_Entities/Props/Workstations/E_Assembly_Bench/E_Assembly_Bench.md).
+- Components: [E_Blade](../03_Entities/Items/Components/E_Blade/E_Blade.md), [E_Core](../03_Entities/Items/Components/E_Core/E_Core.md), [E_Hilt](../03_Entities/Items/Components/E_Hilt/E_Hilt.md), [E_Short_Shaft](../03_Entities/Items/Components/E_Short_Shaft/E_Short_Shaft.md), [E_Long_Shaft](../03_Entities/Items/Components/E_Long_Shaft/E_Long_Shaft.md).
+- Weapons: [E_Sword](../03_Entities/Items/Weapons/E_Sword/E_Sword.md), [E_Wand](../03_Entities/Items/Weapons/E_Wand/E_Wand.md), [E_Staff](../03_Entities/Items/Weapons/E_Staff/E_Staff.md).
 
 ## Locations
 
