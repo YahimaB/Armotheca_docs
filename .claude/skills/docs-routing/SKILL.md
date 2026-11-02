@@ -34,19 +34,15 @@ split into one document per type; route each part and say how it was split.
   code belong to Technical_Design.
 - **Plans quoting specs:** a phase plan links to GDD/Tech sections; it never restates
   their rules. If a plan needs a missing spec, route the spec first.
+- **Art:** an entity's look (description, palette, concept images and their prompts)
+  belongs to its Art doc in GDD; reference screenshots and how concept art is
+  produced belong to Guidelines (`Art_Direction/`).
 - Still ambiguous after reading: ask the user, offering the two closest types.
 
-## Legacy folders (pending reform)
-
-These folders predate the four-type layout. Edit their files in place under the
-owner skill's rules; do not move them until the user approves the reform. Before
-creating a new document of one of these kinds, ask whether to start the reform.
-
-| Current | Proposed target | Owner skill |
-| --- | --- | --- |
-| `Visual_Design/References/` | `Guidelines/Art_Direction/References/` | `docs-guidelines` |
-| `Visual_Design/Concept_Arts/<Subject>/` | the entity's `Art/` folder (`Main_Character` → `GDD/03_Entities/Player/`) | `docs-gdd` |
-| `Visual_Design/Prompts/<Subject>.md` | History entries in the entity's Art doc (`Player_Art.md`) | `docs-gdd` |
+The legacy `Visual_Design/` folder was reformed into these types on 2026-11-02:
+references went to `Guidelines/Art_Direction/References/`, the Main_Character
+concept art and prompt to `GDD/03_Entities/Player/Player_Art.md`, and the prompt
+workflow to `Guidelines/Art_Direction/Concept_Art_Workflow.md`.
 
 ## Shared rules (every route)
 

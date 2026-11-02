@@ -34,7 +34,7 @@ What each state allows is in [_Movement_System › Interactions](../../02_System
 
 ## Art & Audio References
 
-- Concept art: [Main Character](../../../Visual_Design/Prompts/Main_Character.md).
+- Concept art: [Player_Art](Player_Art.md).
 
 ## Appears In
 

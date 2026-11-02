@@ -131,16 +131,23 @@ points to a module doc section, or to `_Module_Map.md` for features.
    links it from Art & Audio References. The Art doc holds:
    - **Description:** the look in a few sentences plus a list of key visual
      elements; behaviour and role stay in the entity doc.
-   - **Palette:** key colours as hex values only.
-   - **Selected:** the heading names of the chosen History versions.
-   - **History:** one `### <NN> <Short Name>` entry per kept image, oldest first,
-     with the image, the AI model and the prompt. A version is one image that was
-     kept; rejected variants are not recorded. Numbers are two digits and never
-     reused. A generated image records its full prompt; an edited one records the
-     prompt that changed the version it was made from.
+   - **Palette:** key colours, each a swatch followed by its hex value:
+     ``<span style="color:#3A4A61;">■</span> `#3A4A61` ``.
+   - **Selected:** a table of the chosen History versions in version order; the
+     first row links each heading, the second shows its image.
+   - **History:** one `### <NN> <Short Name>` entry per kept image, newest first,
+     with the image, the AI model and the prompt folded in a quoted
+     `<details><summary>Prompt</summary>` block (see the template). A version
+     is one image that was kept; rejected variants are not recorded. Numbers are
+     two digits and never reused. A generated image records its full prompt; an
+     edited one records the prompt that changed the version it was made from.
    - **Images** live in the entity's `Art/` folder, named
      `E_<Name>_Art_<NN>_<Short_Name>.png` so the file matches its History heading
      (`### 02 Glowing Core` → `E_Void_Slime_Art_02_Glowing_Core.png`).
+   - **Image size:** every image, in Selected and History, fits in 400×400.
+     Obsidian sizes by width (`![02 Glowing Core|400](Art/…)`): use 400 for a
+     landscape or square image and `400 × width / height` for a portrait one
+     (1696×2528 → `|268`). Inside a table, escape the pipe: `\|268`.
 
 ## Overview files
 
@@ -179,8 +186,8 @@ points to a module doc section, or to `_Module_Map.md` for features.
   listed in its system hub and in at least one feature.
 - Every entity and location has a UI section and appears in its roster or the
   world map.
-- Every entity sits in its own folder; every Art doc's Selected entries match
-  History headings, and every History image exists in `Art/` under the matching
+- Every entity sits in its own folder; every Art doc's Selected links and images
+  match History headings, and every History image exists in `Art/` under the matching
   name.
 - No tuning value in prose outside `06_Balancing/`.
 - Properties block, title and `>` line present; links resolve (run the

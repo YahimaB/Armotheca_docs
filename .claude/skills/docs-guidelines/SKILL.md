@@ -1,6 +1,6 @@
 ---
 name: docs-guidelines
-description: Write and maintain Armotheca production standards in Guidelines/: asset structure and naming, 3D modeling rules, and art direction (references, style). Use for conventions every contributor must follow, whatever the feature.
+description: Write and maintain Armotheca production standards in Guidelines/: asset structure and naming, 3D modeling rules, and art direction (references, concept art workflow). Use for conventions every contributor must follow, whatever the feature.
 ---
 
 # Guidelines documents
@@ -16,12 +16,14 @@ feature's GDD or Technical_Design doc instead.
 Guidelines/
 ├── Assets_Naming.md            # Assets/ folder layout, prefixes, code naming, UI vocabulary
 ├── Modeling_Guidelines.md      # 3D style, poly budgets, LODs, textures, export, delivery
-└── Art_Direction/              # Target of legacy Visual_Design/References/
+└── Art_Direction/
+    ├── Concept_Art_Workflow.md # Stages, prompt settings and templates, common failures
     └── References/<Source>/    # Reference screenshots, prefixed per source (AF_1.jpg)
 ```
 
 Concept art for a specific entity (description, palette, images, prompts) is not a
 guideline: it lives in the entity's Art doc in the GDD (`docs-gdd`, rule 9).
+`Concept_Art_Workflow.md` says how such art is produced and recorded.
 
 Add a new guideline file only for a new discipline (e.g. `Audio_Guidelines.md`,
 `Code_Style.md`); otherwise extend an existing one.

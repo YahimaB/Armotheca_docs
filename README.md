@@ -34,8 +34,8 @@ Armotheca_docs/
 │   └── Exploration/              # + topics: Door_Instances, Realm_Loading, Resource_Nodes, Mob_AI
 ├── Guidelines/
 │   ├── Assets_Naming.md          # Unity Assets folder structure, asset prefixes, UI element vocabulary
-│   └── Modeling_Guidelines.md    # 3D style, poly budgets, textures, export rules for artists
-├── Visual_Design/                # Legacy: references → Guidelines/Art_Direction, concept art and prompts → entity Art docs
+│   ├── Modeling_Guidelines.md    # 3D style, poly budgets, textures, export rules for artists
+│   └── Art_Direction/            # Concept_Art_Workflow + References/ (AF_, GC_ screenshots)
 └── Development_Phases/
     ├── Development_Roadmap.md    # 4-phase production plan & milestones
     └── Phase_1_Core_Loop.md      # Phase 1 weekly plan
@@ -87,7 +87,8 @@ Tech stack (Unity 6.3 LTS · GameObjects, no ECS · FishNet + FishySteamworks, p
 
 ### 📐 Guidelines
 - **[Assets Structure & Naming](Guidelines/Assets_Naming.md)** - `Assets/` folder layout, zone tokens, asset and data-asset prefixes, code naming, UI element vocabulary (Screen, Window, Panel, Container, Card, Label, Value...) and UI layers.
-- **[3D Modeling Guidelines](Guidelines/Modeling_Guidelines.md)** - Target look, reference breakdown (`Visual_Design/References`), polygon budgets, LODs, textures, pivots, modular weapon sockets and delivery checklist.
+- **[3D Modeling Guidelines](Guidelines/Modeling_Guidelines.md)** - Target look, reference breakdown (`Guidelines/Art_Direction/References`), polygon budgets, LODs, textures, pivots, modular weapon sockets and delivery checklist.
+- **[Concept Art Workflow](Guidelines/Art_Direction/Concept_Art_Workflow.md)** - Concept → T-pose → views stages, prompt settings and templates, common failures; results go to each entity's Art doc ([Player_Art](GDD/03_Entities/Player/Player_Art.md)).
 
 ### 🚀 Production & Milestones
 - **[Development Roadmap](Development_Phases/Development_Roadmap.md)** - Phased plan from Phase 1 prototype through Phase 4 polish and launch.

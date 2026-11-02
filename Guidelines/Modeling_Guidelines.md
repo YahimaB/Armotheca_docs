@@ -1,7 +1,7 @@
 # 3D Modeling Guidelines
 
 > Requirements for 3D artists so that every model in *Armotheca* matches the same style, complexity and technical budget.
-> **Visual references:** `Visual_Design/References/` (see §2) · **Naming:** [Assets Naming](Assets_Naming.md) · **Game context:** [Vision](../GDD/00_Overview/Vision.md) · **Tech stack:** [Technical Overview](../Technical_Design/Technical_Overview.md)
+> **Visual references:** `Art_Direction/References/` (see §2) · **Concept art:** [Concept Art Workflow](Art_Direction/Concept_Art_Workflow.md) · **Naming:** [Assets Naming](Assets_Naming.md) · **Game context:** [Vision](../GDD/00_Overview/Vision.md) · **Tech stack:** [Technical Overview](../Technical_Design/Technical_Overview.md)
 
 ---
 
@@ -26,15 +26,15 @@ Character style (Alchemy Factory's semi-realistic people vs Goblin Cleanup's mor
 
 | Image | What to study |
 |---|---|
-| [AF_1](../Visual_Design/References/Alchemy_Factory/AF_1.jpg) | Interior scale of the workshop: timber frame with large chamfered beams, plaster walls with soft painted variation, herringbone floor. Props stay simple; detail lives in silhouette and bevels. |
-| [AF_2](../Visual_Design/References/Alchemy_Factory/AF_2.jpg) | Foliage complexity: simple leaf shapes, berry clusters as a few spheres. Stone border blocks are chunky, irregular and heavily beveled — the target for all stone. |
-| [AF_3](../Visual_Design/References/Alchemy_Factory/AF_3.jpg) | Mechanical props: pipes, stone planters, glowing flasks used as emissive accents. Shows how repeated props must stay cheap because they are instanced many times. |
-| [AF_4](../Visual_Design/References/Alchemy_Factory/AF_4.jpg) | **Magic Door reference.** Stone arch with iron bands and glowing runes, ornament carved into a single panel, portal surface handled by VFX. Also: roof tiles and town buildings for silhouette density. |
-| [AF_5](../Visual_Design/References/Alchemy_Factory/AF_5.jpg) | **The prop detail benchmark.** Barrels, mugs and crate: thick staves, iron bands with oversized rivets, brass tap, rope. Every edge beveled; wood grain lives in the normal map and albedo, not in geometry. |
-| [GC_1](../Visual_Design/References/Goblin_Cleanup/GC_1.jpg) | Character readability: strong color blocking per character, clear silhouettes at distance. Hero magical device (gold rings + glowing orb) as the visual centerpiece of a room. |
-| [GC_2](../Visual_Design/References/Goblin_Cleanup/GC_2.jpg) | Prop density in an interior hub: clutter that reads as cozy without hurting readability; emissive candles as light accents. |
-| [GC_3](../Visual_Design/References/Goblin_Cleanup/GC_3.png) | **Realm environment reference.** Gothic stone corridors, chunky blocks, cracks in the normal map, teal/orange accent lighting, coffins and skeletons as themed set dressing. |
-| [GC_4](../Visual_Design/References/Goblin_Cleanup/GC_4.png) | **Mob tone reference.** The mimic chest: exaggerated, slightly comedic creature design built from a recognizable object. Modular stone walls and arches. |
+| [AF_1](Art_Direction/References/Alchemy_Factory/AF_1.jpg) | Interior scale of the workshop: timber frame with large chamfered beams, plaster walls with soft painted variation, herringbone floor. Props stay simple; detail lives in silhouette and bevels. |
+| [AF_2](Art_Direction/References/Alchemy_Factory/AF_2.jpg) | Foliage complexity: simple leaf shapes, berry clusters as a few spheres. Stone border blocks are chunky, irregular and heavily beveled — the target for all stone. |
+| [AF_3](Art_Direction/References/Alchemy_Factory/AF_3.jpg) | Mechanical props: pipes, stone planters, glowing flasks used as emissive accents. Shows how repeated props must stay cheap because they are instanced many times. |
+| [AF_4](Art_Direction/References/Alchemy_Factory/AF_4.jpg) | **Magic Door reference.** Stone arch with iron bands and glowing runes, ornament carved into a single panel, portal surface handled by VFX. Also: roof tiles and town buildings for silhouette density. |
+| [AF_5](Art_Direction/References/Alchemy_Factory/AF_5.jpg) | **The prop detail benchmark.** Barrels, mugs and crate: thick staves, iron bands with oversized rivets, brass tap, rope. Every edge beveled; wood grain lives in the normal map and albedo, not in geometry. |
+| [GC_1](Art_Direction/References/Goblin_Cleanup/GC_1.jpg) | Character readability: strong color blocking per character, clear silhouettes at distance. Hero magical device (gold rings + glowing orb) as the visual centerpiece of a room. |
+| [GC_2](Art_Direction/References/Goblin_Cleanup/GC_2.jpg) | Prop density in an interior hub: clutter that reads as cozy without hurting readability; emissive candles as light accents. |
+| [GC_3](Art_Direction/References/Goblin_Cleanup/GC_3.png) | **Realm environment reference.** Gothic stone corridors, chunky blocks, cracks in the normal map, teal/orange accent lighting, coffins and skeletons as themed set dressing. |
+| [GC_4](Art_Direction/References/Goblin_Cleanup/GC_4.png) | **Mob tone reference.** The mimic chest: exaggerated, slightly comedic creature design built from a recognizable object. Modular stone walls and arches. |
 
 ---
 
