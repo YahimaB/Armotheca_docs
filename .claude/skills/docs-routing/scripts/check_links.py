@@ -1,4 +1,4 @@
-"""Report relative Markdown links in Armotheca_docs whose target file is missing."""
+"""Report relative Markdown links and <img> sources in Armotheca_docs whose target file is missing."""
 import re
 import sys
 from pathlib import Path
@@ -6,6 +6,7 @@ from urllib.parse import unquote
 
 SKIP_DIRS = {".git", ".obsidian", ".idea", ".claude", ".trash"}
 LINK = re.compile(r"!?\[[^\]]*\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
+IMG = re.compile(r"<img\s[^>]*src=\"([^\"]+)\"")
 
 
 def iter_docs(root):
@@ -24,7 +25,7 @@ def main():
                 in_code = not in_code
             if in_code:
                 continue
-            for target in LINK.findall(line):
+            for target in LINK.findall(line) + IMG.findall(line):
                 if re.match(r"^[a-z]+:", target) or target.startswith("#"):
                     continue
                 file_part = unquote(target.split("#", 1)[0])

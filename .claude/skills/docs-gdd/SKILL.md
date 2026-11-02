@@ -144,10 +144,9 @@ points to a module doc section, or to `_Module_Map.md` for features.
    - **Images** live in the entity's `Art/` folder, named
      `E_<Name>_Art_<NN>_<Short_Name>.png` so the file matches its History heading
      (`### 02 Glowing Core` → `E_Void_Slime_Art_02_Glowing_Core.png`).
-   - **Image size:** every image, in Selected and History, fits in 400×400.
-     Obsidian sizes by width (`![02 Glowing Core|400](Art/…)`): use 400 for a
-     landscape or square image and `400 × width / height` for a portrait one
-     (1696×2528 → `|268`). Inside a table, escape the pipe: `\|268`.
+   - **Image size:** every image, in Selected and History, is an HTML `<img>`
+     capped at 400×400, whatever its aspect:
+     `<img src="Art/E_Void_Slime_Art_02_Glowing_Core.png" alt="02 Glowing Core" style="max-width:400px; max-height:400px;">`.
 
 ## Overview files
 

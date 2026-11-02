@@ -29,19 +29,18 @@ status: Draft
 
 | [01 <Short Name>](#01-<short-name>) |
 | --- |
-| ![01 <Short Name>\|<W>](Art/E_<Name>_Art_01_<Short_Name>.png) |
+| <img src="Art/E_<Name>_Art_01_<Short_Name>.png" alt="01 <Short Name>" style="max-width:400px; max-height:400px;"> |
 
 ## History
 
 <!-- One entry per kept image, newest first. Numbers are two digits and never reused.
-     The image lives in Art/ as E_<Name>_Art_<NN>_<Short_Name>.png and is shown at most 400x400:
-     <W> is 400 for a landscape or square image, 400 x width / height for a portrait one. Escape the | as \| inside tables.
+     The image lives in Art/ as E_<Name>_Art_<NN>_<Short_Name>.png and is shown with an <img> tag capped at 400x400.
      The prompt sits in a quoted <details> block, every line prefixed with ">" (no space), so it starts folded in Obsidian and Claude Desktop.
      A generated image records its full prompt; an edited one records only the prompt that changed the version it was made from. -->
 
 ### 01 <Short Name>
 
-![01 <Short Name>|<W>](Art/E_<Name>_Art_01_<Short_Name>.png)
+<img src="Art/E_<Name>_Art_01_<Short_Name>.png" alt="01 <Short Name>" style="max-width:400px; max-height:400px;">
 
 **Model:** <AI model>
 
