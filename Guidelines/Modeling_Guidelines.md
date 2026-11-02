@@ -1,7 +1,7 @@
 # 3D Modeling Guidelines
 
 > Requirements for 3D artists so that every model in *Armotheca* matches the same style, complexity and technical budget.
-> **Visual references:** `Visual_Design/References/` (see §2) · **Naming:** [Assets Naming](Assets_Naming.md) · **Game context:** [Master GDD](../GDD/Master_GDD.md) · **Tech stack:** [Technical Overview](../Technical_Design/Technical_Overview.md)
+> **Visual references:** `Visual_Design/References/` (see §2) · **Naming:** [Assets Naming](Assets_Naming.md) · **Game context:** [Vision](../GDD/00_Overview/Vision.md) · **Tech stack:** [Technical Overview](../Technical_Design/Technical_Overview.md)
 
 ---
 
@@ -17,7 +17,7 @@ Two shipped games define the target. Use them for **complexity and style**, not 
 
 | Reference | Use it for | Do not take |
 |---|---|---|
-| **Alchemy Factory** | Workshop architecture, props, workstations, daylight palette, foliage, the portal frame | HUD/UI style (ours is defined in UI_Design) |
+| **Alchemy Factory** | Workshop architecture, props, workstations, daylight palette, foliage, the portal frame | HUD/UI style (ours is defined in `GDD/05_UI`) |
 | **Goblin Cleanup** | Realm (dungeon) environments, dark mood lighting, magical devices, creature/mob tone, character readability | First-person hands, gore decals, specific character costume designs |
 
 Character style (Alchemy Factory's semi-realistic people vs Goblin Cleanup's more cartoony proportions) is still open — see §11.
@@ -178,7 +178,7 @@ The project targets **URP with the standard Lit shader (metallic workflow)**; st
 
 ### Modular weapons (critical for gameplay)
 
-Weapons are assembled in game from **exactly two parts** (see [Weapon Crafting](../GDD/Shop/Weapon_Crafting.md)), so every part must fit every compatible counterpart.
+Weapons are assembled in game from **exactly two parts** (see [Weapon Crafting](../GDD/02_Systems/Crafting/_Crafting_System.md)), so every part must fit every compatible counterpart.
 
 | Weapon | Foundation | Payload | Total length |
 |---|---|---|---|
@@ -206,7 +206,7 @@ Weapons are assembled in game from **exactly two parts** (see [Weapon Crafting](
 ### Magic Doors
 
 - Frame only; the portal surface, swirl and runes animation are VFX/shader work (see AF_4).
-- Runes get an emission mask so the door can light up per state (Locked / Ready / Entry Open / In Progress — see [Magic Doors](../GDD/Exploration/Magic_Doors.md)).
+- Runes get an emission mask so the door can light up per state (Locked / Ready / Entry Open / In Progress — see [Magic Doors](../GDD/02_Systems/Exploration/_Exploration_System.md)).
 - Leave space on the frame for a **price plaque** (worldspace UI) and for the names of expedition members.
 
 ### Characters and mobs

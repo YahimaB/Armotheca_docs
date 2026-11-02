@@ -1,6 +1,6 @@
 # Movement - Technical Design
 
-> **Zone:** Common · **Design:** [GDD/Common/Movement](../../GDD/Common/Movement.md)
+> **Zone:** Common · **Design:** [_Movement_System](../../GDD/02_Systems/Movement/_Movement_System.md)
 
 ## Technical Specifications
 
@@ -32,7 +32,7 @@
 2. Create `ClimbingState : MovementState` with its `Enter` / `Tick` / `Exit` and capability flags.
 3. Register it in `PlayerMovementController.RegisterStates()`.
 4. Add the entry transition in the state(s) it starts from (e.g. `AirborneState` detects a climbable surface) and the exit transition inside `ClimbingState`.
-5. Add tuning fields to `MovementSettings` and update the state table in the [GDD](../../GDD/Common/Movement.md).
+5. Add tuning fields to `MovementSettings` and update the state table in the [GDD](../../GDD/02_Systems/Movement/_Movement_System.md).
 
 ---
 

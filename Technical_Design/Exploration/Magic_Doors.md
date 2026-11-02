@@ -1,6 +1,6 @@
 # Magic Doors - Technical Design
 
-> **Zone:** Exploration · **Design:** [GDD/Exploration/Magic_Doors](../../GDD/Exploration/Magic_Doors.md) · **Related:** [Realms](Realms.md) · [Shop Progression](../Shop/Shop_Progression.md)
+> **Zone:** Exploration · **Design:** [_Exploration_System](../../GDD/02_Systems/Exploration/_Exploration_System.md) · **Related:** [Realms](Realms.md) · [Shop Progression](../Shop/Shop_Progression.md)
 
 ## Technical Specifications
 

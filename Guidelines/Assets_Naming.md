@@ -1,7 +1,7 @@
 # Assets Structure & Naming
 
 > Single source of truth for how the Unity project's `Assets/` folder is organized and how every asset, GameObject and UI element is named.
-> Related: [3D Modeling Guidelines](Modeling_Guidelines.md) · [Technical Overview](../Technical_Design/Technical_Overview.md) · [UI Design](../UI_Design/Mailbox/Letter_Commission_Board.md)
+> Related: [3D Modeling Guidelines](Modeling_Guidelines.md) · [Technical Overview](../Technical_Design/Technical_Overview.md) · [UI Design](../GDD/05_UI/Screens/UI_Letter_Commission_Board.md)
 
 ---
 
@@ -23,17 +23,17 @@ The same zones are used in the docs, in folders and in asset names.
 
 | Zone token | Meaning | Docs counterpart |
 |---|---|---|
-| `Common` | Used everywhere (workshop and realms) | `GDD/Common` |
-| `Shop` | The workshop pocket realm | `GDD/Shop` |
-| `Realm` | Shared by all realms (Exit Portal, Aether Chute, shared rocks) | `GDD/Exploration` |
-| `Verdant` | Verdant Corruption | `GDD/Exploration/Realms` |
-| `Pyro` | Pyroclastic Trench | 〃 |
-| `Astral` | Astral Quarry | 〃 |
-| `Frost` | Frostbite Cavern | 〃 |
-| `Character` | Player characters | — |
-| `Mob` | Creatures (used together with the realm in folders) | `GDD/Exploration/Mobs` |
-| `Weapon` | Weapon components | `GDD/Shop/Weapon_Crafting` |
-| `UI` | Interface assets | `UI_Design` |
+| `Common` | Used everywhere (workshop and realms) | `GDD/02_Systems` (Movement, Interaction, Combat) |
+| `Shop` | The workshop pocket realm | `GDD/04_Locations/L00_Workshop` |
+| `Realm` | Shared by all realms (Exit Portal, Aether Chute, shared rocks) | `GDD/04_Locations/_World_Map` |
+| `Verdant` | Verdant Corruption | `GDD/04_Locations/L01_Verdant_Corruption` |
+| `Pyro` | Pyroclastic Trench | `GDD/04_Locations/L02_Pyroclastic_Trench` |
+| `Astral` | Astral Quarry | `GDD/04_Locations/L03_Astral_Quarry` |
+| `Frost` | Frostbite Cavern | `GDD/04_Locations/L04_Frostbite_Cavern` |
+| `Character` | Player characters | `GDD/03_Entities/Player` |
+| `Mob` | Creatures (used together with the realm in folders) | `GDD/03_Entities/Mobs` |
+| `Weapon` | Weapon components | `GDD/03_Entities/Items/Components` |
+| `UI` | Interface assets | `GDD/05_UI` |
 
 - Exploration content lives under `Realms/` in `Art`, `Prefabs`, `Audio` and `Scenes`.
 - Short realm tokens (`Pyro`) are used in **file and folder names**. Full realm names (`PyroclasticTrench`) are used only for **data assets and IDs that represent the realm itself** (`Realm_PyroclasticTrench`, `Door_PyroclasticTrench`) and for realm scenes.
@@ -266,7 +266,7 @@ All interfaces are built with **uGUI**. Every UI GameObject is named **`<Element
 |---|---|---|
 | **Tooltip** | Hover/focus information next to an element; no interaction. | `Tooltip_Item` |
 | **Toast** | A short, auto-dismissing notification that does not block input. | `Toast_LetterArrived` |
-| **Prompt** | The interaction hint shown for the current target (`[E] Pick up Iron Ore`, see [Object Interaction](../GDD/Common/Object_Interaction.md)). | `Prompt_Interact` |
+| **Prompt** | The interaction hint shown for the current target (`[E] Pick up Iron Ore`, see [Object Interaction](../GDD/02_Systems/Interaction/_Interaction_System.md)). | `Prompt_Interact` |
 | **WorldUI** | Root of a World Space canvas that hosts a **full interface on a 3D object** (Letter Board, Assembly Bench hologram). Inside it, the normal structure applies (Header, Panels, Cards…). | `WorldUI_LetterBoard`, `WorldUI_AssemblyBench` |
 | **Marker** | A small world-space indicator above a 3D object or character: nameplate, health above mobs, door price plaque, expedition member list. | `Marker_PlayerName`, `Marker_DoorPrice` |
 | **Overlay** | A full-screen non-interactive effect layer (fades, vignettes, loading curtain). | `Overlay_Fade` |
@@ -286,7 +286,7 @@ Each layer is a root Screen Space Canvas with a fixed sort order. World Space ca
 
 ### 7.6 Example hierarchy
 
-The Letter Commission Board (see [UI Design](../UI_Design/Mailbox/Letter_Commission_Board.md)):
+The Letter Commission Board (see [UI Design](../GDD/05_UI/Screens/UI_Letter_Commission_Board.md)):
 
 ```
 WorldUI_LetterBoard                      (World Space canvas on the board)

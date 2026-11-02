@@ -1,6 +1,6 @@
 # Object Interaction - Technical Design
 
-> **Zone:** Common · **Design:** [GDD/Common/Object_Interaction](../../GDD/Common/Object_Interaction.md)
+> **Zone:** Common · **Design:** [_Interaction_System](../../GDD/02_Systems/Interaction/_Interaction_System.md)
 
 ## Technical Specifications
 

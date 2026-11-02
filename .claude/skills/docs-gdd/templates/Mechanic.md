@@ -7,7 +7,7 @@ status: Draft
 
 # <Mechanic Name>
 
-> **System:** [_<System>_System](_<System>_System.md) · **Technical:** <Technical_Design counterpart>
+> **System:** [_<System>_System](_<System>_System.md) · **Technical:** [_<System>_Module › <Section>](../../../Technical_Design/<System>/_<System>_Module.md#<section>)
 
 ## Summary
 

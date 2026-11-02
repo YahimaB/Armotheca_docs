@@ -10,7 +10,7 @@ pillars: []             # pillar names from Vision.md
 
 # <Feature Name>
 
-> **Hub:** [_Feature_List](_Feature_List.md) · **Technical:** <Technical_Design counterpart>
+> **Hub:** [_Feature_List](_Feature_List.md) · **Technical:** [_Module_Map › Features](../../Technical_Design/_Module_Map.md#features)
 
 ## Purpose
 
@@ -19,6 +19,10 @@ pillars: []             # pillar names from Vision.md
 ## Player Experience
 
 <!-- What the player should feel and do; the moment this feature is at its best. -->
+
+## References
+
+<!-- Shipped titles: what we take from each, what we avoid. -->
 
 ## Mechanics
 

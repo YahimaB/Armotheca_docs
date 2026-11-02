@@ -1,6 +1,6 @@
 # Realms - Technical Design
 
-> **Zone:** Exploration · **Design:** [GDD/Exploration/Realms](../../GDD/Exploration/Realms.md) · **Related:** [Magic Doors](Magic_Doors.md) · [Resource Gathering](Resource_Gathering.md) · [Mobs](Mobs.md)
+> **Zone:** Exploration · **Design:** [_World_Map](../../GDD/04_Locations/_World_Map.md) · **Related:** [Magic Doors](Magic_Doors.md) · [Resource Gathering](Resource_Gathering.md) · [Mobs](Mobs.md)
 
 ## Technical Specifications
 

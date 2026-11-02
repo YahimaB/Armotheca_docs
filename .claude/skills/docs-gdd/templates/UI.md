@@ -7,7 +7,7 @@ status: Draft
 
 # <Screen Name>
 
-> **Flow:** [_UI_Flow](../_UI_Flow.md) · **Technical:** <Technical_Design counterpart>
+> **Flow:** [_UI_Flow](../_UI_Flow.md) · **Technical:** [_UI_Module › <Section>](../../../Technical_Design/UI/_UI_Module.md#<section>)
 
 ## Purpose
 

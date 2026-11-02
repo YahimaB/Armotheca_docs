@@ -1,6 +1,6 @@
 # Order System - Technical Design
 
-> **Zone:** Shop · **Design:** [GDD/Shop/Order_System](../../GDD/Shop/Order_System.md) · **UI:** [Letter Commission Board](../../UI_Design/Mailbox/Letter_Commission_Board.md)
+> **Zone:** Shop · **Design:** [_Orders_System](../../GDD/02_Systems/Orders/_Orders_System.md) · **UI:** [Letter Commission Board](../../GDD/05_UI/Screens/UI_Letter_Commission_Board.md)
 
 ## Technical Specifications
 
@@ -207,3 +207,12 @@ namespace Armotheca.Orders
 - Validation order produces the most useful rejection message (type before quality before element).
 - Batch orders complete only on the last unit; expiry mid-batch forfeits the whole order.
 - Generator never produces criteria for materials behind doors the team has not purchased.
+
+---
+
+## View Notes (moved from the UI design doc)
+
+- **Letter Commission Board:** uGUI World Space Canvas on the board (TextMeshPro text, built-in uGUI navigation for gamepad).
+- **Pinned-letter HUD widget:** uGUI Screen Space Overlay canvas.
+- Both views only listen to `OrderManager` events.
+- Design: [UI_Letter_Commission_Board](../../GDD/05_UI/Screens/UI_Letter_Commission_Board.md), [UI_Pinned_Letter](../../GDD/05_UI/Hud/UI_Pinned_Letter.md).

@@ -12,8 +12,7 @@ are hubs that tie those pieces together.
 
 Read `00_Overview/Vision.md` first. Its pillars and locked constraints (exactly 2
 components per weapon, only Quality and Base Damage, manual labour at launch)
-override any single doc. Until the layout reform is done, the vision lives in
-`Master_GDD.md`; see [Migration](#migration).
+override any single doc.
 
 ## Layout
 
@@ -28,7 +27,7 @@ GDD/
 │   ├── _Feature_List.md        # ID, priority (MoSCoW), status, owner, milestone
 │   └── F<NN>_<Name>.md         # hubs: F01_Commissions.md, F03_Expeditions.md
 ├── 02_Systems/
-│   └── <System>/               # Movement, Interaction, Combat, Crafting, Orders, ...
+│   └── <System>/               # Movement, Interaction, Combat, Crafting, Processing, ...
 │       ├── _<System>_System.md # overview + how its mechanics interact
 │       └── M_<Name>.md         # M_Roll.md, M_Assembly.md
 ├── 03_Entities/
@@ -57,12 +56,17 @@ style guide (fonts, colours, icons) are standards owned by `docs-guidelines`
 or UI category only when no existing one fits, and register it in the matching
 hub.
 
+System names equal code module names: `02_Systems/Combat/` is implemented by
+`Technical_Design/Combat/` in `Armotheca.Combat`. A new or renamed system is
+agreed with `docs-technical-design` in the same change. Every `Technical:` link
+points to a module doc section, or to `_Module_Map.md` for features.
+
 ## Doc types and IDs
 
 | Type | ID / file | Folder | Template |
 | --- | --- | --- | --- |
 | Feature | `F<NN>_<Name>` | `01_Features/` | [Feature](templates/Feature.md) |
-| System hub | `_<System>_System` | `02_Systems/<System>/` | [SystemHub](templates/SystemHub.md) |
+| System hub | `_<System>_System` | `02_Systems/<System>/` | [System_Hub](templates/System_Hub.md) |
 | Mechanic | `M_<Name>` | `02_Systems/<System>/` | [Mechanic](templates/Mechanic.md) |
 | Entity | `E_<Name>` (`Player`, `Camera` unprefixed) | `03_Entities/<Category>/` | [Entity](templates/Entity.md) |
 | Roster / list | `_<Category>_Roster`, `_<Category>_List` | category root | [Roster](templates/Roster.md) |
@@ -160,8 +164,6 @@ hub.
 
 ## Migration
 
-The current GDD is organised by zone (`Master_GDD.md`, `Common/`, `Shop/`,
-`Exploration/`) and UI lives in the legacy `UI_Design/` folder. Edit those files in
-place until the user approves the reform. The planned split of each current
-document is in [references/MigrationMap.md](references/MigrationMap.md). Migrate
-one source document at a time, then run the link check.
+The GDD was migrated from its zone layout on 2026-11-02 (see `00_Overview/Changelog.md`).
+[references/Migration_Map.md](references/Migration_Map.md) records where each old
+section went; use it to answer "where did X go" questions.

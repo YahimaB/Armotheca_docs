@@ -1,6 +1,6 @@
 # Resource Spawning & Gathering - Technical Design
 
-> **Zone:** Exploration · **Design:** [GDD/Exploration/Resource_Gathering](../../GDD/Exploration/Resource_Gathering.md) · **Related:** [Realms](Realms.md) · [Object Interaction](../Common/Object_Interaction.md)
+> **Zone:** Exploration · **Design:** [M_Harvesting](../../GDD/02_Systems/Exploration/M_Harvesting.md) · **Related:** [Realms](Realms.md) · [Object Interaction](../Common/Object_Interaction.md)
 
 ## Technical Specifications
 

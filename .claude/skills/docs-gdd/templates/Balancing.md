@@ -9,9 +9,12 @@ status: Draft
 
 > **System:** [_<System>_System](../02_Systems/<System>/_<System>_System.md)
 
-Rows are keyed by doc ID; columns are parameters. Values marked `*` are initial
-values not yet validated by playtest. Docs link here by table anchor and never
-repeat the value.
+Values marked `*` are initial values not yet validated by playtest. Docs link
+here by table anchor and never repeat the value.
+
+Two table shapes: for a set of things (mobs, tiers, doors), rows are keyed by doc
+ID and columns are parameters; for one mechanic, use `Parameter | Value | Notes`
+under a heading named after it, with an `Owner:` line linking the mechanic.
 
 ## <Table Name>
 

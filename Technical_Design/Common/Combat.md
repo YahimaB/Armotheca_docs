@@ -1,6 +1,6 @@
 # Combat - Technical Design
 
-> **Zone:** Common · **Design:** [GDD/Common/Combat](../../GDD/Common/Combat.md)
+> **Zone:** Common · **Design:** [_Combat_System](../../GDD/02_Systems/Combat/_Combat_System.md)
 
 ## Technical Specifications
 

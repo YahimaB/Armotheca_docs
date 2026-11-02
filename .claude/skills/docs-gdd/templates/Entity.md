@@ -9,7 +9,7 @@ status: Draft
 
 <!-- Links below assume GDD/03_Entities/<Category>/<Subcategory>/; adjust ../ depth to the file's location. -->
 
-> **Roster:** [_<Category>_Roster](../_<Category>_Roster.md) · **Technical:** <Technical_Design counterpart>
+> **Roster:** [_<Category>_Roster](../_<Category>_Roster.md) · **Technical:** [_<Module>_Module › <Section>](../../../../Technical_Design/<Module>/_<Module>_Module.md#<section>)
 
 ## Description & Role
 

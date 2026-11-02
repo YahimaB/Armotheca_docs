@@ -27,7 +27,7 @@ links to its weekly plan.
 ```markdown
 # Phase <N>: <Name> — Weekly Plan
 
-> Part of the [Development Roadmap](Development_Roadmap.md) · Design: [Master GDD](../GDD/Master_GDD.md) · Tech: [Technical Overview](../Technical_Design/Technical_Overview.md) · Naming: [Assets Naming](../Guidelines/Assets_Naming.md) · Art specs: [Modeling Guidelines](../Guidelines/Modeling_Guidelines.md)
+> Part of the [Development Roadmap](Development_Roadmap.md) · Design: [Vision](../GDD/00_Overview/Vision.md) · Tech: [Technical Overview](../Technical_Design/Technical_Overview.md) · Naming: [Assets Naming](../Guidelines/Assets_Naming.md) · Art specs: [Modeling Guidelines](../Guidelines/Modeling_Guidelines.md)
 
 **Duration:** <weeks> (Months <a–b>)
 **Focus:** <one sentence>

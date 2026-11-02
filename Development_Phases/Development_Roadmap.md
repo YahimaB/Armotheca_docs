@@ -3,7 +3,7 @@
 ## Overview
 This roadmap establishes the phased production plan for *Armotheca*, structured to validate the core loop as early as possible, establish robust multiplayer netcode, and scale content toward the endgame Uber-Weapon experience.
 
-Design references: [Master GDD](../GDD/Master_GDD.md) · Technical references: [Technical Overview](../Technical_Design/Technical_Overview.md)
+Design references: [Vision](../GDD/00_Overview/Vision.md) · Technical references: [Technical Overview](../Technical_Design/Technical_Overview.md)
 
 **Tech stack:** Unity 6.3 LTS · GameObjects (no ECS) · FishNet + FishySteamworks (player-hosted) · uGUI · Input System.
 
@@ -52,9 +52,9 @@ Adding networking to finished single-player code is harder and more expensive th
 ### Deliverables:
 0. **Networking Foundation (Weeks 1–3):** FishNet host mode over FishySteamworks on Unity 6.3 LTS, Steam lobby join, disconnect/rejoin, networked player movement, and the networking spike (latency and bandwidth with 4 players, see [Technical Overview](../Technical_Design/Technical_Overview.md)) as a go/no-go gate before gameplay work.
 1. **Common Mechanics:**
-   - [Movement](../GDD/Common/Movement.md): kinematic third-person walk, sprint, jump, roll.
-   - [Object Interaction](../GDD/Common/Object_Interaction.md): instant (pick up, drop, place, take, use) and continuous (hold-to-work, harvest) interactions; hands / weapon slot / backpack carry model.
-   - [Combat](../GDD/Common/Combat.md): sword swing chain and wand/staff magic orb, player health and downed state.
+   - [Movement](../GDD/02_Systems/Movement/_Movement_System.md): kinematic third-person walk, sprint, jump, roll.
+   - [Object Interaction](../GDD/02_Systems/Interaction/_Interaction_System.md): instant (pick up, drop, place, take, use) and continuous (hold-to-work, harvest) interactions; hands / weapon slot / backpack carry model.
+   - [Combat](../GDD/02_Systems/Combat/_Combat_System.md): sword swing chain and wand/staff magic orb, player health and downed state.
 2. **2-Piece Modular Assembly:** Functional assembly bench combining 1 Foundation + 1 Payload module (Swords, Wands, Staves). Weapons carry only **Quality (1–100)** and **Base Damage**.
 3. **Manual Processing Workstations:**
    - Smelting Forge & Anvil (with optional timing strike mini-game).

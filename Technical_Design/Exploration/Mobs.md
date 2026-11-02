@@ -1,6 +1,6 @@
 # Mobs - Technical Design
 
-> **Zone:** Exploration · **Design:** [GDD/Exploration/Mobs](../../GDD/Exploration/Mobs.md) · **Related:** [Combat](../Common/Combat.md) · [Realms](Realms.md)
+> **Zone:** Exploration · **Design:** [_Mob_Roster](../../GDD/03_Entities/Mobs/_Mob_Roster.md) · **Related:** [Combat](../Common/Combat.md) · [Realms](Realms.md)
 
 ## Technical Specifications
 

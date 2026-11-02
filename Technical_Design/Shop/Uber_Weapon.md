@@ -1,6 +1,6 @@
 # Uber-Weapon - Technical Design
 
-> **Zone:** Shop · **Design:** [GDD/Shop/Uber_Weapon](../../GDD/Shop/Uber_Weapon.md)
+> **Zone:** Shop · **Design:** [_Endgame_System](../../GDD/02_Systems/Endgame/_Endgame_System.md)
 
 ## Technical Specifications
 

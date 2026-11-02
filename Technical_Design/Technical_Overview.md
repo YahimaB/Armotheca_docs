@@ -1,6 +1,6 @@
 # Armotheca - Technical Overview
 
-> Technical counterpart of the [Master GDD](../GDD/Master_GDD.md). Each mechanic's technical document mirrors its GDD document at the same path under `Technical_Design/`.
+> Technical counterpart of the [Master GDD](../GDD/00_Overview/Vision.md). Each mechanic's technical document mirrors its GDD document at the same path under `Technical_Design/`.
 
 ## 1. Technology Stack (Decided)
 
@@ -130,7 +130,7 @@ namespace Armotheca.Core
 | `Armotheca.Orders` | Shop | [Order System](Shop/Order_System.md) |
 | `Armotheca.Progression` | Shop | [Shop Progression](Shop/Shop_Progression.md) · [Uber-Weapon](Shop/Uber_Weapon.md) |
 | `Armotheca.Exploration` | Exploration | [Magic Doors](Exploration/Magic_Doors.md) · [Realms](Exploration/Realms.md) · [Resource Gathering](Exploration/Resource_Gathering.md) · [Mobs](Exploration/Mobs.md) |
-| `Armotheca.UI` | Shared | [UI Design](../UI_Design/Mailbox/Letter_Commission_Board.md) (uGUI views) |
+| `Armotheca.UI` | Shared | [UI Design](../GDD/05_UI/Screens/UI_Letter_Commission_Board.md) (uGUI views) |
 
 ---
 

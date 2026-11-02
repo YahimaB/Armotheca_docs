@@ -1,6 +1,6 @@
 # Shop Progression - Technical Design
 
-> **Zone:** Shop · **Design:** [GDD/Shop/Shop_Progression](../../GDD/Shop/Shop_Progression.md)
+> **Zone:** Shop · **Design:** [_Progression_System](../../GDD/02_Systems/Progression/_Progression_System.md)
 
 ## Technical Specifications
 

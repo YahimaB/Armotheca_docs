@@ -1,6 +1,6 @@
 # Weapon Crafting - Technical Design
 
-> **Zone:** Shop · **Design:** [GDD/Shop/Weapon_Crafting](../../GDD/Shop/Weapon_Crafting.md) · **UI:** [Assembly Bench UI](../../UI_Design/Workstations/Assembly_Bench_UI.md)
+> **Zone:** Shop · **Design:** [_Crafting_System](../../GDD/02_Systems/Crafting/_Crafting_System.md) · **UI:** [Assembly Bench UI](../../GDD/05_UI/World/UI_Assembly_Bench.md)
 
 ## Technical Specifications
 
@@ -254,3 +254,11 @@ namespace Armotheca.Crafting
 - Unit-test every `(foundation, payload)` pair for correct resolution / rejection.
 - Quality averaging rounds half up and stays within 1–100 for all input pairs.
 - `BaseDamage` of an assembled weapon always equals its payload's base damage, regardless of quality.
+
+---
+
+## View Notes (moved from the UI design doc)
+
+- **Assembly Bench UI:** uGUI World Space Canvas attached to the bench, TextMeshPro for all text, Animator/tweens for socket pulses and the hologram.
+- The view only listens to `AssemblyBench` events.
+- Design: [UI_Assembly_Bench](../../GDD/05_UI/World/UI_Assembly_Bench.md).

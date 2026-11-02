@@ -1,6 +1,6 @@
 # Resource Processing - Technical Design
 
-> **Zone:** Shop · **Design:** [GDD/Shop/Resource_Processing](../../GDD/Shop/Resource_Processing.md)
+> **Zone:** Shop · **Design:** [_Processing_System](../../GDD/02_Systems/Processing/_Processing_System.md)
 
 ## Technical Specifications
 

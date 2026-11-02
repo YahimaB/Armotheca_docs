@@ -1,6 +1,6 @@
 # Phase 1: Core Loop & Workshop Prototype — Weekly Plan
 
-> Part of the [Development Roadmap](Development_Roadmap.md) · Design: [Master GDD](../GDD/Master_GDD.md) · Tech: [Technical Overview](../Technical_Design/Technical_Overview.md) · Naming: [Assets Naming](../Guidelines/Assets_Naming.md) · Art specs: [Modeling Guidelines](../Guidelines/Modeling_Guidelines.md)
+> Part of the [Development Roadmap](Development_Roadmap.md) · Design: [Vision](../GDD/00_Overview/Vision.md) · Tech: [Technical Overview](../Technical_Design/Technical_Overview.md) · Naming: [Assets Naming](../Guidelines/Assets_Naming.md) · Art specs: [Modeling Guidelines](../Guidelines/Modeling_Guidelines.md)
 
 **Duration:** 13 weeks (Months 1–3)
 **Focus:** Prove the common mechanics, physical crafting and 2-piece assembly — **networked from the first week** (host + clients over FishNet / FishySteamworks), following the [Networking-First Principle](Development_Roadmap.md#networking-first-principle).
@@ -239,7 +239,7 @@ All assets follow the naming in [Assets Naming](../Guidelines/Assets_Naming.md) 
 | Items: `SM_Weapon_Hilt_ArcaneOak`, `SM_Weapon_ShortShaft_ArcaneOak`, `SM_Weapon_LongShaft_ArcaneOak` (each with `Socket_Payload`), `SM_Common_VerdantEssence`, `SM_Weapon_Core_Verdant` | Static meshes | *Placeholder OK*, connector sizes must match across materials. |
 | Clips: `A_Player_Chisel`, `A_Player_Polish`, `A_Player_TurnValve` | Animations | *Placeholder OK.* |
 | SFX/VFX: wood shavings, lathe hum, bubbling distiller, core crystallize glow | Audio / VFX | *Placeholder OK.* |
-| **Decisions:** (1) does the lathe have a mini-game or a fixed-quality hold? (2) element and Base Damage of the Verdant Core (Bramble Stalker essence) (3) distiller temperature zone size and drift speed | Design | Required. Open questions in [Resource Processing](../GDD/Shop/Resource_Processing.md). |
+| **Decisions:** (1) does the lathe have a mini-game or a fixed-quality hold? (2) element and Base Damage of the Verdant Core (Bramble Stalker essence) (3) distiller temperature zone size and drift speed | Design | Required. Open questions in [Resource Processing](../GDD/02_Systems/Processing/_Processing_System.md). |
 
 ### Work this week
 - Lathe: load log → hold chisel (continuous) → choose output (Hilt / Short Shaft / Long Shaft) → Carving Bench polish (continuous).
@@ -267,7 +267,7 @@ All assets follow the naming in [Assets Naming](../Guidelines/Assets_Naming.md) 
 | `SM_Shop_RunedMallet` | Static mesh | *Placeholder OK.* |
 | Lock animation of the bench (0.5 s), `A_Player_MalletStrike` | Animation | *Placeholder OK.* |
 | Flawless glow `VFX_QualityGlow_Flawless` | VFX | *Placeholder OK.* |
-| Hologram preview style per [Assembly Bench UI](../UI_Design/Workstations/Assembly_Bench_UI.md) | UI | *Placeholder OK* — data must be correct, styling can come later. |
+| Hologram preview style per [Assembly Bench UI](../GDD/05_UI/World/UI_Assembly_Bench.md) | UI | *Placeholder OK* — data must be correct, styling can come later. |
 | Equipped weapon attachment points on the character: `Socket_HandRight`, `Socket_Back` | Rig | Required on the final character; placeholder bones OK. |
 
 ### Work this week
@@ -294,7 +294,7 @@ All assets follow the naming in [Assets Naming](../Guidelines/Assets_Naming.md) 
 |---|---|---|
 | `SM_Shop_MailboxNexus` (arrival tube + board) and `SM_Shop_OutgoingTube` | Static meshes | *Placeholder OK.* |
 | `SM_Common_Letter` | Static mesh | *Placeholder OK.* |
-| Letter Board UI per [Letter Commission Board](../UI_Design/Mailbox/Letter_Commission_Board.md): `PF_UI_Card_Letter`, frames, `UI_Icon_WeaponType_*`, `UI_Icon_Element_*` | UI sprites / prefabs | *Placeholder OK* (functional layout first). |
+| Letter Board UI per [Letter Commission Board](../GDD/05_UI/Screens/UI_Letter_Commission_Board.md): `PF_UI_Card_Letter`, frames, `UI_Icon_WeaponType_*`, `UI_Icon_Element_*` | UI sprites / prefabs | *Placeholder OK* (functional layout first). |
 | **Guild letter data:** 5–10 flavor texts, gold reward per weapon type, lifespan (240–360 s), arrival interval | Data / Writing | Required. |
 | SFX: `SFX_Shop_Mailbox_Arrive_01`, `SFX_Shop_Dispatch_Success_01`, `SFX_Shop_Dispatch_Reject_01` | Audio | *Placeholder OK.* |
 | Gold counter placement on the HUD | Design | *Placeholder OK.* |
@@ -326,7 +326,7 @@ All assets follow the naming in [Assets Naming](../Guidelines/Assets_Naming.md) 
 | SFX: swing whoosh, sword impact (iron), orb cast, orb impact, player hurt, downed | Audio | *Placeholder OK.* |
 | Training dummy `SM_Common_TrainingDummy` | Static mesh | *Placeholder OK.* |
 | Health bar `Bar_Health` and downed/revive markers | UI | *Placeholder OK.* |
-| **Decision:** starter weapons — do players start with a sword/wand so they are never unarmed? | Design | Required: the Phase 1 loop kills a mob before any weapon is crafted. Open question in [Combat](../GDD/Common/Combat.md). |
+| **Decision:** starter weapons — do players start with a sword/wand so they are never unarmed? | Design | Required: the Phase 1 loop kills a mob before any weapon is crafted. Open question in [Combat](../GDD/02_Systems/Combat/_Combat_System.md). |
 
 ### Work this week
 - `Armotheca.Combat` per [Technical_Design/Combat](../Technical_Design/Common/Combat.md): sword 2-swing chain (frontal arc, multi-hit once per swing), magic orb (cooldown, aim assist, stops on first hit), values from `AttackProfile_SwordSwing` / `AttackProfile_MagicOrb`.

@@ -21,7 +21,8 @@ split into one document per type; route each part and say how it was split.
 
 ## Tie-breakers
 
-- **New mechanic:** write the GDD first, then its Technical_Design counterpart.
+- **New mechanic:** write the GDD first, then its section in the owning code
+  module's Technical_Design doc (GDD system and module share a name).
   No C# in a GDD, no design rationale in a tech doc; link instead.
 - **Numbers:** a design-facing value (damage, price, lifespan) goes to GDD; a budget
   or target (ms, KB/s, tick rate, poly count) goes to Technical_Design or Guidelines;
@@ -43,8 +44,7 @@ creating a new document of one of these kinds, ask whether to start the reform.
 
 | Current | Proposed target | Owner skill |
 | --- | --- | --- |
-| `GDD/Master_GDD.md`, `GDD/{Common,Shop,Exploration}/` | GDD type layout (`docs-gdd` migration map) | `docs-gdd` |
-| `UI_Design/<Area>/*.md` | `GDD/05_UI/<Category>/UI_<Name>.md` | `docs-gdd` |
+| `Technical_Design/{Common,Shop,Exploration}/` | `Technical_Design/<Module>/` (`docs-technical-design` migration map) | `docs-technical-design` |
 | `Visual_Design/References/` | `Guidelines/Art_Direction/References/` | `docs-guidelines` |
 | `Visual_Design/Concept_Arts/` | `Guidelines/Art_Direction/Concept_Arts/` | `docs-guidelines` |
 | `Visual_Design/Prompts/` | `Guidelines/Art_Direction/Prompts/` | `docs-guidelines` |
@@ -54,14 +54,14 @@ creating a new document of one of these kinds, ask whether to start the reform.
 - File and folder names use **Capitalized_Words**: an underscore after the prefix
   and between words, each word capitalized (`Order_System.md`, `Technical_Design/`,
   `M_Sword_Swing.md`, `_Feature_List.md`, `Phase_1_Core_Loop.md`). Acronyms stay
-  uppercase (`Master_GDD.md`, `UI_Design/`); numbers are their own word
+  uppercase (`UI_Assembly_Bench.md`, `GDD/`); numbers are their own word
   (`Phase_1`) except in numbered IDs (`F01_`, `L02_`, `00_Overview`). Exceptions:
   `README.md`, image files named by their source prefix (`AF_1.jpg`), and the
   skill folders in `.claude/skills/` (kebab-case, required by Claude Code).
 - This rule covers the docs only; Unity asset names keep the CamelCase words set
   in `Guidelines/Assets_Naming.md` (`SM_Shop_AssemblyBench`).
 - Documents are English Markdown.
-- Links are relative Markdown links (`[Text](../GDD/Shop/Order_System.md)`), not
+- Links are relative Markdown links (`[M_Assembly](../GDD/02_Systems/Crafting/M_Assembly.md)`), not
   Obsidian `[[wikilinks]]`, so they work on Git hosts and in Rider as well.
 - Every document opens with an `#` title and a `>` context line linking its
   counterparts (see the type skill for the exact fields).

@@ -31,7 +31,7 @@ Add a new guideline file only for a new discipline (e.g. `Audio_Guidelines.md`,
 # <Discipline> Guidelines
 
 > <One line: who must follow this and what it guarantees.>
-> **Naming:** [Assets Naming](Assets_Naming.md) · **Game context:** [Master GDD](../GDD/Master_GDD.md) · **Tech stack:** [Technical Overview](../Technical_Design/Technical_Overview.md)
+> **Naming:** [Assets Naming](Assets_Naming.md) · **Game context:** [Vision](../GDD/00_Overview/Vision.md) · **Tech stack:** [Technical Overview](../Technical_Design/Technical_Overview.md)
 
 ## 1. <Numbered sections: rules, budgets, conventions>
 ## <n>. Quick Reference or Delivery Checklist

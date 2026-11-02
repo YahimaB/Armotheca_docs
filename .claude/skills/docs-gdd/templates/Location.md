@@ -7,7 +7,7 @@ status: Draft
 
 # <Location Name>
 
-> **World:** [_World_Map](../_World_Map.md) · **Technical:** <Technical_Design counterpart>
+> **World:** [_World_Map](../_World_Map.md) · **Technical:** [_<Module>_Module › <Section>](../../../Technical_Design/<Module>/_<Module>_Module.md#<section>)
 
 ## Purpose in Progression
 
