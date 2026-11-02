@@ -21,8 +21,8 @@ split into one document per type; route each part and say how it was split.
 
 ## Tie-breakers
 
-- **New mechanic:** write the GDD first, then the TechnicalDesign doc at the same
-  relative path. No C# in a GDD, no design rationale in a tech doc; link instead.
+- **New mechanic:** write the GDD first, then its TechnicalDesign counterpart.
+  No C# in a GDD, no design rationale in a tech doc; link instead.
 - **Numbers:** a design-facing value (damage, price, lifespan) goes to GDD; a budget
   or target (ms, KB/s, tick rate, poly count) goes to TechnicalDesign or Guidelines;
   a week or deadline goes to DevelopmentPhases.
@@ -43,7 +43,8 @@ creating a new document of one of these kinds, ask whether to start the reform.
 
 | Current | Proposed target | Owner skill |
 | --- | --- | --- |
-| `UIDesign/<Area>/*.md` | `GDD/UI/<Area>/*.md` | `docs-gdd` |
+| `GDD/MasterGDD.md`, `GDD/{Common,Shop,Exploration}/` | GDD type layout (`docs-gdd` migration map) | `docs-gdd` |
+| `UIDesign/<Area>/*.md` | `GDD/05_UI/<Category>/UI_<Name>.md` | `docs-gdd` |
 | `VisualDesign/References/` | `Guidelines/ArtDirection/References/` | `docs-guidelines` |
 | `VisualDesign/ConceptArts/` | `Guidelines/ArtDirection/ConceptArts/` | `docs-guidelines` |
 | `VisualDesign/Prompts/` | `Guidelines/ArtDirection/Prompts/` | `docs-guidelines` |
