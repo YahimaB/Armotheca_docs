@@ -7,7 +7,7 @@ status: Draft
 
 # Mob Spawning
 
-> **System:** [_Exploration_System](_Exploration_System.md) · **Technical:** [Mobs (tech)](../../../Technical_Design/Exploration/Mobs.md)
+> **System:** [_Exploration_System](_Exploration_System.md) · **Technical:** [Mob_AI](../../../Technical_Design/Exploration/Mob_AI.md)
 
 ## Summary
 

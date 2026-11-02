@@ -1,6 +1,28 @@
-# Weapon Crafting - Technical Design
+---
+id: _Crafting_Module
+type: module
+module: Crafting
+namespace: Armotheca.Crafting
+status: Draft
+---
 
-> **Zone:** Shop · **Design:** [_Crafting_System](../../GDD/02_Systems/Crafting/_Crafting_System.md) · **UI:** [Assembly Bench UI](../../GDD/05_UI/World/UI_Assembly_Bench.md)
+# Crafting Module
+
+> **Design:** [_Crafting_System](../../GDD/02_Systems/Crafting/_Crafting_System.md) · **Map:** [_Module_Map](../_Module_Map.md) · **Overview:** [Technical Overview](../Technical_Overview.md)
+
+## Scope
+
+| GDD doc | Implemented in |
+| --- | --- |
+| [M_Assembly](../../GDD/02_Systems/Crafting/M_Assembly.md) | [Category Resolution](#category-resolution); `WeaponAssembler`, `AssemblyBench` |
+| [M_Quality](../../GDD/02_Systems/Crafting/M_Quality.md) | [Weapon Stat Model](#weapon-stat-model-locked); [Quality Tiers](#quality-tiers) |
+| [M_Weapon_Naming](../../GDD/02_Systems/Crafting/M_Weapon_Naming.md) | [Unity C# Reference Code](#unity-c-reference-code) — `AssembledWeapon` name |
+| [E_Assembly_Bench](../../GDD/03_Entities/Props/Workstations/E_Assembly_Bench.md) | [Architecture](#architecture--implementation-approaches) — `AssemblyBench` |
+| Components ([E_Blade](../../GDD/03_Entities/Items/Components/E_Blade.md), [E_Core](../../GDD/03_Entities/Items/Components/E_Core.md), [E_Hilt](../../GDD/03_Entities/Items/Components/E_Hilt.md), [E_Short_Shaft](../../GDD/03_Entities/Items/Components/E_Short_Shaft.md), [E_Long_Shaft](../../GDD/03_Entities/Items/Components/E_Long_Shaft.md)) | `WeaponComponentData` |
+| Weapons ([E_Sword](../../GDD/03_Entities/Items/Weapons/E_Sword.md), [E_Wand](../../GDD/03_Entities/Items/Weapons/E_Wand.md), [E_Staff](../../GDD/03_Entities/Items/Weapons/E_Staff.md)) | `AssembledWeapon` |
+| [UI_Assembly_Bench](../../GDD/05_UI/World/UI_Assembly_Bench.md) | Events below; view in [_UI_Module](../UI/_UI_Module.md) |
+
+---
 
 ## Technical Specifications
 
@@ -41,7 +63,7 @@
 - `ComponentMaterialDefinition` (SO): material ID, display name, element, `BaseDamage` (payload materials only), allowed component kinds.
 - `WeaponComponentData` (struct): runtime component — material ID, kind, element, quality, base damage.
 - `WeaponAssembler` (static): validates compatibility and builds an immutable `AssembledWeapon`.
-- `AssemblyBench` (MonoBehaviour): physical workstation with two sockets and the mallet strike; uses the common [Object Interaction](../Common/Object_Interaction.md) contracts.
+- `AssemblyBench` (MonoBehaviour): physical workstation with two sockets and the mallet strike; uses the common [Object Interaction](../Interaction/_Interaction_Module.md) contracts.
 
 **Pros:**
 - Static data decoupled from runtime instances.
@@ -58,6 +80,26 @@
 
 - Socket contents and assembly are host-authoritative. Clients request `PlaceInSocket`, `TakeFromSocket`, `StrikeMallet`.
 - An `AssembledWeapon` is replicated as `{ type, foundation, payload }`; `Quality` and `BaseDamage` are recomputed deterministically on each client.
+
+---
+
+## Data
+
+| Definition (SO) | Field | Supplied by |
+| --- | --- | --- |
+| `ComponentMaterialDefinition` | `BaseDamage`, element | [_Item_List › Materials](../../GDD/03_Entities/Items/_Item_List.md#materials) (values not yet defined) |
+| `QualityRules` | tier bands | [Crafting › Quality Tiers](../../GDD/06_Balancing/Crafting.md#quality-tiers) |
+| `AssemblyBench` | locking animation | [Crafting › Assembly](../../GDD/06_Balancing/Crafting.md#assembly) |
+
+---
+
+## Events
+
+| Event | Raised when | Consumed by |
+| --- | --- | --- |
+| `OnPreviewChanged` | Both sockets hold compatible parts | Bench preview hologram |
+| `OnWeaponAssembled` | The mallet locks a weapon | Output riser, audio, VFX |
+| `OnIncompatible` | Mismatched parts | Socket error feedback |
 
 ---
 
@@ -257,8 +299,4 @@ namespace Armotheca.Crafting
 
 ---
 
-## View Notes (moved from the UI design doc)
-
-- **Assembly Bench UI:** uGUI World Space Canvas attached to the bench, TextMeshPro for all text, Animator/tweens for socket pulses and the hologram.
-- The view only listens to `AssemblyBench` events.
-- Design: [UI_Assembly_Bench](../../GDD/05_UI/World/UI_Assembly_Bench.md).
+View: [_UI_Module › Assembly Bench](../UI/_UI_Module.md#assembly-bench).

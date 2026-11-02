@@ -7,7 +7,7 @@ status: Draft
 
 # Health, Downed & Revive
 
-> **System:** [_Combat_System](_Combat_System.md) · **Technical:** [Combat (tech)](../../../Technical_Design/Common/Combat.md)
+> **System:** [_Combat_System](_Combat_System.md) · **Technical:** [_Combat_Module › Player Downed Flow](../../../Technical_Design/Combat/_Combat_Module.md#player-downed-flow-host)
 
 ## Summary
 

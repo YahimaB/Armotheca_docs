@@ -7,7 +7,7 @@ status: Draft
 
 # Door Lifecycle
 
-> **System:** [_Exploration_System](_Exploration_System.md) · **Technical:** [Magic Doors (tech)](../../../Technical_Design/Exploration/Magic_Doors.md)
+> **System:** [_Exploration_System](_Exploration_System.md) · **Technical:** [Door_Instances](../../../Technical_Design/Exploration/Door_Instances.md)
 
 ## Summary
 

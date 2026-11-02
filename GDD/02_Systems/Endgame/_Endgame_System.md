@@ -6,7 +6,7 @@ status: Draft
 
 # Endgame System
 
-> **Glossary:** [System](../../00_Overview/Glossary.md) · **Technical:** [Uber-Weapon (tech)](../../../Technical_Design/Shop/Uber_Weapon.md)
+> **Glossary:** [System](../../00_Overview/Glossary.md) · **Technical:** [_Endgame_Module](../../../Technical_Design/Endgame/_Endgame_Module.md)
 
 ## Overview
 

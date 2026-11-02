@@ -19,7 +19,7 @@ migration map; confirm both together with the user.
 
 | Module | Namespace | GDD system | Built from |
 | --- | --- | --- | --- |
-| Core | `Armotheca.Core` | — | `Technical_Overview.md` §3 data/runtime split, §5 Shared Types |
+| Core | `Armotheca.Core` | — | `Technical_Overview.md` §5 Shared Types (§3 principles stayed in the overview) |
 | Networking | `Armotheca.Networking` | — (serves `F07_Co_Op`) | `Technical_Overview.md` §4 Networking Setup and spike |
 | Movement | `Armotheca.Movement` | Movement | `Common/Movement.md` (keep Input Mapping as a section) |
 | Interaction | `Armotheca.Interaction` | Interaction | `Common/Object_Interaction.md` |
@@ -43,7 +43,7 @@ migration map; confirm both together with the user.
 
 ## Technical_Overview.md after migration
 
-Keeps §1 stack, §2 targets, §3 principles (minus the data split, now in Core),
+Keeps §1 stack, §2 targets, §3 principles,
 §4 a one-paragraph networking summary linking Networking, §6 upgrade plan, §8 open
 decisions and §9 standards (shortened to a link to this skill's rules). §5 moves to
 Core; §7 Code Organization is replaced by `_Module_Map.md`.

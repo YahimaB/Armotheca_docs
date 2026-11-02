@@ -1,6 +1,24 @@
-# Uber-Weapon - Technical Design
+---
+id: _Endgame_Module
+type: module
+module: Endgame
+namespace: Armotheca.Endgame
+status: Draft
+---
 
-> **Zone:** Shop · **Design:** [_Endgame_System](../../GDD/02_Systems/Endgame/_Endgame_System.md)
+# Endgame Module
+
+> **Design:** [_Endgame_System](../../GDD/02_Systems/Endgame/_Endgame_System.md) · **Map:** [_Module_Map](../_Module_Map.md) · **Overview:** [Technical Overview](../Technical_Overview.md)
+
+## Scope
+
+| GDD doc | Implemented in |
+| --- | --- |
+| [M_Forging_Ritual](../../GDD/02_Systems/Endgame/M_Forging_Ritual.md) | [Architecture](#architecture--implementation-approaches) — `UberRitualDirector`, `RitualPhase`; [Networking](#networking) |
+| [E_Primordial_Catalyst](../../GDD/03_Entities/Items/Catalysts/E_Primordial_Catalyst.md) | [Technical Specifications](#technical-specifications) — catalyst tracking |
+| [E_Great_Crucible](../../GDD/03_Entities/Props/Workstations/E_Great_Crucible.md) | Ritual start interaction |
+
+---
 
 ## Technical Specifications
 
@@ -31,14 +49,26 @@
 
 ---
 
+## Events
+
+| Event | Raised when | Consumed by |
+| --- | --- | --- |
+| `OnCatalystAcquired` | A catalyst is brought home | Pedestal, audio |
+| `OnPhaseStarted` | A ritual phase begins | UI, music, VFX |
+| `OnPhaseFailed` | A ritual phase fails | UI, music |
+| `OnUberWeaponForged` | The ritual completes | Victory screen, save |
+
+---
+
 ## Unity C# Reference Code
 
 ```csharp
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Armotheca.Progression;
 
-namespace Armotheca.Progression
+namespace Armotheca.Endgame
 {
     public static class CatalystIds
     {

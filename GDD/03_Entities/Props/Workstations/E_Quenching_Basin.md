@@ -7,7 +7,7 @@ status: Draft
 
 # Quenching Basin
 
-> **Roster:** [_Prop_List](../_Prop_List.md) · **Technical:** [Resource Processing (tech)](../../../../Technical_Design/Shop/Resource_Processing.md)
+> **Roster:** [_Prop_List](../_Prop_List.md) · **Technical:** [_Processing_Module › Technical Specifications](../../../../Technical_Design/Processing/_Processing_Module.md#technical-specifications)
 
 ## Description & Role
 

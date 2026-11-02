@@ -91,7 +91,7 @@ All assets follow the naming in [Assets Naming](../Guidelines/Assets_Naming.md) 
 
 ### Work this week
 - `IA_Player` Input Actions (keyboard/mouse + gamepad): move, sprint, jump, roll, interact, secondary, attack.
-- Kinematic character controller per [Technical_Design/Movement](../Technical_Design/Common/Movement.md): walk/sprint, jump with coyote time and buffer, roll with cooldown and invulnerability window flag, values from `Settings_Movement`.
+- Kinematic character controller per [Technical_Design/Movement](../Technical_Design/Movement/_Movement_Module.md): walk/sprint, jump with coyote time and buffer, roll with cooldown and invulnerability window flag, values from `Settings_Movement`.
 - Character state machine matching the GDD state table (grounded, airborne, rolling, carrying, interacting, downed — the last three as stubs).
 - `AC_Player` with a locomotion blend tree; third-person camera following the local player only.
 
@@ -146,7 +146,7 @@ All assets follow the naming in [Assets Naming](../Guidelines/Assets_Naming.md) 
 | Item list for Phase 1 with display names (raw → processed → weapon) | Data | See the material table in Week 6–8; can be finalized then. |
 
 ### Work this week
-- `Armotheca.Interaction` per [Technical_Design/Object_Interaction](../Technical_Design/Common/Object_Interaction.md): best-target selection (1.8 m reach, facing bias), single `Prompt_Interact` with verb + object name, invalid-action reasons (`Hands full`, `Wrong part for this socket`).
+- `Armotheca.Interaction` per [Technical_Design/Object_Interaction](../Technical_Design/Interaction/_Interaction_Module.md): best-target selection (1.8 m reach, facing bias), single `Prompt_Interact` with verb + object name, invalid-action reasons (`Hands full`, `Wrong part for this socket`).
 - `ItemDefinition` ScriptableObjects and networked world item prefab.
 - Carry model: **Hands** (1 item), **Weapon Slot** (1 weapon), **Backpack** (6 raw resources).
 - Instant interactions: pick up, drop, place/snap into socket, take, hand over to teammate, generic open/use.
@@ -271,7 +271,7 @@ All assets follow the naming in [Assets Naming](../Guidelines/Assets_Naming.md) 
 | Equipped weapon attachment points on the character: `Socket_HandRight`, `Socket_Back` | Rig | Required on the final character; placeholder bones OK. |
 
 ### Work this week
-- Pure assembly domain logic per [Technical_Design/Weapon_Crafting](../Technical_Design/Shop/Weapon_Crafting.md): valid pairs (Hilt+Blade, Short Shaft+Core, Long Shaft+Core), Quality = rounded average, Base Damage from payload, auto-naming `[Payload] [Foundation] [Category]`; EditMode tests for every pair and rejection.
+- Pure assembly domain logic per [Technical_Design/Weapon_Crafting](../Technical_Design/Crafting/_Crafting_Module.md): valid pairs (Hilt+Blade, Short Shaft+Core, Long Shaft+Core), Quality = rounded average, Base Damage from payload, auto-naming `[Payload] [Foundation] [Category]`; EditMode tests for every pair and rejection.
 - Bench sockets accept only their part type; mallet strike (instant) assembles; weapon appears on the output riser.
 - World-space hologram preview showing predicted name, Quality tier and Base Damage before locking.
 - Weapons go to hands on pickup; `[Q] Equip` swaps with the weapon slot; equipped weapon visible on the character.
@@ -329,7 +329,7 @@ All assets follow the naming in [Assets Naming](../Guidelines/Assets_Naming.md) 
 | **Decision:** starter weapons — do players start with a sword/wand so they are never unarmed? | Design | Required: the Phase 1 loop kills a mob before any weapon is crafted. Open question in [Combat](../GDD/02_Systems/Combat/_Combat_System.md). |
 
 ### Work this week
-- `Armotheca.Combat` per [Technical_Design/Combat](../Technical_Design/Common/Combat.md): sword 2-swing chain (frontal arc, multi-hit once per swing), magic orb (cooldown, aim assist, stops on first hit), values from `AttackProfile_SwordSwing` / `AttackProfile_MagicOrb`.
+- `Armotheca.Combat` per [Technical_Design/Combat](../Technical_Design/Combat/_Combat_Module.md): sword 2-swing chain (frontal arc, multi-hit once per swing), magic orb (cooldown, aim assist, stops on first hit), values from `AttackProfile_SwordSwing` / `AttackProfile_MagicOrb`.
 - `IDamageable`, player health 100, invulnerability (roll start, 0.5 s after hit), hit-stop and flash feedback.
 - Downed state with 20 s bleed-out, 3 s cooperative revive (continuous interaction), ejection hook (wired to realms in Week 11).
 - Training dummy in the workshop sandbox.
@@ -392,7 +392,7 @@ All assets follow the naming in [Assets Naming](../Guidelines/Assets_Naming.md) 
 | **`Mob_BrambleStalker` data:** health, lunge damage, telegraph time, speeds, aggro range, drop table, group sizes | Data | Required (initial values). |
 
 ### Work this week
-- `Armotheca.Exploration` mobs per [Technical_Design/Mobs](../Technical_Design/Exploration/Mobs.md): Chaser behaviour (approach, telegraphed lunge), Ambusher variant hidden next to nodes, waking on harvest.
+- `Armotheca.Exploration` mobs per [Technical_Design/Mobs](../Technical_Design/Exploration/Mob_AI.md): Chaser behaviour (approach, telegraphed lunge), Ambusher variant hidden next to nodes, waking on harvest.
 - NavMesh for the Verdant realm (AI Navigation package).
 - Spawn zones rolled on door open with the letter guarantee for mob drops; sword stagger; death drops.
 - Downed bleed-out in a realm ejects the player to the workshop and drops their backpack/hands contents in the realm.

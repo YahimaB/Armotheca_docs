@@ -6,7 +6,7 @@ status: Draft
 
 # Combat System
 
-> **Glossary:** [System](../../00_Overview/Glossary.md) · **Balancing:** [Combat](../../06_Balancing/Combat.md) · **Technical:** [Combat (tech)](../../../Technical_Design/Common/Combat.md)
+> **Glossary:** [System](../../00_Overview/Glossary.md) · **Balancing:** [Combat](../../06_Balancing/Combat.md) · **Technical:** [_Combat_Module](../../../Technical_Design/Combat/_Combat_Module.md)
 
 ## Overview
 

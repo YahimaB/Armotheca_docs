@@ -89,7 +89,7 @@ Assets/
 │   │   └── Sandbox/<PersonName>/               # personal test scenes, never referenced by the game
 │   ├── Scripts/                                # one folder + .asmdef per namespace
 │   │   ├── Core/  Networking/  Movement/  Interaction/  Combat/
-│   │   ├── Crafting/  Shop/  Orders/  Progression/  Exploration/  UI/
+│   │   ├── Crafting/  Processing/  Orders/  Progression/  Endgame/  Exploration/  UI/
 │   │   └── Editor/
 │   ├── Settings/                               # URP assets, Input Actions, Volume profiles, Physics
 │   └── Tests/
@@ -104,7 +104,7 @@ Assets/
 - **One folder per asset** in `Art/`: mesh, textures and materials of the asset live together. Add `Textures/` and `Materials/` subfolders only when an asset has more than ~10 files.
 - **Third-party content is never edited.** To modify an Asset Store asset, copy it into `_Project/` and rename it to our conventions.
 - **Source files stay outside `Assets/`** (`.blend`, `.spp`, `.psd`, `.kra`, audio projects) in a separate art-source location. Only exported FBX, PNG/TGA and WAV/OGG files enter `Assets/`.
-- **Script folders match namespaces** from the [Technical Overview](../Technical_Design/Technical_Overview.md). Each has an assembly definition named after the namespace: `Scripts/Combat/Armotheca.Combat.asmdef`.
+- **Script folders match namespaces** from the [Module Map](../Technical_Design/_Module_Map.md). Each has an assembly definition named after the namespace: `Scripts/Combat/Armotheca.Combat.asmdef`.
 - **Git:** commit `.meta` files; binaries (fbx, png, tga, psd, wav, ogg) go through Git LFS.
 
 ---

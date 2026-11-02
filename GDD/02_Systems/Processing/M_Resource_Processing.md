@@ -7,7 +7,7 @@ status: Draft
 
 # Resource Processing (Station Pipelines)
 
-> **System:** [_Processing_System](_Processing_System.md) · **Technical:** [Resource Processing (tech)](../../../Technical_Design/Shop/Resource_Processing.md)
+> **System:** [_Processing_System](_Processing_System.md) · **Technical:** [_Processing_Module › Architecture](../../../Technical_Design/Processing/_Processing_Module.md#architecture--implementation-approaches)
 
 ## Summary
 

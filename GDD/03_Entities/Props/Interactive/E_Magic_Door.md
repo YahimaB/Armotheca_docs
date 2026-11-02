@@ -7,7 +7,7 @@ status: Draft
 
 # Magic Door
 
-> **Roster:** [_Prop_List](../_Prop_List.md) · **Technical:** [Magic Doors (tech)](../../../../Technical_Design/Exploration/Magic_Doors.md)
+> **Roster:** [_Prop_List](../_Prop_List.md) · **Technical:** [Door_Instances](../../../../Technical_Design/Exploration/Door_Instances.md)
 
 ## Description & Role
 

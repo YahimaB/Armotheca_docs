@@ -7,7 +7,7 @@ status: Draft
 
 # The Forging Ritual
 
-> **System:** [_Endgame_System](_Endgame_System.md) · **Technical:** [Uber-Weapon (tech)](../../../Technical_Design/Shop/Uber_Weapon.md)
+> **System:** [_Endgame_System](_Endgame_System.md) · **Technical:** [_Endgame_Module › Architecture](../../../Technical_Design/Endgame/_Endgame_Module.md#architecture--implementation-approaches)
 
 ## Summary
 

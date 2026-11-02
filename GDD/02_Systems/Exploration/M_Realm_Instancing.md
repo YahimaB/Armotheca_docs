@@ -7,7 +7,7 @@ status: Draft
 
 # Realm Instancing
 
-> **System:** [_Exploration_System](_Exploration_System.md) · **Technical:** [Realms (tech)](../../../Technical_Design/Exploration/Realms.md)
+> **System:** [_Exploration_System](_Exploration_System.md) · **Technical:** [Realm_Loading](../../../Technical_Design/Exploration/Realm_Loading.md)
 
 ## Summary
 

@@ -6,7 +6,7 @@ status: Draft
 
 # Interaction System
 
-> **Glossary:** [System](../../00_Overview/Glossary.md) · **Balancing:** [Interaction](../../06_Balancing/Interaction.md) · **Technical:** [Object Interaction (tech)](../../../Technical_Design/Common/Object_Interaction.md)
+> **Glossary:** [System](../../00_Overview/Glossary.md) · **Balancing:** [Interaction](../../06_Balancing/Interaction.md) · **Technical:** [_Interaction_Module](../../../Technical_Design/Interaction/_Interaction_Module.md)
 
 ## Overview
 

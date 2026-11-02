@@ -32,6 +32,7 @@ Owner: [M_Node_Spawning](../02_Systems/Exploration/M_Node_Spawning.md), [M_Harve
 | Respawn during an expedition | None |  |
 | Letter guarantee | ≥ 1 node per required material |  |
 | Hits per Mineral Vein | 3–5 |  |
+| Strike interval | 0.6 s* | One hit per helper per interval |
 | Hits per Arcane Flora | 3–4 |  |
 | Max harvesters per node | 2 |  |
 

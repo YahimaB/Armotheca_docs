@@ -7,7 +7,7 @@ status: Draft
 
 # Realm Pressure
 
-> **Flow:** [_UI_Flow](../_UI_Flow.md) · **Technical:** [Mobs (tech)](../../../Technical_Design/Exploration/Mobs.md)
+> **Flow:** [_UI_Flow](../_UI_Flow.md) · **Technical:** [_UI_Module › Realm Pressure](../../../Technical_Design/UI/_UI_Module.md#realm-pressure)
 
 ## Purpose
 

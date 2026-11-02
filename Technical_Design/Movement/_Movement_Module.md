@@ -1,6 +1,27 @@
-# Movement - Technical Design
+---
+id: _Movement_Module
+type: module
+module: Movement
+namespace: Armotheca.Movement
+status: Draft
+---
 
-> **Zone:** Common · **Design:** [_Movement_System](../../GDD/02_Systems/Movement/_Movement_System.md)
+# Movement Module
+
+> **Design:** [_Movement_System](../../GDD/02_Systems/Movement/_Movement_System.md) · **Map:** [_Module_Map](../_Module_Map.md) · **Overview:** [Technical Overview](../Technical_Overview.md)
+
+## Scope
+
+| GDD doc | Implemented in |
+| --- | --- |
+| [_Movement_System](../../GDD/02_Systems/Movement/_Movement_System.md) | [Architecture](#architecture--implementation-approaches) (state capability flags) |
+| [M_Walk](../../GDD/02_Systems/Movement/M_Walk.md) | [States](#states) — `GroundedState` |
+| [M_Sprint](../../GDD/02_Systems/Movement/M_Sprint.md) | [States](#states) — `GroundedState` |
+| [M_Jump](../../GDD/02_Systems/Movement/M_Jump.md) | [States](#states) — `AirborneState`, coyote / buffer timers |
+| [M_Roll](../../GDD/02_Systems/Movement/M_Roll.md) | [States](#states) — `RollingState`; [Networking](#networking) for host-side i-frames |
+| [Player](../../GDD/03_Entities/Player/Player.md) | [Controller (Context)](#controller-context) |
+
+---
 
 ## Technical Specifications
 
@@ -23,7 +44,7 @@
 ### Approach B: State Pattern — One Class per State (Chosen)
 - `PlayerMovementController` is the **context**: it owns the motor (velocities, timers, `CharacterController`), inputs and flags, and exposes shared helpers (locomotion, gravity, jump consumption).
 - Each `MovementState` subclass owns its own `Enter` / `Tick` / `Exit` logic, its outgoing transitions and its **capability flags** (`AllowsSprint`, `AllowsRoll`, `IsInvulnerable`).
-- Other systems never read state internals; they query `CanRoll`, `CanSprint`, `IsInvulnerable` and set `Lock` / `IsCarrying` (see [Object Interaction](Object_Interaction.md) and [Combat](Combat.md)).
+- Other systems never read state internals; they query `CanRoll`, `CanSprint`, `IsInvulnerable` and set `Lock` / `IsCarrying` (see [Object Interaction](../Interaction/_Interaction_Module.md) and [Combat](../Combat/_Combat_Module.md)).
 - **Pros:** The move set is expected to grow; new moves are added as new classes without touching existing ones (Open/Closed). States are testable in isolation.
 - **Cons:** More files and some indirection for the current 4 states; shared motor logic must stay in the controller to avoid duplication between states.
 
@@ -44,7 +65,7 @@ FishNet (see [Technical Overview](../Technical_Overview.md)):
 - **State replication:** On `OnStateChanged`, the owner sends the new `MovementStateId` (and roll start tick) through a `[ServerRpc]`; the host stores it in a `SyncVar<MovementStateId>` that drives animation on all clients.
 - **Host validation:** The host rejects implausible moves (speed above sprint max with tolerance, teleport distances) and corrects the owner via a `[TargetRpc]`.
 - **Roll invulnerability** is evaluated on the host using the replicated roll start tick to avoid client-side cheating of i-frames.
-- **Portal transitions:** Because movement is client-authoritative, the host asks the owning client to teleport (`[TargetRpc]`, see [Magic Doors](../Exploration/Magic_Doors.md)); the owner moves itself and clears interpolation.
+- **Portal transitions:** Because movement is client-authoritative, the host asks the owning client to teleport (`[TargetRpc]`, see [Magic Doors](../Exploration/Door_Instances.md)); the owner moves itself and clears interpolation.
 - **Prediction:** FishNet's client-side prediction is not used initially; revisit only if playtests show movement or roll timing problems under latency.
 
 ---
@@ -57,6 +78,27 @@ FishNet (see [Technical Overview](../Technical_Overview.md)):
 | Sprint (hold) | Left Shift | Left stick press / LB |
 | Jump | Space | A / Cross |
 | Roll | Left Ctrl / Right Mouse | B / Circle |
+
+---
+
+## Data
+
+| Definition (SO) | Field | Supplied by |
+| --- | --- | --- |
+| `MovementSettings` | walk speed, carrying multiplier | [Movement › Walk](../../GDD/06_Balancing/Movement.md#walk) |
+| `MovementSettings` | sprint speed | [Movement › Sprint](../../GDD/06_Balancing/Movement.md#sprint) |
+| `MovementSettings` | jump height, coyote time, jump buffer | [Movement › Jump](../../GDD/06_Balancing/Movement.md#jump) |
+| `MovementSettings` | roll distance, duration, invulnerability, cooldown | [Movement › Roll](../../GDD/06_Balancing/Movement.md#roll) |
+
+---
+
+## Events
+
+| Event | Raised when | Consumed by |
+| --- | --- | --- |
+| `OnStateChanged` | Movement state changes | Animation, network state replication |
+| `OnJumped` | A jump starts | Audio, VFX |
+| `OnRollStarted` | A roll starts | Interaction (cancels continuous), audio, VFX |
 
 ---
 

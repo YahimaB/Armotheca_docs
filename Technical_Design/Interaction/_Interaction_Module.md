@@ -1,14 +1,34 @@
-# Object Interaction - Technical Design
+---
+id: _Interaction_Module
+type: module
+module: Interaction
+namespace: Armotheca.Interaction
+status: Draft
+---
 
-> **Zone:** Common · **Design:** [_Interaction_System](../../GDD/02_Systems/Interaction/_Interaction_System.md)
+# Interaction Module
+
+> **Design:** [_Interaction_System](../../GDD/02_Systems/Interaction/_Interaction_System.md) · **Map:** [_Module_Map](../_Module_Map.md) · **Overview:** [Technical Overview](../Technical_Overview.md)
+
+## Scope
+
+| GDD doc | Implemented in |
+| --- | --- |
+| [M_Carry_Model](../../GDD/02_Systems/Interaction/M_Carry_Model.md) | [Technical Specifications](#technical-specifications) — `PlayerCarrier` |
+| [M_Instant_Interaction](../../GDD/02_Systems/Interaction/M_Instant_Interaction.md) | [Architecture](#architecture--implementation-approaches) — `IInstantInteractable` |
+| [M_Continuous_Interaction](../../GDD/02_Systems/Interaction/M_Continuous_Interaction.md) | [Architecture](#architecture--implementation-approaches) — `IContinuousInteractable`; [Networking](#networking) |
+| [M_Targeting](../../GDD/02_Systems/Interaction/M_Targeting.md) | [Technical Specifications](#technical-specifications) — `PlayerInteractor` targeting |
+| [UI_Interaction_Prompt](../../GDD/05_UI/World/UI_Interaction_Prompt.md) | `InteractionPrompt` here; view in [_UI_Module](../UI/_UI_Module.md) |
+
+---
 
 ## Technical Specifications
 
 - **Two interaction contracts:** `IInstantInteractable` (resolve on press) and `IContinuousInteractable` (start / tick / stop with progress). One object may implement both (e.g. a forge: instant to load ore, continuous to pump bellows).
-- **Targeting:** `Physics.OverlapSphere` around a point in front of the player (reach 1.8 m) on an `Interactable` layer, scored by distance and facing angle. Runs at 10 Hz on the local client for prompts; validated by the host on use.
+- **Targeting:** `Physics.OverlapSphere` around a point in front of the player (reach: [Interaction › Targeting](../../GDD/06_Balancing/Interaction.md#targeting)) on an `Interactable` layer, scored by distance and facing angle. Runs at 10 Hz on the local client for prompts; validated by the host on use.
 - **Carry state:** `PlayerCarrier` component holds the Hands item, the equipped weapon and the backpack contents.
 - **Prompts:** Interactables return a `InteractionPrompt` (verb + object name + kind) for the current player context; UI reads it via an event.
-- **Progress retention:** Continuous interactables keep progress for `ProgressRetentionSeconds` (5 s) after the last tick before decaying.
+- **Progress retention:** Continuous interactables keep progress for `ProgressRetentionSeconds` ([Interaction › Continuous Interaction](../../GDD/06_Balancing/Interaction.md#continuous-interaction)) after the last tick before decaying.
 - **Performance budget:** Targeting query < 0.02 ms per local player; no per-frame allocations (use `OverlapSphereNonAlloc`).
 
 ---
@@ -36,6 +56,26 @@ Approach A is chosen; context rules are kept in a shared helper to stay consiste
 - The **host** re-runs `CanInteract` (distance, line of sight, busy state) and executes the interaction; item ownership changes are host-authoritative.
 - Continuous progress is **ticked on the host** and replicated as a normalized value (≤ 10 Hz) for progress bars. Clients predict the bar locally and correct on update.
 - Busy/exclusive locks (one player per anvil) live on the host to prevent double use.
+
+---
+
+## Data
+
+| Definition (SO) | Field | Supplied by |
+| --- | --- | --- |
+| `PlayerCarrier` | backpack capacity | [Interaction › Carry Model](../../GDD/06_Balancing/Interaction.md#carry-model) |
+| Continuous interactables | `ProgressRetentionSeconds`, helper bonus | [Interaction › Continuous Interaction](../../GDD/06_Balancing/Interaction.md#continuous-interaction) |
+| `PlayerInteractor` | reach | [Interaction › Targeting](../../GDD/06_Balancing/Interaction.md#targeting) |
+
+---
+
+## Events
+
+| Event | Raised when | Consumed by |
+| --- | --- | --- |
+| `OnCarryChanged` | Hands, weapon slot or backpack change | Movement (`IsCarrying`), HUD |
+| `OnContinuousStateChanged` | A hold interaction starts / stops | Movement (`Lock`), animation |
+| `OnProgressChanged` | Continuous progress changes | Prompt progress bar |
 
 ---
 
@@ -286,5 +326,5 @@ namespace Armotheca.Interaction
 }
 ```
 
-- `OnContinuousStateChanged(true)` sets `PlayerMovementController.Lock = LockReason.Interaction` (and `false` clears it); `PlayerCarrier.OnCarryChanged` updates `IsCarrying`. `PlayerMovementController.OnRollStarted` calls `CancelContinuous()` (see [Movement](Movement.md)).
+- `OnContinuousStateChanged(true)` sets `PlayerMovementController.Lock = LockReason.Interaction` (and `false` clears it); `PlayerCarrier.OnCarryChanged` updates `IsCarrying`. `PlayerMovementController.OnRollStarted` calls `CancelContinuous()` (see [Movement](../Movement/_Movement_Module.md)).
 - Instant interactions take priority over continuous ones on the same target, so pressing interact on a forge with ore in hands loads it, and holding with empty hands pumps the bellows.

@@ -1,12 +1,21 @@
-# Resource Spawning & Gathering - Technical Design
+---
+id: Resource_Nodes
+type: topic
+module: Exploration
+status: Draft
+---
 
-> **Zone:** Exploration · **Design:** [M_Harvesting](../../GDD/02_Systems/Exploration/M_Harvesting.md) · **Related:** [Realms](Realms.md) · [Object Interaction](../Common/Object_Interaction.md)
+# Resource Nodes
+
+> **Module:** [_Exploration_Module](_Exploration_Module.md) · **Design:** [M_Harvesting](../../GDD/02_Systems/Exploration/M_Harvesting.md) · [M_Node_Spawning](../../GDD/02_Systems/Exploration/M_Node_Spawning.md) · **Related:** [Realm_Loading](Realm_Loading.md) · [_Interaction_Module](../Interaction/_Interaction_Module.md)
+
+---
 
 ## Technical Specifications
 
 - **Node definition:** `ResourceNodeDefinition` (SO): node ID, prefab, hits required, strike interval, drop table, rare variant drop table, tool animation type (Pickaxe / Axe).
 - **Spawn tables:** `NodeSpawnTable` per realm with per-band active fraction and weighted node entries.
-- **Harvesting:** `ResourceNode` implements `IContinuousInteractable` with `MaxHelpers = 2`. While held, each helper lands a strike every `strikeInterval` seconds (initial 0.6 s); each strike = 1 hit.
+- **Harvesting:** `ResourceNode` implements `IContinuousInteractable` with `MaxHelpers` ([Exploration › Nodes](../../GDD/06_Balancing/Exploration.md#nodes)). While held, each helper lands a strike every `strikeInterval` seconds ([Exploration › Nodes](../../GDD/06_Balancing/Exploration.md#nodes)); each strike = 1 hit.
 - **Drops:** Rolled with `DropRoller` (see [Technical Overview](../Technical_Overview.md)) using the realm seed's RNG; spawned as `WorldItem` pickups with a small scatter. Walking over a pickup auto-adds it to the harvester's backpack if there is room.
 - **No respawn** within a realm instance.
 - **Performance:** ≤ 40 nodes per realm; nodes are static colliders, no per-frame update unless being harvested.
@@ -28,6 +37,17 @@
 
 - Host owns node hit counts and spawning; clients receive `OnStruck(hitIndex)` events for VFX/SFX and a `Harvested` event.
 - Drops are host-spawned network objects; backpack additions are host-validated.
+
+---
+
+## Data
+
+| Definition (SO) | Field | Supplied by |
+| --- | --- | --- |
+| `ResourceNodeDefinition` | hits required, strike interval | [Exploration › Nodes](../../GDD/06_Balancing/Exploration.md#nodes) |
+| `ResourceNodeDefinition` | drop tables | Not yet defined |
+| `NodeSpawnTable` | active fraction per band, rare chance | [Exploration › Nodes](../../GDD/06_Balancing/Exploration.md#nodes) |
+| `ResourceNode` | `MaxHelpers` | [Exploration › Nodes](../../GDD/06_Balancing/Exploration.md#nodes) |
 
 ---
 

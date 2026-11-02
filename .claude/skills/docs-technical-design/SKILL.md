@@ -101,7 +101,7 @@ Every doc starts with YAML properties (`id`, `type`, `module`, `status`), then
 
 ## Migration
 
-The current docs mirror the old GDD zones (`Common/`, `Shop/`, `Exploration/`).
-Edit them in place until the user approves the reform. The planned split is in
-[references/Migration_Map.md](references/Migration_Map.md); migrate after the GDD
-docs they implement, so links can point to their new IDs.
+The tech docs were migrated from the old zone folders (`Common/`, `Shop/`,
+`Exploration/`) to modules on 2026-11-02.
+[references/Migration_Map.md](references/Migration_Map.md) records where each old
+doc went; use it to answer "where did X go" questions.

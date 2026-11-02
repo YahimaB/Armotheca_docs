@@ -7,7 +7,7 @@ status: Draft
 
 # Player
 
-> **Overview:** [Vision](../../00_Overview/Vision.md) · **Technical:** [Movement (tech)](../../../Technical_Design/Common/Movement.md)
+> **Overview:** [Vision](../../00_Overview/Vision.md) · **Technical:** [_Movement_Module › Controller](../../../Technical_Design/Movement/_Movement_Module.md#controller-context)
 
 ## Description & Role
 

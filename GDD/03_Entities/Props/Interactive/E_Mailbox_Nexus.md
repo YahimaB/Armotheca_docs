@@ -7,7 +7,7 @@ status: Draft
 
 # Mailbox Nexus
 
-> **Roster:** [_Prop_List](../_Prop_List.md) · **Technical:** [Order System (tech)](../../../../Technical_Design/Shop/Order_System.md)
+> **Roster:** [_Prop_List](../_Prop_List.md) · **Technical:** [_Orders_Module › Networking](../../../../Technical_Design/Orders/_Orders_Module.md#networking)
 
 ## Description & Role
 

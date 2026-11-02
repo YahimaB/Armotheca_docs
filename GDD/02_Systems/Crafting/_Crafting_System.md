@@ -6,7 +6,7 @@ status: Draft
 
 # Crafting System
 
-> **Glossary:** [System](../../00_Overview/Glossary.md) · **Balancing:** [Crafting](../../06_Balancing/Crafting.md) · **Technical:** [Weapon Crafting (tech)](../../../Technical_Design/Shop/Weapon_Crafting.md)
+> **Glossary:** [System](../../00_Overview/Glossary.md) · **Balancing:** [Crafting](../../06_Balancing/Crafting.md) · **Technical:** [_Crafting_Module](../../../Technical_Design/Crafting/_Crafting_Module.md)
 
 ## Overview
 

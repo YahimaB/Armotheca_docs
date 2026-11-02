@@ -6,7 +6,7 @@ status: Draft
 
 # Mob Roster
 
-> **Overview:** [Glossary](../../00_Overview/Glossary.md) · **Balancing:** [Combat › Mobs](../../06_Balancing/Combat.md#mobs) · **Technical:** [Mobs (tech)](../../../Technical_Design/Exploration/Mobs.md)
+> **Overview:** [Glossary](../../00_Overview/Glossary.md) · **Balancing:** [Combat › Mobs](../../06_Balancing/Combat.md#mobs) · **Technical:** [Mob_AI](../../../Technical_Design/Exploration/Mob_AI.md)
 
 ## Overview
 

@@ -1,10 +1,29 @@
-# Combat - Technical Design
+---
+id: _Combat_Module
+type: module
+module: Combat
+namespace: Armotheca.Combat
+status: Draft
+---
 
-> **Zone:** Common · **Design:** [_Combat_System](../../GDD/02_Systems/Combat/_Combat_System.md)
+# Combat Module
+
+> **Design:** [_Combat_System](../../GDD/02_Systems/Combat/_Combat_System.md) · **Map:** [_Module_Map](../_Module_Map.md) · **Overview:** [Technical Overview](../Technical_Overview.md)
+
+## Scope
+
+| GDD doc | Implemented in |
+| --- | --- |
+| [M_Sword_Swing](../../GDD/02_Systems/Combat/M_Sword_Swing.md) | [Technical Specifications](#technical-specifications) — sword hit detection, `SwordSwingProfile` |
+| [M_Magic_Orb](../../GDD/02_Systems/Combat/M_Magic_Orb.md) | [Technical Specifications](#technical-specifications) — orb projectile, `MagicOrbProfile` |
+| [M_Health_And_Downed](../../GDD/02_Systems/Combat/M_Health_And_Downed.md) | [Player Downed Flow](#player-downed-flow-host); `Health` |
+| [E_Sword](../../GDD/03_Entities/Items/Weapons/E_Sword.md), [E_Wand](../../GDD/03_Entities/Items/Weapons/E_Wand.md), [E_Staff](../../GDD/03_Entities/Items/Weapons/E_Staff.md) | [Architecture](#architecture--implementation-approaches) — executor per category |
+
+---
 
 ## Technical Specifications
 
-- **Damage source:** Every hit deals the attacker weapon's `BaseDamage` (integer). No quality, element or other modifiers are applied at this stage (see [Weapon Crafting](../Shop/Weapon_Crafting.md)).
+- **Damage source:** Every hit deals the attacker weapon's `BaseDamage` (integer). No quality, element or other modifiers are applied at this stage (see [Weapon Crafting](../Crafting/_Crafting_Module.md)).
 - **Attack profiles vs weapon stats:** Timing, reach and projectile parameters are **attack profile** data defined once per weapon category (`SwordSwingProfile`, `MagicOrbProfile`). They are not per-weapon stats and do not vary between crafted weapons.
 - **Sword hit detection:** During the active window, an arc test (`OverlapSphereNonAlloc` + angle filter) runs each physics step; a per-swing `HashSet` prevents hitting the same target twice.
 - **Orb projectile:** Pooled projectile moved kinematically with a `SphereCast` per step; destroyed on first `IDamageable` or environment hit, or at max range.
@@ -36,6 +55,26 @@ Approach A is chosen. Animations follow the profile timings; animation events ar
 - **Health:** `SyncVar<int>` on the mob/player `NetworkBehaviour`, with change callbacks for UI and hit flashes.
 - **Lag compensation:** FishNet's lag compensation is available if host-side hit detection feels unfair to remote players; not used initially.
 - **Invulnerability checks** use host time and replicated roll start time.
+
+---
+
+## Data
+
+| Definition (SO) | Field | Supplied by |
+| --- | --- | --- |
+| `SwordSwingProfile` | chain length, timings, arc, reach, chain window | [Combat › Sword Swing](../../GDD/06_Balancing/Combat.md#sword-swing) |
+| `MagicOrbProfile` | cast time, cooldown, speed, range, aim cone | [Combat › Magic Orb](../../GDD/06_Balancing/Combat.md#magic-orb) |
+| `Health` (player) | max health, post-hit invulnerability, bleed-out, revive | [Combat › Health and Downed](../../GDD/06_Balancing/Combat.md#health-and-downed) |
+
+---
+
+## Events
+
+| Event | Raised when | Consumed by |
+| --- | --- | --- |
+| `OnDamaged` | A hit lands | Hit flash, HUD, audio |
+| `OnDepleted` | Health reaches 0 | Downed flow (players), death and drops (mobs) |
+| `OnDespawn` | An orb ends | Projectile pool |
 
 ---
 
@@ -266,6 +305,6 @@ namespace Armotheca.Combat
 ```
 
 ### Player Downed Flow (host)
-1. `Health.OnDepleted` on a player → set `PlayerMovementController.Lock = LockReason.Downed`, start bleed-out timer (20 s), enable a `ReviveInteractable` (a `ContinuousInteractableBase` with 3 s duration, see [Object Interaction](Object_Interaction.md)).
-2. Revive completed → `Health.Restore(0.5f)`, set `Lock = LockReason.None`.
-3. Timer expired or no other living player in the realm → eject to workshop (see [Magic Doors](../Exploration/Magic_Doors.md)): drop backpack + hands at the downed position, keep the equipped weapon, `Health.Restore(1f)`.
+1. `Health.OnDepleted` on a player → set `PlayerMovementController.Lock = LockReason.Downed`, start the bleed-out timer ([Combat › Health and Downed](../../GDD/06_Balancing/Combat.md#health-and-downed)), enable a `ReviveInteractable` (a `ContinuousInteractableBase` with the revive duration from the same table, see [Object Interaction](../Interaction/_Interaction_Module.md)).
+2. Revive completed → `Health.Restore(reviveHealth)`, set `Lock = LockReason.None`.
+3. Timer expired or no other living player in the realm → eject to workshop (see [Magic Doors](../Exploration/Door_Instances.md)): drop backpack + hands at the downed position, keep the equipped weapon, `Health.Restore(1f)`.

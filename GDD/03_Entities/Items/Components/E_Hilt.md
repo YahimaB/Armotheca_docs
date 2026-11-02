@@ -7,7 +7,7 @@ status: Draft
 
 # Hilt
 
-> **Roster:** [_Item_List](../_Item_List.md) · **Technical:** [Weapon Crafting (tech)](../../../../Technical_Design/Shop/Weapon_Crafting.md)
+> **Roster:** [_Item_List](../_Item_List.md) · **Technical:** [_Crafting_Module › Architecture](../../../../Technical_Design/Crafting/_Crafting_Module.md#architecture--implementation-approaches)
 
 ## Description & Role
 

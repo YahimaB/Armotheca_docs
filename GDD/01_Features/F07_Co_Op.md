@@ -10,7 +10,7 @@ pillars: [Cooperative Synergy]
 
 # Co-op (1–4 Players)
 
-> **Hub:** [_Feature_List](_Feature_List.md) · **Technical:** [Technical Overview › Networking Setup](../../Technical_Design/Technical_Overview.md#4-networking-setup-fishnet--fishysteamworks)
+> **Hub:** [_Feature_List](_Feature_List.md) · **Technical:** [_Networking_Module](../../Technical_Design/Networking/_Networking_Module.md)
 
 ## Purpose
 

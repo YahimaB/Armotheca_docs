@@ -7,7 +7,7 @@ status: Draft
 
 # Interaction Prompt
 
-> **Flow:** [_UI_Flow](../_UI_Flow.md) · **Technical:** [Object Interaction (tech)](../../../Technical_Design/Common/Object_Interaction.md)
+> **Flow:** [_UI_Flow](../_UI_Flow.md) · **Technical:** [_UI_Module › Interaction Prompt](../../../Technical_Design/UI/_UI_Module.md#interaction-prompt)
 
 ## Purpose
 

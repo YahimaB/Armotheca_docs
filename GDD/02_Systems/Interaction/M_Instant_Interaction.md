@@ -7,7 +7,7 @@ status: Draft
 
 # Instant Interaction
 
-> **System:** [_Interaction_System](_Interaction_System.md) · **Technical:** [Object Interaction (tech)](../../../Technical_Design/Common/Object_Interaction.md)
+> **System:** [_Interaction_System](_Interaction_System.md) · **Technical:** [_Interaction_Module › Architecture](../../../Technical_Design/Interaction/_Interaction_Module.md#architecture--implementation-approaches)
 
 ## Summary
 

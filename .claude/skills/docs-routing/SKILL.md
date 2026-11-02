@@ -44,7 +44,6 @@ creating a new document of one of these kinds, ask whether to start the reform.
 
 | Current | Proposed target | Owner skill |
 | --- | --- | --- |
-| `Technical_Design/{Common,Shop,Exploration}/` | `Technical_Design/<Module>/` (`docs-technical-design` migration map) | `docs-technical-design` |
 | `Visual_Design/References/` | `Guidelines/Art_Direction/References/` | `docs-guidelines` |
 | `Visual_Design/Concept_Arts/` | `Guidelines/Art_Direction/Concept_Arts/` | `docs-guidelines` |
 | `Visual_Design/Prompts/` | `Guidelines/Art_Direction/Prompts/` | `docs-guidelines` |

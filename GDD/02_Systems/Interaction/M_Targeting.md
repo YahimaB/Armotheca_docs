@@ -7,7 +7,7 @@ status: Draft
 
 # Targeting & Prompts
 
-> **System:** [_Interaction_System](_Interaction_System.md) · **Technical:** [Object Interaction (tech)](../../../Technical_Design/Common/Object_Interaction.md)
+> **System:** [_Interaction_System](_Interaction_System.md) · **Technical:** [_Interaction_Module › Technical Specifications](../../../Technical_Design/Interaction/_Interaction_Module.md#technical-specifications)
 
 ## Summary
 

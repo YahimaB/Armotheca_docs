@@ -1,12 +1,30 @@
-# Resource Processing - Technical Design
+---
+id: _Processing_Module
+type: module
+module: Processing
+namespace: Armotheca.Processing
+status: Draft
+---
 
-> **Zone:** Shop · **Design:** [_Processing_System](../../GDD/02_Systems/Processing/_Processing_System.md)
+# Processing Module
+
+> **Design:** [_Processing_System](../../GDD/02_Systems/Processing/_Processing_System.md) · **Map:** [_Module_Map](../_Module_Map.md) · **Overview:** [Technical Overview](../Technical_Overview.md)
+
+## Scope
+
+| GDD doc | Implemented in |
+| --- | --- |
+| [M_Resource_Processing](../../GDD/02_Systems/Processing/M_Resource_Processing.md) | [Architecture](#architecture--implementation-approaches) — station state machines, `ProcessingRecipe` |
+| [M_Processing_Mini_Game](../../GDD/02_Systems/Processing/M_Processing_Mini_Game.md) | [Architecture](#architecture--implementation-approaches) — `TimingStrikeMiniGame`, `TemperatureHoldMiniGame`; [Networking](#networking) |
+| Workstations ([E_Smelting_Forge](../../GDD/03_Entities/Props/Workstations/E_Smelting_Forge.md), [E_Anvil](../../GDD/03_Entities/Props/Workstations/E_Anvil.md), [E_Quenching_Basin](../../GDD/03_Entities/Props/Workstations/E_Quenching_Basin.md), [E_Woodworking_Lathe](../../GDD/03_Entities/Props/Workstations/E_Woodworking_Lathe.md), [E_Carving_Bench](../../GDD/03_Entities/Props/Workstations/E_Carving_Bench.md), [E_Arcane_Extractor](../../GDD/03_Entities/Props/Workstations/E_Arcane_Extractor.md), [E_Purity_Distiller](../../GDD/03_Entities/Props/Workstations/E_Purity_Distiller.md)) | [Technical Specifications](#technical-specifications) |
+
+---
 
 ## Technical Specifications
 
 - **Stations:** Smelting Forge (+ Bellows), Anvil, Quenching Basin, Woodworking Lathe, Carving Bench, Arcane Extractor, Purity Distiller.
-- **Interaction model:** Loading/unloading = `IInstantInteractable`; working = `IContinuousInteractable` (see [Object Interaction](../Common/Object_Interaction.md)).
-- **Quality output:** Integer 1–100 via `QualityRules` (see [Weapon Crafting](Weapon_Crafting.md)). Skipped mini-game → `QualityRules.Baseline` (60).
+- **Interaction model:** Loading/unloading = `IInstantInteractable`; working = `IContinuousInteractable` (see [Object Interaction](../Interaction/_Interaction_Module.md)).
+- **Quality output:** Integer 1–100 via `QualityRules` (see [Weapon Crafting](../Crafting/_Crafting_Module.md)). Skipped mini-game → `QualityRules.Baseline` ([Processing › Accessibility](../../GDD/06_Balancing/Processing.md#accessibility)).
 - **Outputs:** `WeaponComponentData` built with `WeaponComponentData.Create(material, kind, quality)`. Base Damage and Element come from the `ComponentMaterialDefinition`, never from the station.
 - **Recipes:** `ProcessingRecipe` ScriptableObjects map input item ID → material definition + output kind per station.
 - **Tick rate:** Station logic ticks on the host at 30 Hz; mini-game cursors run client-side and send the timing value with the strike request.
@@ -35,6 +53,28 @@
 
 ---
 
+## Data
+
+| Definition (SO) | Field | Supplied by |
+| --- | --- | --- |
+| `ProcessingRecipe` | input item → material + output kind | Content data (no balancing values) |
+| `QualityRules` | base quality, strike modifiers | [Processing › Anvil Strike](../../GDD/06_Balancing/Processing.md#anvil-strike) |
+| `QualityRules` | `Baseline` | [Processing › Accessibility](../../GDD/06_Balancing/Processing.md#accessibility) |
+| `TemperatureHoldMiniGame` | hold duration | [Processing › Heat Regulation](../../GDD/06_Balancing/Processing.md#heat-regulation) |
+| Bellows | heating time | [Processing › Stations](../../GDD/06_Balancing/Processing.md#stations) |
+
+---
+
+## Events
+
+| Event | Raised when | Consumed by |
+| --- | --- | --- |
+| `OnIngotReady` | Forge reaches heat | Station VFX, prompt |
+| `OnStrikeFeedback` | An anvil strike is judged | Mini-game feedback, audio |
+| `OnOutputReady` | A component is finished | Output tray, audio |
+
+---
+
 ## Unity C# Reference Code
 
 ```csharp
@@ -44,7 +84,7 @@ using UnityEngine;
 using Armotheca.Crafting;
 using Armotheca.Interaction;
 
-namespace Armotheca.Shop
+namespace Armotheca.Processing
 {
     [CreateAssetMenu(menuName = "Armotheca/Shop/Processing Recipe")]
     public class ProcessingRecipe : ScriptableObject

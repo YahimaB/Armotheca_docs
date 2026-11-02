@@ -7,7 +7,7 @@ status: Draft
 
 # The Workshop (Armotheca Pocket Realm)
 
-> **World:** [_World_Map](../_World_Map.md) · **Technical:** [Shop Progression (tech)](../../../Technical_Design/Shop/Shop_Progression.md)
+> **World:** [_World_Map](../_World_Map.md) · **Technical:** [_Progression_Module › Technical Specifications](../../../Technical_Design/Progression/_Progression_Module.md#technical-specifications)
 
 ## Purpose in Progression
 

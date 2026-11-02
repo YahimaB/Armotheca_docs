@@ -7,7 +7,7 @@ status: Draft
 
 # Pinned Letter
 
-> **Flow:** [_UI_Flow](../_UI_Flow.md) · **Technical:** [Order System (tech) › View Notes](../../../Technical_Design/Shop/Order_System.md#view-notes-moved-from-the-ui-design-doc)
+> **Flow:** [_UI_Flow](../_UI_Flow.md) · **Technical:** [_UI_Module › Letter Commission Board](../../../Technical_Design/UI/_UI_Module.md#letter-commission-board)
 
 ## Purpose
 

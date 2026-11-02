@@ -7,7 +7,7 @@ status: Draft
 
 # Assembly Bench (2-Piece Modular Crafting)
 
-> **Flow:** [_UI_Flow](../_UI_Flow.md) · **Technical:** [Weapon Crafting (tech) › View Notes](../../../Technical_Design/Shop/Weapon_Crafting.md#view-notes-moved-from-the-ui-design-doc)
+> **Flow:** [_UI_Flow](../_UI_Flow.md) · **Technical:** [_UI_Module › Assembly Bench](../../../Technical_Design/UI/_UI_Module.md#assembly-bench)
 
 ## Purpose
 

@@ -1,14 +1,34 @@
-# Order System - Technical Design
+---
+id: _Orders_Module
+type: module
+module: Orders
+namespace: Armotheca.Orders
+status: Draft
+---
 
-> **Zone:** Shop · **Design:** [_Orders_System](../../GDD/02_Systems/Orders/_Orders_System.md) · **UI:** [Letter Commission Board](../../GDD/05_UI/Screens/UI_Letter_Commission_Board.md)
+# Orders Module
+
+> **Design:** [_Orders_System](../../GDD/02_Systems/Orders/_Orders_System.md) · **Map:** [_Module_Map](../_Module_Map.md) · **Overview:** [Technical Overview](../Technical_Overview.md)
+
+## Scope
+
+| GDD doc | Implemented in |
+| --- | --- |
+| [M_Commission_Criteria](../../GDD/02_Systems/Orders/M_Commission_Criteria.md) | [Technical Specifications](#technical-specifications) — evaluation order; `CommissionOrder.Validate()` |
+| [M_Letter_Flow](../../GDD/02_Systems/Orders/M_Letter_Flow.md) | [Architecture](#architecture--implementation-approaches) — `OrderManager`; [Networking](#networking) |
+| Clients ([E_Adventurers_Guild](../../GDD/03_Entities/NPCs/Clients/E_Adventurers_Guild.md), [E_Arcane_Academy](../../GDD/03_Entities/NPCs/Clients/E_Arcane_Academy.md), [E_City_Garrison](../../GDD/03_Entities/NPCs/Clients/E_City_Garrison.md), [E_SOS_Dispatch](../../GDD/03_Entities/NPCs/Clients/E_SOS_Dispatch.md), [E_Eccentric_Collectors](../../GDD/03_Entities/NPCs/Clients/E_Eccentric_Collectors.md)) | `ClientArchetypeDefinition` ([Data](#data)) |
+| [E_Mailbox_Nexus](../../GDD/03_Entities/Props/Interactive/E_Mailbox_Nexus.md) | Outgoing Tube submission RPC ([Networking](#networking)) |
+| [UI_Letter_Commission_Board](../../GDD/05_UI/Screens/UI_Letter_Commission_Board.md), [UI_Pinned_Letter](../../GDD/05_UI/Hud/UI_Pinned_Letter.md) | Events below; views in [_UI_Module](../UI/_UI_Module.md) |
+
+---
 
 ## Technical Specifications
 
-- **Active letter queue:** Max 5 simultaneous letters (`maxActiveLetters`).
-- **Letter lifespan:** 90 s (SOS) to 360 s (Guild), defined per archetype in `ClientArchetypeDefinition`.
+- **Active letter queue:** `maxActiveLetters` ([Orders › Letter Rules](../../GDD/06_Balancing/Orders.md#letter-rules)).
+- **Letter lifespan:** per archetype in `ClientArchetypeDefinition` ([Orders › Client Archetypes](../../GDD/06_Balancing/Orders.md#client-archetypes)).
 - **Evaluation:** Instant validation when a weapon is submitted to the Outgoing Tube. Criteria checked in order: weapon type → minimum quality tier → element → specific component material.
 - **Stat model:** Validation reads only `AssembledWeapon.Type`, `Tier` (from `Quality`), `Element` and component material IDs. `BaseDamage` is not used by orders at this stage.
-- **Generation:** `OrderGenerator` picks an archetype by weighted table gated by shop tier, then builds criteria only from materials obtainable through doors the team owns (purchased, see [Magic Doors](../Exploration/Magic_Doors.md)).
+- **Generation:** `OrderGenerator` picks an archetype by weighted table gated by shop tier, then builds criteria only from materials obtainable through doors the team owns (purchased, see [Magic Doors](../Exploration/Door_Instances.md)).
 
 ---
 
@@ -29,6 +49,27 @@
 
 - `OrderManager` runs on the host only. Letters replicate as `{ id, archetype, criteria, remainingSeconds, rewards }` on creation; clients extrapolate timers locally and receive corrections every 5 s.
 - Submissions are host RPCs carrying the held weapon's network ID and the target order ID.
+
+---
+
+## Data
+
+| Definition (SO) | Field | Supplied by |
+| --- | --- | --- |
+| `ClientArchetypeDefinition` | lifespan range, batch size, rewards, failure penalty | [Orders › Client Archetypes](../../GDD/06_Balancing/Orders.md#client-archetypes) |
+| `ClientArchetypeDefinition` | weights, tier requirement | Not yet in balancing |
+| `OrderManager` | `maxActiveLetters`, Flawless bonus | [Orders › Letter Rules](../../GDD/06_Balancing/Orders.md#letter-rules) |
+
+---
+
+## Events
+
+| Event | Raised when | Consumed by |
+| --- | --- | --- |
+| `OnOrderReceived` | A letter arrives | Board, audio |
+| `OnOrderCompleted` | A delivery passes verification | Board, currencies, audio, VFX |
+| `OnOrderRejected` | A delivery fails verification | Board rejection stamp |
+| `OnOrderExpired` | A letter times out | Board, reputation |
 
 ---
 
@@ -210,9 +251,4 @@ namespace Armotheca.Orders
 
 ---
 
-## View Notes (moved from the UI design doc)
-
-- **Letter Commission Board:** uGUI World Space Canvas on the board (TextMeshPro text, built-in uGUI navigation for gamepad).
-- **Pinned-letter HUD widget:** uGUI Screen Space Overlay canvas.
-- Both views only listen to `OrderManager` events.
-- Design: [UI_Letter_Commission_Board](../../GDD/05_UI/Screens/UI_Letter_Commission_Board.md), [UI_Pinned_Letter](../../GDD/05_UI/Hud/UI_Pinned_Letter.md).
+Views: [_UI_Module › Letter Commission Board](../UI/_UI_Module.md#letter-commission-board).

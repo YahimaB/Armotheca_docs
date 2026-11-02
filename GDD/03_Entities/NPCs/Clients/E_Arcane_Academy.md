@@ -7,7 +7,7 @@ status: Draft
 
 # Arcane Academy (The Perfectionists)
 
-> **Roster:** [_Client_Roster](_Client_Roster.md) · **Technical:** [Order System (tech)](../../../../Technical_Design/Shop/Order_System.md)
+> **Roster:** [_Client_Roster](_Client_Roster.md) · **Technical:** [_Orders_Module › Data](../../../../Technical_Design/Orders/_Orders_Module.md#data)
 
 ## Description & Role
 

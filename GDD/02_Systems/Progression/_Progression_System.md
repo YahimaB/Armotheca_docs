@@ -6,7 +6,7 @@ status: Draft
 
 # Progression System
 
-> **Glossary:** [System](../../00_Overview/Glossary.md) · **Balancing:** [Progression](../../06_Balancing/Progression.md) · **Technical:** [Shop Progression (tech)](../../../Technical_Design/Shop/Shop_Progression.md)
+> **Glossary:** [System](../../00_Overview/Glossary.md) · **Balancing:** [Progression](../../06_Balancing/Progression.md) · **Technical:** [_Progression_Module](../../../Technical_Design/Progression/_Progression_Module.md)
 
 ## Overview
 

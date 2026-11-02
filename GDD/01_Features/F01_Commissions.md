@@ -10,7 +10,7 @@ pillars: [Dimensional Contract Cycle]
 
 # Commissions (Customer Letters)
 
-> **Hub:** [_Feature_List](_Feature_List.md) · **Technical:** [Technical Overview › Code Organization](../../Technical_Design/Technical_Overview.md#7-code-organization)
+> **Hub:** [_Feature_List](_Feature_List.md) · **Technical:** [_Module_Map › Features](../../Technical_Design/_Module_Map.md#features)
 
 ## Purpose
 

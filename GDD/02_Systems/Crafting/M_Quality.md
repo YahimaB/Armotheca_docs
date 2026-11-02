@@ -7,7 +7,7 @@ status: Draft
 
 # Weapon Stats & Quality Tiers
 
-> **System:** [_Crafting_System](_Crafting_System.md) · **Technical:** [Weapon Crafting (tech)](../../../Technical_Design/Shop/Weapon_Crafting.md)
+> **System:** [_Crafting_System](_Crafting_System.md) · **Technical:** [_Crafting_Module › Weapon Stat Model](../../../Technical_Design/Crafting/_Crafting_Module.md#weapon-stat-model-locked)
 
 ## Summary
 

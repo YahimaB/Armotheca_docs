@@ -7,7 +7,7 @@ status: Draft
 
 # Door Purchase
 
-> **System:** [_Exploration_System](_Exploration_System.md) · **Technical:** [Magic Doors (tech)](../../../Technical_Design/Exploration/Magic_Doors.md)
+> **System:** [_Exploration_System](_Exploration_System.md) · **Technical:** [_Progression_Module › Technical Specifications](../../../Technical_Design/Progression/_Progression_Module.md#technical-specifications)
 
 ## Summary
 

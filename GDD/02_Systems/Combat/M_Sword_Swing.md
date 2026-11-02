@@ -7,7 +7,7 @@ status: Draft
 
 # Sword Swing
 
-> **System:** [_Combat_System](_Combat_System.md) · **Technical:** [Combat (tech)](../../../Technical_Design/Common/Combat.md)
+> **System:** [_Combat_System](_Combat_System.md) · **Technical:** [_Combat_Module › Technical Specifications](../../../Technical_Design/Combat/_Combat_Module.md#technical-specifications)
 
 ## Summary
 

@@ -7,7 +7,7 @@ status: Draft
 
 # Arcane Flora
 
-> **Roster:** [_Prop_List](../_Prop_List.md) · **Technical:** [Resource Gathering (tech)](../../../../Technical_Design/Exploration/Resource_Gathering.md)
+> **Roster:** [_Prop_List](../_Prop_List.md) · **Technical:** [Resource_Nodes](../../../../Technical_Design/Exploration/Resource_Nodes.md)
 
 ## Description & Role
 

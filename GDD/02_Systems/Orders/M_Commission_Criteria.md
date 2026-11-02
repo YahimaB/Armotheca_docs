@@ -7,7 +7,7 @@ status: Draft
 
 # Commission Criteria
 
-> **System:** [_Orders_System](_Orders_System.md) · **Technical:** [Order System (tech)](../../../Technical_Design/Shop/Order_System.md)
+> **System:** [_Orders_System](_Orders_System.md) · **Technical:** [_Orders_Module › Technical Specifications](../../../Technical_Design/Orders/_Orders_Module.md#technical-specifications)
 
 ## Summary
 

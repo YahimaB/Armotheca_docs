@@ -6,7 +6,7 @@ status: Draft
 
 # Orders System
 
-> **Glossary:** [System](../../00_Overview/Glossary.md) · **Balancing:** [Orders](../../06_Balancing/Orders.md) · **Technical:** [Order System (tech)](../../../Technical_Design/Shop/Order_System.md)
+> **Glossary:** [System](../../00_Overview/Glossary.md) · **Balancing:** [Orders](../../06_Balancing/Orders.md) · **Technical:** [_Orders_Module](../../../Technical_Design/Orders/_Orders_Module.md)
 
 ## Overview
 

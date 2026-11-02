@@ -6,7 +6,7 @@ status: Draft
 
 # Exploration System
 
-> **Glossary:** [System](../../00_Overview/Glossary.md) · **Balancing:** [Exploration](../../06_Balancing/Exploration.md) · **Technical:** [Magic Doors (tech)](../../../Technical_Design/Exploration/Magic_Doors.md)
+> **Glossary:** [System](../../00_Overview/Glossary.md) · **Balancing:** [Exploration](../../06_Balancing/Exploration.md) · **Technical:** [_Exploration_Module](../../../Technical_Design/Exploration/_Exploration_Module.md)
 
 ## Overview
 

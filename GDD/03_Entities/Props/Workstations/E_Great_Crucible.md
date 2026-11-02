@@ -7,7 +7,7 @@ status: Draft
 
 # The Great Crucible
 
-> **Roster:** [_Prop_List](../_Prop_List.md) · **Technical:** [Uber-Weapon (tech)](../../../../Technical_Design/Shop/Uber_Weapon.md)
+> **Roster:** [_Prop_List](../_Prop_List.md) · **Technical:** [_Endgame_Module › Technical Specifications](../../../../Technical_Design/Endgame/_Endgame_Module.md#technical-specifications)
 
 ## Description & Role
 

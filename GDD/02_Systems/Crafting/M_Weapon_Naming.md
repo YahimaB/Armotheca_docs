@@ -7,7 +7,7 @@ status: Draft
 
 # Weapon Naming
 
-> **System:** [_Crafting_System](_Crafting_System.md) · **Technical:** [Weapon Crafting (tech)](../../../Technical_Design/Shop/Weapon_Crafting.md)
+> **System:** [_Crafting_System](_Crafting_System.md) · **Technical:** [_Crafting_Module › Reference Code](../../../Technical_Design/Crafting/_Crafting_Module.md#unity-c-reference-code)
 
 ## Summary
 

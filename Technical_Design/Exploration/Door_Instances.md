@@ -1,17 +1,26 @@
-# Magic Doors - Technical Design
+---
+id: Door_Instances
+type: topic
+module: Exploration
+status: Draft
+---
 
-> **Zone:** Exploration · **Design:** [_Exploration_System](../../GDD/02_Systems/Exploration/_Exploration_System.md) · **Related:** [Realms](Realms.md) · [Shop Progression](../Shop/Shop_Progression.md)
+# Door Instances
+
+> **Module:** [_Exploration_Module](_Exploration_Module.md) · **Design:** [M_Door_Lifecycle](../../GDD/02_Systems/Exploration/M_Door_Lifecycle.md) · **Related:** [Realm_Loading](Realm_Loading.md) · [_Progression_Module](../Progression/_Progression_Module.md)
+
+---
 
 ## Technical Specifications
 
 - **Door data:** `DoorDefinition` (SO): door ID, destination `RealmDefinition`, required shop tier, gold price, owned-at-start flag.
-- **Ownership:** Stored in `ShopProgressionState.OwnedDoorIds` and persisted with progression. Purchases go through `ShopProgressionManager.TryPurchaseDoor` (see [Shop Progression](../Shop/Shop_Progression.md)).
+- **Ownership:** Stored in `ShopProgressionState.OwnedDoorIds` and persisted with progression. Purchases go through `ShopProgressionManager.TryPurchaseDoor` (see [Shop Progression](../Progression/_Progression_Module.md)).
 - **States:** `Locked → Ready → EntryOpen → InProgress → Cooldown → Ready`.
   - `Locked`: tier not reached or not purchased (the door shows its price plaque once the tier is reached).
-  - `EntryOpen` (90 s): anyone may enter; every entrant is added to the expedition's member set.
+  - `EntryOpen` (entry window: [Exploration › Doors](../../GDD/06_Balancing/Exploration.md#doors)): anyone may enter; every entrant is added to the expedition's member set.
   - `InProgress`: only members may enter. The expedition ends when the realm becomes empty.
   - If the entry window closes with nobody inside, the expedition ends immediately.
-  - `Cooldown` (20 s) after the expedition ends.
+  - `Cooldown` (same table) after the expedition ends.
 - **No timer inside realms.** Door timestamps (`entryClosesAt`, `readyAt`) are host-authoritative and replicated as absolute server times; clients compute countdowns locally.
 - **Leaving:** Realm-side `ExitPortal` (always open) and the downed bleed-out ejection both call `DimensionalDoor.Exit` / `Eject`.
 - **Realm lifetime:** The door owns its `RealmInstance` and unloads it when the expedition ends. One realm per door at a time.
@@ -36,9 +45,17 @@
 ## Networking
 
 - Door state, `entryClosesAt` and the member list replicate on change (members are shown on the sealed door surface).
-- Entry/exit are `[ServerRpc]` requests; the host validates `CanEnter`, adds the connection to the realm scene (FishNet `SceneManager`, so the client loads it and starts observing its objects), then tells the owning client to teleport via `[TargetRpc]` (movement is client-authoritative, see [Movement](../Common/Movement.md)).
+- Entry/exit are `[ServerRpc]` requests; the host validates `CanEnter`, adds the connection to the realm scene (FishNet `SceneManager`, so the client loads it and starts observing its objects), then tells the owning client to teleport via `[TargetRpc]` (movement is client-authoritative, see [Movement](../Movement/_Movement_Module.md)).
 - Door purchase is a host RPC from the price plaque's hold interaction; the host validates tier and gold.
 - Drop-chute deposits are host RPCs; spawned workshop items are host-spawned network objects.
+
+---
+
+## Data
+
+| Definition (SO) | Field | Supplied by |
+| --- | --- | --- |
+| `DoorDefinition` | entry window, cooldown | [Exploration › Doors](../../GDD/06_Balancing/Exploration.md#doors) |
 
 ---
 

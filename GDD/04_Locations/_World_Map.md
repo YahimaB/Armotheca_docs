@@ -6,7 +6,7 @@ status: Draft
 
 # World Map
 
-> **Overview:** [Vision](../00_Overview/Vision.md) · **Technical:** [Realms (tech)](../../Technical_Design/Exploration/Realms.md)
+> **Overview:** [Vision](../00_Overview/Vision.md) · **Technical:** [Realm_Loading](../../Technical_Design/Exploration/Realm_Loading.md)
 
 ## Structure
 

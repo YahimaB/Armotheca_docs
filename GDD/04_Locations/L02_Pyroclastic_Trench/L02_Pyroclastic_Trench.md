@@ -7,7 +7,7 @@ status: Draft
 
 # Pyroclastic Trench
 
-> **World:** [_World_Map](../_World_Map.md) · **Technical:** [Realms (tech)](../../../Technical_Design/Exploration/Realms.md)
+> **World:** [_World_Map](../_World_Map.md) · **Technical:** [Realm_Loading](../../../Technical_Design/Exploration/Realm_Loading.md)
 
 ## Purpose in Progression
 

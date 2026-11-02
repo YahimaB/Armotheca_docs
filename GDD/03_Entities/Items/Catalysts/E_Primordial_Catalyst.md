@@ -7,7 +7,7 @@ status: Draft
 
 # Primordial Catalysts
 
-> **Roster:** [_Item_List](../_Item_List.md) · **Technical:** [Uber-Weapon (tech)](../../../../Technical_Design/Shop/Uber_Weapon.md)
+> **Roster:** [_Item_List](../_Item_List.md) · **Technical:** [_Endgame_Module › Technical Specifications](../../../../Technical_Design/Endgame/_Endgame_Module.md#technical-specifications)
 
 ## Description & Role
 

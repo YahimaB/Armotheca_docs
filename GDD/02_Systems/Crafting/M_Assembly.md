@@ -7,7 +7,7 @@ status: Draft
 
 # Assembly (2-Piece Modular)
 
-> **System:** [_Crafting_System](_Crafting_System.md) · **Technical:** [Weapon Crafting (tech)](../../../Technical_Design/Shop/Weapon_Crafting.md)
+> **System:** [_Crafting_System](_Crafting_System.md) · **Technical:** [_Crafting_Module › Category Resolution](../../../Technical_Design/Crafting/_Crafting_Module.md#category-resolution)
 
 ## Summary
 

@@ -7,7 +7,7 @@ status: Draft
 
 # Void Slime
 
-> **Roster:** [_Mob_Roster](../_Mob_Roster.md) · **Technical:** [Mobs (tech)](../../../../Technical_Design/Exploration/Mobs.md)
+> **Roster:** [_Mob_Roster](../_Mob_Roster.md) · **Technical:** [Mob_AI](../../../../Technical_Design/Exploration/Mob_AI.md)
 
 ## Description & Role
 

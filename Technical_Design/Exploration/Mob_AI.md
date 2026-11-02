@@ -1,14 +1,23 @@
-# Mobs - Technical Design
+---
+id: Mob_AI
+type: topic
+module: Exploration
+status: Draft
+---
 
-> **Zone:** Exploration · **Design:** [_Mob_Roster](../../GDD/03_Entities/Mobs/_Mob_Roster.md) · **Related:** [Combat](../Common/Combat.md) · [Realms](Realms.md)
+# Mob AI & Spawning
+
+> **Module:** [_Exploration_Module](_Exploration_Module.md) · **Design:** [_Mob_Roster](../../GDD/03_Entities/Mobs/_Mob_Roster.md) · [M_Mob_Spawning](../../GDD/02_Systems/Exploration/M_Mob_Spawning.md) · [M_Realm_Pressure](../../GDD/02_Systems/Exploration/M_Realm_Pressure.md) · **Related:** [_Combat_Module](../Combat/_Combat_Module.md) · [Realm_Loading](Realm_Loading.md)
+
+---
 
 ## Technical Specifications
 
 - **Mob definition:** `MobDefinition` (SO): mob ID, prefab, category, archetype, max health, attack damage, telegraph/attack/recover timings, move speed, aggro radius, staggerable flag, drop table, provided material IDs.
-- **Health & damage:** Uses the shared `Health` / `IDamageable` from [Combat](../Common/Combat.md). Mob attacks deal fixed `AttackDamage` from data.
+- **Health & damage:** Uses the shared `Health` / `IDamageable` from [Combat](../Combat/_Combat_Module.md). Mob attacks deal fixed `AttackDamage` from data.
 - **AI:** Lightweight finite state machine per mob (`Idle → Chase/Reposition → Telegraph → Attack → Recover`), driven by archetype. Movement on a baked NavMesh per realm scene (`NavMeshAgent`).
 - **Spawning:** `MobDirector` populates spawn zones on realm load, then runs wandering spawns driven by **Realm Pressure**.
-- **Realm Pressure:** Integer level, +1 every 60 s of *occupied* time (paused while the realm is empty during the entry window). Each level shortens the wandering spawn interval (30 s − 5 s/level, min 8 s) and raises the alive cap (12 + 2/level, hard cap 20). From level 3, Outer zones may draw from the Deep group table. Pressure never resets within a realm instance.
+- **Realm Pressure:** Integer level that rises with *occupied* time (paused while the realm is empty during the entry window) and never resets within a realm instance. Each level shortens the wandering spawn interval and raises the alive cap up to a hard cap; from a set level, Outer zones may draw from the Deep group table. Values: [Exploration › Realm Pressure](../../GDD/06_Balancing/Exploration.md#realm-pressure).
 - **Ambushers:** Spawned dormant next to nodes; wake on the node's first `OnStruck`.
 - **Drops:** On death, roll the drop table with the realm RNG and spawn `WorldItem` pickups.
 - **Performance:** AI ticks at 10 Hz (staggered across mobs); target ≤ 0.5 ms total AI cost at the 20-mob hard cap (high Realm Pressure).
@@ -33,6 +42,17 @@ Approach A for regular mobs; Apex Guardians may use a dedicated phase controller
 
 - AI runs only on the host. Mob transforms replicate at 10–20 Hz with interpolation; state changes (telegraph start, attack, death) replicate as events so clients play telegraphs on time.
 - Hits on mobs are resolved by the host combat code.
+
+---
+
+## Data
+
+| Definition (SO) | Field | Supplied by |
+| --- | --- | --- |
+| `MobDefinition` | max health, attack damage | [Combat › Mobs](../../GDD/06_Balancing/Combat.md#mobs) (not yet defined) |
+| `MobDefinition` | timings, speed, aggro radius, drop table | Not yet defined |
+| `MobSpawnTable` | active zones per band | [Exploration › Mobs](../../GDD/06_Balancing/Exploration.md#mobs) |
+| `MobSpawnTable` | pressure step, wandering interval, alive cap, deep-in-outer level | [Exploration › Realm Pressure](../../GDD/06_Balancing/Exploration.md#realm-pressure) |
 
 ---
 

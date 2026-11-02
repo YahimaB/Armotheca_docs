@@ -6,7 +6,7 @@ status: Draft
 
 # Movement System
 
-> **Glossary:** [System](../../00_Overview/Glossary.md) · **Balancing:** [Movement](../../06_Balancing/Movement.md) · **Technical:** [Movement (tech)](../../../Technical_Design/Common/Movement.md)
+> **Glossary:** [System](../../00_Overview/Glossary.md) · **Balancing:** [Movement](../../06_Balancing/Movement.md) · **Technical:** [_Movement_Module](../../../Technical_Design/Movement/_Movement_Module.md)
 
 ## Overview
 

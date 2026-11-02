@@ -1,12 +1,21 @@
-# Realms - Technical Design
+---
+id: Realm_Loading
+type: topic
+module: Exploration
+status: Draft
+---
 
-> **Zone:** Exploration · **Design:** [_World_Map](../../GDD/04_Locations/_World_Map.md) · **Related:** [Magic Doors](Magic_Doors.md) · [Resource Gathering](Resource_Gathering.md) · [Mobs](Mobs.md)
+# Realm Loading
+
+> **Module:** [_Exploration_Module](_Exploration_Module.md) · **Design:** [M_Realm_Instancing](../../GDD/02_Systems/Exploration/M_Realm_Instancing.md) · [_World_Map](../../GDD/04_Locations/_World_Map.md) · **Related:** [Door_Instances](Door_Instances.md) · [Resource_Nodes](Resource_Nodes.md) · [Mob_AI](Mob_AI.md)
+
+---
 
 ## Technical Specifications
 
 - **One scene per realm layout** (`Realm_VerdantCorruption`, ...), authored by hand with tagged anchors: Entry anchor, Exit Portal, Aether Chute, node spawn points, mob spawn zones, Apex Arena gate.
 - **Lifetime:** Loaded when its door opens, unloaded when the door ends the expedition (realm empty after the entry window). There is no realm timer.
-- **Occupancy:** `RealmInstance.SetOccupied` is called by the door whenever the realm goes from empty to occupied and back; Realm Pressure only advances while occupied (see [Mobs](Mobs.md)).
+- **Occupancy:** `RealmInstance.SetOccupied` is called by the door whenever the realm goes from empty to occupied and back; Realm Pressure only advances while occupied (see [Mobs](Mob_AI.md)).
 - **Bands:** Every spawn point/zone is tagged `Outer`, `Deep` or `Apex`.
 - **Population:** On load, the host populates nodes and mobs from the realm's spawn tables with a seed generated per opening (`RealmSeed`), so results are reproducible for debugging and replays.
 - **Letter guarantees:** The populator receives the set of materials required by active letters and forces at least one matching node / mob group if this realm can supply it.

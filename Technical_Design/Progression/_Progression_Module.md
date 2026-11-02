@@ -1,12 +1,31 @@
-# Shop Progression - Technical Design
+---
+id: _Progression_Module
+type: module
+module: Progression
+namespace: Armotheca.Progression
+status: Draft
+---
 
-> **Zone:** Shop · **Design:** [_Progression_System](../../GDD/02_Systems/Progression/_Progression_System.md)
+# Progression Module
+
+> **Design:** [_Progression_System](../../GDD/02_Systems/Progression/_Progression_System.md) · **Map:** [_Module_Map](../_Module_Map.md) · **Overview:** [Technical Overview](../Technical_Overview.md)
+
+## Scope
+
+| GDD doc | Implemented in |
+| --- | --- |
+| [M_Currencies](../../GDD/02_Systems/Progression/M_Currencies.md) | [Technical Specifications](#technical-specifications) — `ShopProgressionState` |
+| [M_Workshop_Tiers](../../GDD/02_Systems/Progression/M_Workshop_Tiers.md) | [Architecture](#architecture--implementation-approaches) — `ShopTierDefinition` ladder; [Tier Assets](#tier-assets) |
+| [M_Door_Purchase](../../GDD/02_Systems/Exploration/M_Door_Purchase.md) | [Technical Specifications](#technical-specifications) — `TryPurchaseDoor`; [Door Assets](#door-assets) |
+| [L00_Workshop](../../GDD/04_Locations/L00_Workshop/L00_Workshop.md) | Workshop expansion per tier ([Technical Specifications](#technical-specifications)) |
+
+---
 
 ## Technical Specifications
 
 - **State:** Current tier, gold, reputation, emergency tokens, owned doors, unlocked blueprints.
 - **Tier data:** `ShopTierDefinition` ScriptableObjects (cost, reputation threshold, unlocked stations, unlocked archetypes, workshop layout prefab/scene section).
-- **Door purchases:** Doors are defined by `DoorDefinition` (required tier + gold price, see [Magic Doors](../Exploration/Magic_Doors.md)). A door is purchasable when `TierIndex >= RequiredTier` and gold ≥ price; purchased door IDs are stored in `OwnedDoorIds`. Doors flagged `OwnedAtStart` are added on a new save.
+- **Door purchases:** Doors are defined by `DoorDefinition` (required tier + gold price, see [Magic Doors](../Exploration/Door_Instances.md)). A door is purchasable when `TierIndex >= RequiredTier` and gold ≥ price; purchased door IDs are stored in `OwnedDoorIds`. Doors flagged `OwnedAtStart` are added on a new save.
 - **Persistence:** Saved after every tier upgrade and every completed commission, as JSON (decision pending vs binary, see [Technical Overview](../Technical_Overview.md)). Only the host saves; clients receive state on join.
 - **Workshop expansion:** Each tier enables a pre-built section of the workshop scene (rooms, station slots, door frames) rather than spawning geometry at runtime.
 
@@ -28,7 +47,28 @@
 
 - Host-only `ShopProgressionManager`. Gold/reputation changes replicate as absolute values with change events.
 - Tier upgrade is a host RPC from the upgrade ledger interaction; the host validates and broadcasts the new tier, and every client enables the matching workshop section.
-- Door purchase is a host RPC from the door's price plaque (1 s hold); the host validates tier and gold and broadcasts `OnDoorPurchased`.
+- Door purchase is a host RPC from the door's price plaque (hold time: [Exploration › Doors](../../GDD/06_Balancing/Exploration.md#doors)); the host validates tier and gold and broadcasts `OnDoorPurchased`.
+
+---
+
+## Data
+
+| Definition (SO) | Field | Supplied by |
+| --- | --- | --- |
+| `ShopTierDefinition` | gold cost, reputation threshold | [Progression › Workshop Tiers](../../GDD/06_Balancing/Progression.md#workshop-tiers) |
+| `ShopTierDefinition` | unlocked stations and archetypes | [M_Workshop_Tiers](../../GDD/02_Systems/Progression/M_Workshop_Tiers.md) |
+| `DoorDefinition` | required tier, gold price, owned at start | [Progression › Doors](../../GDD/06_Balancing/Progression.md#doors) |
+
+---
+
+## Events
+
+| Event | Raised when | Consumed by |
+| --- | --- | --- |
+| `OnCurrencyChanged` | Gold or reputation changes | HUD, board header |
+| `OnUpgradeAffordabilityChanged` | An upgrade becomes (un)affordable | HUD hint, ledger glow |
+| `OnTierUpgraded` | A tier is bought | Workshop sections, audio |
+| `OnDoorPurchased` | A door is bought | Door state, plaque |
 
 ---
 
@@ -162,21 +202,23 @@ namespace Armotheca.Progression
 
 ---
 
-## Tier Data (Current Values)
+## Tier Assets
 
-| Asset | Tier | Gold Cost | Rep Threshold | Stations |
-|---|---|---|---|---|
-| `ShopTier_RusticForge` | 1 | 0 | 0 | Anvil, Smelter |
-| `ShopTier_ArcaneAtelier` | 2 | 1,500 | 200 | Lathe, ArcaneExtractor |
-| `ShopTier_AstralArmotheca` | 3 | 6,000 | 800 | QuenchingBasin, GreatCrucible |
+Values come from [Progression › Workshop Tiers](../../GDD/06_Balancing/Progression.md#workshop-tiers); unlocks from [M_Workshop_Tiers](../../GDD/02_Systems/Progression/M_Workshop_Tiers.md).
 
-## Door Data (Current Values)
+| Asset | Tier |
+|---|---|
+| `ShopTier_RusticForge` | 1 |
+| `ShopTier_ArcaneAtelier` | 2 |
+| `ShopTier_AstralArmotheca` | 3 |
 
-| Asset | Realm | Required Tier | Gold Price | Owned at Start |
-|---|---|---|---|---|
-| `Door_VerdantCorruption` | Verdant Corruption | 1 | 0 | Yes |
-| `Door_PyroclasticTrench` | Pyroclastic Trench | 2 | 1,000 | No |
-| `Door_AstralQuarry` | Astral Quarry | 3 | 2,000 | No |
-| `Door_FrostbiteCavern` | Frostbite Cavern | 3 | 2,000 | No |
+## Door Assets
 
-Total gold per tier is unchanged from the previous design (Tier 2: 2,500; Tier 3: 10,000), now split between upgrade and doors.
+Values come from [Progression › Doors](../../GDD/06_Balancing/Progression.md#doors).
+
+| Asset | Location |
+|---|---|
+| `Door_VerdantCorruption` | [L01_Verdant_Corruption](../../GDD/04_Locations/L01_Verdant_Corruption/L01_Verdant_Corruption.md) |
+| `Door_PyroclasticTrench` | [L02_Pyroclastic_Trench](../../GDD/04_Locations/L02_Pyroclastic_Trench/L02_Pyroclastic_Trench.md) |
+| `Door_AstralQuarry` | [L03_Astral_Quarry](../../GDD/04_Locations/L03_Astral_Quarry/L03_Astral_Quarry.md) |
+| `Door_FrostbiteCavern` | [L04_Frostbite_Cavern](../../GDD/04_Locations/L04_Frostbite_Cavern/L04_Frostbite_Cavern.md) |

@@ -6,7 +6,7 @@ status: Draft
 
 # UI Flow
 
-> **Overview:** [Glossary](../00_Overview/Glossary.md) · **Naming:** [Assets Naming §7](../../Guidelines/Assets_Naming.md) · **Technical:** [Technical Overview › Technology Stack](../../Technical_Design/Technical_Overview.md#1-technology-stack-decided)
+> **Overview:** [Glossary](../00_Overview/Glossary.md) · **Naming:** [Assets Naming §7](../../Guidelines/Assets_Naming.md) · **Technical:** [_UI_Module](../../Technical_Design/UI/_UI_Module.md)
 
 Categories: `Hud/` (screen-space overlays during play), `Menus/` (front-end and pause), `Screens/` (full interfaces opened from an object), `World/` (diegetic, world-space UI), `Widgets/` (shared components). Most of *Armotheca*'s UI is diegetic.
 

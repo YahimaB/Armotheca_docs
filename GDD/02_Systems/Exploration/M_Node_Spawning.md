@@ -7,7 +7,7 @@ status: Draft
 
 # Node Spawning
 
-> **System:** [_Exploration_System](_Exploration_System.md) · **Technical:** [Resource Gathering (tech)](../../../Technical_Design/Exploration/Resource_Gathering.md)
+> **System:** [_Exploration_System](_Exploration_System.md) · **Technical:** [Resource_Nodes](../../../Technical_Design/Exploration/Resource_Nodes.md)
 
 ## Summary
 

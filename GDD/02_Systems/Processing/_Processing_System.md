@@ -6,7 +6,7 @@ status: Draft
 
 # Processing System
 
-> **Glossary:** [System](../../00_Overview/Glossary.md) · **Balancing:** [Processing](../../06_Balancing/Processing.md) · **Technical:** [Resource Processing (tech)](../../../Technical_Design/Shop/Resource_Processing.md)
+> **Glossary:** [System](../../00_Overview/Glossary.md) · **Balancing:** [Processing](../../06_Balancing/Processing.md) · **Technical:** [_Processing_Module](../../../Technical_Design/Processing/_Processing_Module.md)
 
 ## Overview
 

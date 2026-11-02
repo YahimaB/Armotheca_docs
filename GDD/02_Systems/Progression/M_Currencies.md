@@ -7,7 +7,7 @@ status: Draft
 
 # Currencies
 
-> **System:** [_Progression_System](_Progression_System.md) · **Technical:** [Shop Progression (tech)](../../../Technical_Design/Shop/Shop_Progression.md)
+> **System:** [_Progression_System](_Progression_System.md) · **Technical:** [_Progression_Module › Technical Specifications](../../../Technical_Design/Progression/_Progression_Module.md#technical-specifications)
 
 ## Summary
 
