@@ -1,0 +1,76 @@
+---
+name: docs-guidelines
+description: Write and maintain Armotheca production standards in Guidelines/: asset structure and naming, 3D modeling rules, and art direction (references, concept art, image prompts). Use for conventions every contributor must follow, whatever the feature.
+---
+
+# Guidelines documents
+
+A Guidelines document says **how any contributor must produce assets or code**,
+independent of a specific mechanic. It is normative: write rules, budgets and
+checklists, not discussion. A rule that applies to one feature belongs in that
+feature's GDD or TechnicalDesign doc instead.
+
+## Layout
+
+```
+Guidelines/
+├── AssetsNaming.md            # Assets/ folder layout, prefixes, code naming, UI vocabulary
+├── ModelingGuidelines.md      # 3D style, poly budgets, LODs, textures, export, delivery
+└── ArtDirection/              # Target of legacy VisualDesign/
+    ├── References/<Source>/   # Reference screenshots, prefixed per source (AF_1.jpg)
+    ├── ConceptArts/<Subject>/ # Approved concept images
+    └── Prompts/<Subject>.md   # Image-generation prompts and settings per subject
+```
+
+Add a new guideline file only for a new discipline (e.g. `AudioGuidelines.md`,
+`CodeStyle.md`); otherwise extend an existing one.
+
+## Guideline document template
+
+```markdown
+# <Discipline> Guidelines
+
+> <One line: who must follow this and what it guarantees.>
+> **Naming:** [Assets Naming](AssetsNaming.md) · **Game context:** [Master GDD](../GDD/MasterGDD.md) · **Tech stack:** [Technical Overview](../TechnicalDesign/TechnicalOverview.md)
+
+## 1. <Numbered sections: rules, budgets, conventions>
+## <n>. Quick Reference or Delivery Checklist
+## <n+1>. Open Questions
+```
+
+- Number top-level sections so other docs can cite them (`AssetsNaming.md` §7).
+- Prefer tables for budgets, prefixes and per-asset rules; give one correct and,
+  where useful, one incorrect example.
+
+## Prompt document template (ArtDirection/Prompts)
+
+```markdown
+# <Subject> — Image Prompts
+
+## <n>. <Stage>          <!-- Concept, T-Pose, Views, ... -->
+### Settings             <!-- model, aspect ratio, reference images, seed -->
+### Prompt
+## Workflow              <!-- stage order, which output feeds the next -->
+## Notes
+```
+
+Store the accepted outputs under `ConceptArts/<Subject>/` and link them from the
+prompt doc.
+
+## Workflow
+
+1. Read the whole guideline being changed; section numbers are referenced
+   elsewhere, so append or renumber deliberately.
+2. When renumbering or renaming a rule, search all docs for `§<n>` and the old term
+   and update them.
+3. A changed convention (prefix, folder, budget) may invalidate existing assets in
+   `Armotheca_unity/Assets`; tell the user what no longer complies rather than
+   renaming assets from here.
+4. New guideline file: add it to the README "Guidelines" section.
+
+## Checks
+
+- Rules are stated as requirements with concrete values, not preferences.
+- No feature-specific rules that belong in GDD/TechnicalDesign.
+- Images referenced from docs exist; links resolve (run the `docs-routing` link
+  check).

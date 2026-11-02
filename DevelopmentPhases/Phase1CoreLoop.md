@@ -1,6 +1,6 @@
 # Phase 1: Core Loop & Workshop Prototype — Weekly Plan
 
-> Part of the [Development Roadmap](DevelopmentRoadmap.md) · Design: [Master GDD](../GDD/MasterGDD.md) · Tech: [Technical Overview](../TechnicalDesign/TechnicalOverview.md) · Naming: [Assets Naming](../untitled%20folder/AssetsNaming.md) · Art specs: [Modeling Guidelines](../untitled%20folder/ModelingGuidelines.md)
+> Part of the [Development Roadmap](DevelopmentRoadmap.md) · Design: [Master GDD](../GDD/MasterGDD.md) · Tech: [Technical Overview](../TechnicalDesign/TechnicalOverview.md) · Naming: [Assets Naming](../Guidelines/AssetsNaming.md) · Art specs: [Modeling Guidelines](../Guidelines/ModelingGuidelines.md)
 
 **Duration:** 13 weeks (Months 1–3)
 **Focus:** Prove the common mechanics, physical crafting and 2-piece assembly — **networked from the first week** (host + clients over FishNet / FishySteamworks), following the [Networking-First Principle](DevelopmentRoadmap.md#networking-first-principle).
@@ -14,12 +14,12 @@ A team (1–2 players for the milestone, tested up to 4) can take a letter, step
 ## How to Read This Plan
 
 Each week lists:
-1. **Required sources** — what must be delivered to the implementer **before the week starts** (models, textures, animations, audio, data values, decisions, accounts). Items marked *placeholder OK* can be replaced by greybox primitives, Unity built-in shapes or free stand-ins; the final asset can be swapped in later without code changes, as long as it keeps the names, pivots and sockets defined in the [Modeling Guidelines](../untitled%20folder/ModelingGuidelines.md).
+1. **Required sources** — what must be delivered to the implementer **before the week starts** (models, textures, animations, audio, data values, decisions, accounts). Items marked *placeholder OK* can be replaced by greybox primitives, Unity built-in shapes or free stand-ins; the final asset can be swapped in later without code changes, as long as it keeps the names, pivots and sockets defined in the [Modeling Guidelines](../Guidelines/ModelingGuidelines.md).
 2. **Work this week** — what gets built.
 3. **Networking** — what is synchronized and who owns it. Every feature is accepted only when it works for the host **and** a connected client.
 4. **Done when** — the acceptance check at the end of the week.
 
-All assets follow the naming in [Assets Naming](../untitled%20folder/AssetsNaming.md) and are delivered into `Assets/_Project/...`. Source files (`.blend`, `.spp`, `.psd`) stay outside `Assets/`.
+All assets follow the naming in [Assets Naming](../Guidelines/AssetsNaming.md) and are delivered into `Assets/_Project/...`. Source files (`.blend`, `.spp`, `.psd`) stay outside `Assets/`.
 
 ### Global Definition of Done (every week)
 - Works in a session with **host + at least 1 client** (Multiplayer Play Mode / ParrelSync locally); single-player is simply a host with no clients.
