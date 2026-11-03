@@ -45,4 +45,4 @@ Referenced by other docs but not designed yet:
 - Ritual phase display and campaign victory screen ([M_Forging_Ritual](../02_Systems/Endgame/M_Forging_Ritual.md)).
 - Main menu, lobby, join and drop-in ([F07_Co_Op](../01_Features/F07_Co_Op.md)).
 
-The UI visual style (fonts, colours, icons) is owned by Guidelines.
+The UI visual style (fonts, colours, icons) is set in [Visual Style](../../Guidelines/Art_Direction/Visual_Style.md).

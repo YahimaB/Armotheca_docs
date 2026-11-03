@@ -17,7 +17,7 @@ Two shipped games define the target. Use them for **complexity and style**, not 
 
 | Reference | Use it for | Do not take |
 |---|---|---|
-| **Alchemy Factory** | Workshop architecture, props, workstations, daylight palette, foliage, the portal frame | HUD/UI style (ours is defined in `GDD/05_UI`) |
+| **Alchemy Factory** | Workshop architecture, props, workstations, daylight palette, foliage, the portal frame | HUD/UI style (ours is set in [Visual Style](Art_Direction/Visual_Style.md)) |
 | **Goblin Cleanup** | Realm (dungeon) environments, dark mood lighting, magical devices, creature/mob tone, character readability | First-person hands, gore decals, specific character costume designs |
 
 Character style (Alchemy Factory's semi-realistic people vs Goblin Cleanup's more cartoony proportions) is still open — see §11.
@@ -147,16 +147,7 @@ The project targets **URP with the standard Lit shader (metallic workflow)**; st
 ### Palette rules
 
 - **Mundane materials:** muted and warm (honey/grey wood, blue-grey iron, cool grey stone, cream plaster). Smoothness mostly low (matte look).
-- **Magic and elements:** the only saturated colors, always with emission. Element colors must match the UI:
-
-| Element | Color |
-|---|---|
-| Physical | Neutral steel |
-| Fire | Orange-red |
-| Frost | Cyan |
-| Lightning | Yellow |
-| Arcane | Purple-magenta |
-| Holy | Warm gold-white |
+- **Magic and elements:** the only saturated colors, always with emission, in the [element colours](Art_Direction/Visual_Style.md#1-element-colours).
 
 ---
 

@@ -18,6 +18,7 @@ Guidelines/
 ├── UI_Composition.md           # UI categories, element vocabulary, hierarchy, layers
 ├── Modeling_Guidelines.md      # 3D style, poly budgets, LODs, textures, export, delivery
 └── Art_Direction/
+    ├── Visual_Style.md         # Element colours, UI visual style
     ├── Concept_Art_Workflow.md # Stages, prompt settings and templates, common failures
     └── References/<Source>/    # Reference screenshots, prefixed per source (AF_1.jpg)
 ```

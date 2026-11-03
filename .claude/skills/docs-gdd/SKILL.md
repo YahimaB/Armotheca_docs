@@ -55,8 +55,8 @@ GDD/
 
 UI categories, and which one a UI doc goes in, are defined in
 `Guidelines/UI_Composition.md` §2; `Prefabs/UI/` uses the same folders. An
-entity's own concept art belongs to the entity (its Art doc); art references,
-mood boards and the UI visual style guide (fonts, colours, icons) are standards
+entity's own concept art belongs to the entity (its Art doc); art references
+and the visual style (element colours; UI fonts, colours and icons) are standards
 owned by `docs-guidelines` (`Guidelines/Art_Direction/`), not GDD content. Add a
 new system, entity category or UI category only when no existing one fits, and
 register it in the matching hub (a UI category in `UI_Composition.md` §2).
