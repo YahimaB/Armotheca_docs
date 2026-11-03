@@ -121,13 +121,27 @@ The project targets **URP with the standard Lit shader (metallic workflow)**; st
 
 ### Texture sets
 
-| Map | Content |
-|---|---|
-| Base Color | Hand-painted albedo, soft gradients, subtle edge wear. No baked hard shadows. |
-| Normal | OpenGL format (Y+), as Unity expects |
-| Metallic / Smoothness | Metallic in R, Smoothness in A |
-| Ambient Occlusion | Grayscale |
-| Emission (only when needed) | Runes, cores, flasks, portals |
+Unity receives up to four textures per material:
+
+| Map | Content | Colour space |
+|---|---|---|
+| Base Color | Hand-painted albedo, soft gradients, subtle edge wear. No baked hard shadows. | sRGB |
+| Normal | OpenGL format (Y+), as Unity expects | Linear (imported as Normal map) |
+| Metallic / AO / Smoothness | The three grayscale maps packed into one texture (see below) | Linear |
+| Emission (only when needed) | Runes, cores, flasks, portals | sRGB |
+
+Channel packing:
+
+| Map | R | G | B | A |
+|---|---|---|---|---|
+| Base Color | Red | Green | Blue | Opacity, only for cutout or transparent materials |
+| Normal | X | Y (Y+) | Z | — |
+| Metallic / AO / Smoothness | Metallic | Ambient Occlusion | — | Smoothness |
+| Emission | Red | Green | Blue | — |
+
+- The packed texture goes into both the Metallic and the Occlusion slot of the URP Lit material: URP reads metallic from R, smoothness from A and occlusion from G.
+- Maps from generators and bakers often come in another convention. Before packing, Smoothness = 1 − Roughness; a DirectX (Y−) normal map gets its green channel inverted.
+- `Sources/<Entity>/Results/` keeps the separate Metallic, AO and Smoothness or Roughness maps next to the packed texture, so it can be repacked.
 
 File suffixes: [Assets Naming §4](Assets_Naming.md#4-asset-prefixes).
 

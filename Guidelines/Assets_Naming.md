@@ -123,7 +123,7 @@ Sources/
     │   ├── Mixamo/
     │   └── Moddif/
     ├── Blender/                # Blender working scenes
-    └── Results/                # final exports ready for Unity
+    └── Results/                # final exports ready for Unity, plus the separate channel maps packed into _MAS
 ```
 
 Each last-level folder in `Art/` may hold a `prompts.json` that logs its generation requests ([Concept Art Workflow §2](Art_Direction/Concept_Art_Workflow.md#2-recording-results)).
@@ -168,10 +168,11 @@ Each last-level folder in `Art/` may hold a `prompts.json` that logs its generat
 |---|---|
 | `_BC` | Base Color (+ alpha if needed) |
 | `_N` | Normal |
-| `_MS` | Metallic + Smoothness |
-| `_AO` | Ambient Occlusion |
+| `_MAS` | Metallic + Ambient Occlusion + Smoothness, packed in one texture |
 | `_E` | Emission |
 | `_9S` | UI sprite set up for 9-slicing (appended after the name: `UI_Frame_Parchment_9S`) |
+
+The separate channel maps packed into `_MAS` stay in `Sources/` and never enter `Assets/`. They use the full map name: `_Metallic`, `_AO`, and `_Smoothness` or `_Roughness` as the tool produced it (`T_Shop_AssemblyBench_Roughness`).
 
 ### Names inside models (FBX hierarchy)
 
