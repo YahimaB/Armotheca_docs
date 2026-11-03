@@ -35,8 +35,9 @@ split into one document per type; route each part and say how it was split.
 - **Plans quoting specs:** a phase plan links to GDD/Tech sections; it never restates
   their rules. If a plan needs a missing spec, route the spec first.
 - **Art:** an entity's look (description, palette, concept images and their prompts)
-  belongs to its Art doc in GDD; reference screenshots and how concept art is
-  produced belong to Guidelines (`Art_Direction/`).
+  and the modeling requirements of one entity or group belong to its Art doc in GDD
+  (`E_<Name>_Art.md`, `_<Folder>_Art.md`); rules for every asset, reference
+  screenshots and how concept art is produced belong to Guidelines.
 - Still ambiguous after reading: ask the user, offering the two closest types.
 
 The legacy `Visual_Design/` folder was reformed into these types on 2026-11-02:

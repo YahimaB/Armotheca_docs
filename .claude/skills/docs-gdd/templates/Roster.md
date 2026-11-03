@@ -10,7 +10,7 @@ status: Draft
 
 ## Overview
 
-<!-- How this category is grouped (subfolders) and what every member must define. -->
+<!-- How this category is grouped (subfolders), what every member must define, and links to its _<Folder>_Art docs. -->
 
 ## Roster
 

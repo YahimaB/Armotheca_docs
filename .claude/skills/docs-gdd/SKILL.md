@@ -36,10 +36,12 @@ GDD/
 │   ├── NPCs/Clients/           # _Client_Roster.md, E_Adventurers_Guild/, ...
 │   ├── Items/                  # _Item_List.md, Weapons/, Components/, Catalysts/
 │   └── Props/                  # _Prop_List.md, Interactive/, Workstations/, Resource_Nodes/
-│       └── <Group>/E_<Name>/   # one folder per entity
-│           ├── E_<Name>.md
-│           ├── E_<Name>_Art.md # optional: concept art description and history
-│           └── Art/            # E_<Name>_Art_<NN>_<Short_Name>.png
+│       └── <Group>/
+│           ├── _<Group>_Art.md # optional: modeling requirements shared by the group
+│           └── E_<Name>/       # one folder per entity
+│               ├── E_<Name>.md
+│               ├── E_<Name>_Art.md # optional: look, modeling requirements, concept art
+│               └── Art/        # E_<Name>_Art_<NN>_<Short_Name>.png
 ├── 04_Locations/
 │   ├── _World_Map.md           # structure, unlock order, connections
 │   └── L<NN>_<Name>/           # L00_Workshop/, L01_Verdant_Corruption/
@@ -75,6 +77,7 @@ points to a module doc section, or to `_Module_Map.md` for features.
 | Mechanic | `M_<Name>` | `02_Systems/<System>/` | [Mechanic](templates/Mechanic.md) |
 | Entity | `E_<Name>` | `03_Entities/<Category>/<Group>/E_<Name>/` | [Entity](templates/Entity.md) |
 | Entity art | `E_<Name>_Art` | the entity's folder | [Entity_Art](templates/Entity_Art.md) |
+| Group art | `_<Folder>_Art` | a category or group folder | [Group_Art](templates/Group_Art.md) |
 | Roster / list | `_<Category>_Roster`, `_<Category>_List` | category root | [Roster](templates/Roster.md) |
 | Location | `L<NN>_<Name>` | `04_Locations/L<NN>_<Name>/` | [Location](templates/Location.md) |
 | UI | `UI_<Name>` | `05_UI/<Category>/` | [UI](templates/UI.md) |
@@ -127,12 +130,16 @@ points to a module doc section, or to `_Module_Map.md` for features.
    (`_Feature_List`, system hub, roster, `_World_Map` or `_UI_Flow`) in the same change,
    plus the README hub (see `docs-routing`).
 9. **Entity art lives with the entity.** Every entity has its own folder. Its
-   concept art goes in an optional `E_<Name>_Art.md` beside the entity doc, which
-   links it from Art & Audio References. The Art doc holds:
+   look goes in an optional `E_<Name>_Art.md` beside the entity doc, which
+   links it from Art & Audio References. Every section is optional; an Art doc
+   may hold only Modeling Requirements until concept art exists. It holds:
    - **Description:** the look in a few sentences plus a list of key visual
      elements; behaviour and role stay in the entity doc.
    - **Palette:** key colours, each a swatch followed by its hex value:
      ``<span style="color:#3A4A61;">■</span> `#3A4A61` ``.
+   - **Modeling Requirements:** what this entity's 3D model must contain beyond
+     its group's Art doc and `Guidelines/Modeling_Guidelines.md` (sockets, moving
+     parts, emission masks). States are linked to the entity doc, never listed.
    - **Selected:** a table of the chosen History versions in version order; the
      first row links each heading, the second shows its image.
    - **History:** one `### <NN> <Short Name>` entry per recorded image, newest
@@ -146,6 +153,10 @@ points to a module doc section, or to `_Module_Map.md` for features.
    - **Image size:** every image, in Selected and History, is an HTML `<img>`
      capped at 400×400, whatever its aspect:
      `<img src="Art/E_Void_Slime_Art_02_Glowing_Core.png" alt="02 Glowing Core" style="max-width:400px; max-height:400px;">`.
+   - **Group art:** modeling requirements shared by every entity in a category or
+     group folder go in `_<Folder>_Art.md` in that folder (`_Workstations_Art.md`,
+     `_Mobs_Art.md`), linked from the roster's Overview. An entity's Art doc adds
+     to them and never repeats them.
 
 ## Overview files
 

@@ -23,8 +23,9 @@ Guidelines/
     └── References/<Source>/    # Reference screenshots, prefixed per source (AF_1.jpg)
 ```
 
-Concept art for a specific entity (description, palette, images, prompts) is not a
-guideline: it lives in the entity's Art doc in the GDD (`docs-gdd`, rule 9).
+Concept art and modeling requirements for one entity or group (description,
+palette, images, prompts, sockets, parts) are not guidelines: they live in the
+entity's or group's Art doc in the GDD (`docs-gdd`, rule 9).
 `Concept_Art_Workflow.md` says how such art is produced and recorded.
 
 Add a new guideline file only for a new discipline (e.g. `Audio_Guidelines.md`,

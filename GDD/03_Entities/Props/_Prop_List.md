@@ -13,8 +13,8 @@ status: Draft
 World objects players interact with. Props are reused across locations, so behaviour lives here and each location lists which props it contains.
 
 - `Interactive/`: doors, portals, chutes, the mailbox.
-- `Workstations/`: processing and assembly stations in the workshop.
-- `Resource_Nodes/`: harvestable nodes in realms.
+- `Workstations/`: processing and assembly stations in the workshop. Modeling requirements: [_Workstations_Art](Workstations/_Workstations_Art.md).
+- `Resource_Nodes/`: harvestable nodes in realms. Modeling requirements: [_Resource_Nodes_Art](Resource_Nodes/_Resource_Nodes_Art.md).
 
 ## Roster
 

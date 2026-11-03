@@ -60,7 +60,7 @@ Character style (Alchemy Factory's semi-realistic people vs Goblin Cleanup's mor
 
 ---
 
-## 4. Polygon Budgets (LOD0)
+## 4. Polygon and Rig Budgets
 
 Triangle counts are for the final in-engine mesh (triangulated), LOD0. These are **initial targets**; they will be confirmed by a performance test in Phase 1 against the 60 FPS targets (GTX 1660 desktop, Steam Deck).
 
@@ -88,6 +88,14 @@ Triangle counts are for the final in-engine mesh (triangulated), LOD0. These are
 | Visible triangles   | ≤ 1,500,000                          | ≤ 800,000  |
 | Draw calls          | ≤ 1,000                              | ≤ 600      |
 | Materials per frame | Keep low via trim sheets and atlases |            |
+
+### Rig budgets
+
+| Category | Rig | Bones (excluding face) | Bone influences per vertex |
+|---|---|---|---|
+| Player character | Unity Humanoid-compatible (shared animations) | ≤ 75 | ≤ 4 |
+| Minor mob, elemental beast | Generic allowed | ≤ 75 | ≤ 4 |
+| Apex Guardian | Generic allowed | ≤ 120, agreed per guardian | ≤ 4 |
 
 ---
 
@@ -160,54 +168,22 @@ File suffixes: [Assets Naming §4](Assets_Naming.md#4-asset-prefixes).
 - **Pivots:**
   - Props and furniture: bottom center.
   - Doors and portals: bottom center of the threshold.
-  - Weapon components: at the connection point (see §8).
+  - Attachable parts (weapon components): at the connection point.
   - Carried items: at the grip point.
 - **Export:** FBX, Y-up in Unity, transforms applied (scale 1, rotation 0), triangulated or with clean quads; no n-gons, no zero-area faces, no flipped normals.
 - **Smoothing:** use hard edges at UV seams and weighted/custom normals on beveled hard-surface parts so bevels shade cleanly with few segments.
 
 ---
 
-## 8. Asset-Specific Rules
+## 8. Parts, States and Effects
 
-### Modular weapons (critical for gameplay)
+Requirements for one entity or a group of entities live in its Art doc in the GDD: `E_<Name>_Art.md` next to the entity, `_<Folder>_Art.md` in its category or group folder (e.g. [_Workstations_Art](../GDD/03_Entities/Props/Workstations/_Workstations_Art.md), [_Components_Art](../GDD/03_Entities/Items/Components/_Components_Art.md)). This section holds only the principles they build on.
 
-Weapons are assembled in game from **exactly two parts** (see [Weapon Crafting](../GDD/02_Systems/Crafting/_Crafting_System.md)), so every part must fit every compatible counterpart.
-
-| Weapon | Foundation | Payload | Total length |
-|---|---|---|---|
-| Sword | Hilt | Blade | 1.0 – 1.2 m |
-| Wand | Short Shaft | Core | 0.35 – 0.45 m |
-| Staff | Long Shaft | Core | 1.6 – 1.8 m |
-
-- Every foundation contains an empty/locator named **`Socket_Payload`** at the connection point, Y axis pointing along the weapon.
-- Every payload has its **pivot at its own connection point**, oriented the same way, so it snaps onto `Socket_Payload` without offsets.
-- Connection areas use a **standard connector size** per weapon type (a hilt collar and blade tang that match across all materials; a shaft tip and core cradle that match across all materials).
-- The material of the part must read from color and silhouette alone (iron vs star metal blade, oak vs bog-wood shaft). Element shows through the emissive core or blade accents.
-- Quality tiers are **not modeled**; the Flawless glow is a VFX added by code.
-
-### Workstations
-
-- Hero objects: highest detail in the workshop, unique silhouette per station so players identify them across the room.
-- Model **sockets and interaction points as named empties** (`Socket_Input`, `Socket_Output`, `Interact_Point`) for the interaction system.
-- Moving parts (bellows, lathe chuck, mallet, valves) are **separate objects** named `Part_<Name>` with their own pivots so they can be animated.
-
-### Resource nodes
-
-- Each node needs **3 states**: intact, damaged (after first hits), broken/depleted — or intact + broken with damage handled by VFX. Same pivot for all states.
-- Node material must be readable from far away by color: each ore/wood/crystal type gets a distinct hue consistent with its element.
-
-### Magic Doors
-
-- Frame only; the portal surface, swirl and runes animation are VFX/shader work (see AF_4).
-- Runes get an emission mask so the door can light up per state (Locked / Ready / Entry Open / In Progress — see [Magic Doors](../GDD/02_Systems/Exploration/_Exploration_System.md)).
-- Leave space on the frame for a **price plaque** (worldspace UI) and for the names of expedition members.
-
-### Characters and mobs
-
-- **Player characters:** stylized proportions with clear color blocking so 4 players are distinguishable at a glance (GC_1). Hands slightly oversized to read when holding items.
-- **Rigging:** player characters use a Unity **Humanoid**-compatible skeleton (shared animations); ≤ 75 bones excluding face; max **4 bone influences per vertex**.
-- **Mobs:** generic rigs allowed; attack telegraphs need readable body motion, so give mobs clear "wind-up" parts (jaws, tails, claws).
-- **Apex Guardians:** may exceed bone limits (≤ 120 bones) — agree per guardian.
+- **Attachment and interaction points** are named empties in the model, never offsets in code.
+- **Moving parts** are separate objects, each with its own pivot, so they can be animated.
+- **Visual states** of one asset (intact, broken, open) share one pivot; damage that VFX can show is not modelled.
+- **Gameplay effects** (quality glow, portal surfaces, element auras) are VFX or shader work, not geometry. Leave room and emission masks for them.
+- **Readability** comes first: an entity must be recognisable by silhouette and colour blocking at gameplay distance (§3).
 
 ---
 
@@ -226,8 +202,8 @@ Asset, folder and in-model names, where delivered files go and where source file
 - [ ] ≤ 2 materials (≤ 3 for characters); trim sheets used where possible
 - [ ] UV1 lightmap channel for static environment meshes
 - [ ] Real-world scale, pivot per §7, transforms applied
-- [ ] Required sockets/empties present (weapons, workstations)
-- [ ] Moving parts separated (workstations, doors)
+- [ ] Rig within the budget (§4)
+- [ ] Requirements of the entity's and its group's Art docs met (sockets, moving parts, states)
 - [ ] Turntable render + one in-engine screenshot next to a reference image
 
 ---

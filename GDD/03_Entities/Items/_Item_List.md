@@ -10,7 +10,7 @@ status: Draft
 
 ## Overview
 
-Everything a player can hold: weapons, weapon components, raw materials and catalysts. Weapons and components have their own docs; raw materials are listed here until they need rules of their own.
+Everything a player can hold: weapons, weapon components, raw materials and catalysts. Weapons and components have their own docs; raw materials are listed here until they need rules of their own. Modeling requirements for weapon components: [_Components_Art](Components/_Components_Art.md).
 
 ## Roster
 

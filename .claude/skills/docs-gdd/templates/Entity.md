@@ -39,7 +39,7 @@ status: Draft
 
 ## Art & Audio References
 
-<!-- Concept art: [E_<Name>_Art](E_<Name>_Art.md), or None. Sound intent. -->
+<!-- Art: [E_<Name>_Art](E_<Name>_Art.md) and the group's [_<Group>_Art](../_<Group>_Art.md), or None. Sound intent. -->
 
 ## Appears In
 

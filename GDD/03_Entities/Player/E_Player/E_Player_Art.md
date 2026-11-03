@@ -34,6 +34,11 @@ A mysterious hooded artisan: a weapon-smith from a magical workshop that floats 
 - <span style="color:#DBBB8A;">■</span> `#DBBB8A`
 - <span style="color:#010005;">■</span> `#010005`
 
+## Modeling Requirements
+
+- Clear colour blocking: only the coat accent changes per player, so four players read apart at a glance (GC_1 in [Modeling Guidelines §2](../../../../Guidelines/Modeling_Guidelines.md#per-image-notes)).
+- Hands slightly oversized so held items read.
+
 ## Selected
 
 | [01 Male](#01-male)    | [02 Female](#02-female)|

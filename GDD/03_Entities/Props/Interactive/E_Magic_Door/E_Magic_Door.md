@@ -47,7 +47,7 @@ Price and required tier: [Progression › Doors](../../../../06_Balancing/Progre
 
 ## Art & Audio References
 
-- Magic Door reference image AF_4 in [Modeling Guidelines](../../../../../Guidelines/Modeling_Guidelines.md).
+- Art: [E_Magic_Door_Art](E_Magic_Door_Art.md).
 
 ## Appears In
 

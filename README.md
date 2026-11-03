@@ -89,7 +89,7 @@ Tech stack (Unity 6.3 LTS · GameObjects, no ECS · FishNet + FishySteamworks, p
 ### 📐 Guidelines
 - **[Assets Structure & Naming](Guidelines/Assets_Naming.md)** - `Assets/` folder layout, zone tokens, asset and data-asset prefixes, code naming.
 - **[UI Composition](Guidelines/UI_Composition.md)** - UI categories shared by `GDD/05_UI` and `Prefabs/UI`, element vocabulary (Screen, Window, Panel, Container, Widget, Label, Value...), `<Name>_<ElementType>` GameObject names, UI layers and an example hierarchy.
-- **[3D Modeling Guidelines](Guidelines/Modeling_Guidelines.md)** - Target look, reference breakdown (`Guidelines/Art_Direction/References`), polygon budgets, LODs, textures, pivots, modular weapon sockets and delivery checklist.
+- **[3D Modeling Guidelines](Guidelines/Modeling_Guidelines.md)** - Target look, reference breakdown (`Guidelines/Art_Direction/References`), polygon and rig budgets, LODs, textures, pivots, principles for parts, states and effects, and delivery checklist; per-entity requirements live in the GDD Art docs.
 - **[Visual Style](Guidelines/Art_Direction/Visual_Style.md)** - Element colours shared by models, VFX and UI; home of the UI visual style (fonts, frames, icons).
 - **[Concept Art Workflow](Guidelines/Art_Direction/Concept_Art_Workflow.md)** - Concept → T-pose → views stages, prompt settings and templates, common failures; results go to each entity's Art doc ([E_Player_Art](GDD/03_Entities/Player/E_Player/E_Player_Art.md)).
 

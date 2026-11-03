@@ -1,7 +1,7 @@
 # Concept Art Workflow
 
 > How every contributor generates concept art for an entity, from a free-pose concept to the orthographic views a 3D artist models from, and where the results are recorded.
-> **Style:** [3D Modeling Guidelines](../Modeling_Guidelines.md) §1, §3, §6, §8 · **References:** `Art_Direction/References/` · **Example:** [E_Player_Art](../../GDD/03_Entities/Player/E_Player/E_Player_Art.md)
+> **Style:** [3D Modeling Guidelines](../Modeling_Guidelines.md) §1, §3, §6, §8 and the entity's Art doc · **References:** `Art_Direction/References/` · **Example:** [E_Player_Art](../../GDD/03_Entities/Player/E_Player/E_Player_Art.md)
 
 ## 1. Stages
 

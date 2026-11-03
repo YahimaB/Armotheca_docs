@@ -23,6 +23,12 @@ status: Draft
 
 - <span style="color:#RRGGBB;">■</span> `#RRGGBB`
 
+## Modeling Requirements
+
+<!-- Optional: what the 3D model of this entity must contain beyond the group's _<Folder>_Art.md and the Modeling Guidelines. Link the entity doc for states; never list them here. -->
+
+-
+
 ## Selected
 
 <!-- Chosen History versions, in version order: the first row links their headings, the second shows their images. -->

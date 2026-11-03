@@ -10,7 +10,7 @@ status: Draft
 
 ## Overview
 
-Mobs are the danger and the second resource source of every realm. They threaten players busy harvesting and drop the organic ingredients — essences, cores, claws — that wand and staff cores need. They are simple, readable enemies built on a few behaviour archetypes, so they work with the deliberately simple sword-and-orb combat ([F04_Combat](../../01_Features/F04_Combat.md)).
+Mobs are the danger and the second resource source of every realm. They threaten players busy harvesting and drop the organic ingredients — essences, cores, claws — that wand and staff cores need. They are simple, readable enemies built on a few behaviour archetypes, so they work with the deliberately simple sword-and-orb combat ([F04_Combat](../../01_Features/F04_Combat.md)). Modeling requirements shared by all mobs: [_Mobs_Art](_Mobs_Art.md).
 
 ### Categories
 

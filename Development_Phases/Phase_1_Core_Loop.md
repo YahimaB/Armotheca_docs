@@ -204,7 +204,7 @@ All assets follow the naming in [Assets Naming](../Guidelines/Assets_Naming.md) 
 | `SM_Shop_SmeltingForge` with `Part_Bellows`, `Socket_Input`, `Interact_Point` | Workstation mesh | *Placeholder OK* for week; final 6–15k tris, sockets as named empties. |
 | `SM_Shop_Anvil` with `Socket_Input`, `Interact_Point` | Workstation mesh | *Placeholder OK.* |
 | `SM_Shop_QuenchingBasin` with `Socket_Input`, `Socket_Output` | Workstation mesh | *Placeholder OK.* |
-| Tongs `SM_Shop_Tongs`, items `SM_Common_HotIngot_Iron`, `SM_Weapon_Blade_Iron` (pivot at connection point) | Static meshes | *Placeholder OK*, but the blade must follow the standard connector rule (Modeling Guidelines §8). |
+| Tongs `SM_Shop_Tongs`, items `SM_Common_HotIngot_Iron`, `SM_Weapon_Blade_Iron` (pivot at connection point) | Static meshes | *Placeholder OK*, but the blade must follow the standard connector rule ([_Components_Art](../GDD/03_Entities/Items/Components/_Components_Art.md)). |
 | Clips: `A_Player_PumpBellows`, `A_Player_HammerStrike` | Animations | *Placeholder OK.* |
 | Heat glow `VFX_Forge_Heat`, sparks `VFX_Anvil_Sparks`, steam `VFX_Quench_Steam` | VFX | *Placeholder OK.* |
 | SFX: `SFX_Shop_Bellows_Pump_01`, `SFX_Shop_Anvil_Strike_01..03`, `SFX_Shop_Quench_Hiss_01` | Audio | *Placeholder OK* (free library sounds). |
