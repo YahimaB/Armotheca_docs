@@ -13,6 +13,7 @@
 - AI agents use two skills from the Armotheca project repository (`.claude/skills/`):
   - `image-reference-workflow`: concept exploration and faithful edits of an accepted image.
   - `character-sheet-pipeline`: reference sheets for modeling from the approved concept, with `{CHARACTER_POSE}` set to T-pose or A-pose.
+  - `multiview-sheet-pipeline` (in `Sources/.claude/skills/`): 2×2 turnaround sheets made from those references, split into four views (front, left, back, right) for Tripo3D Multi View.
 
 ## 2. Recording Results
 
