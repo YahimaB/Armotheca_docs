@@ -56,7 +56,7 @@ All assets follow the naming in [Assets Naming](../Guidelines/Assets_Naming.md) 
 |---|---|---|
 | Git repository with **Git LFS** enabled | Infrastructure | LFS tracking for fbx, png, tga, psd, wav, ogg (see naming guide §3). |
 | Confirmed versions: Unity 6.3 LTS patch, FishNet 4.x, FishySteamworks, Steamworks.NET | Decision | Exact versions to pin in the manifest. |
-| Render pipeline confirmation (**URP** assumed) | Decision | Open question in the Modeling Guidelines §11. |
+| Render pipeline confirmation (**URP** assumed) | Decision | Decided: URP ([Technical Overview §1](../Technical_Design/Technical_Overview.md#1-technology-stack-decided)). |
 | Steam client installed + Steam test **App ID 480** | Account | Used until Armotheca has its own App ID. |
 
 ### Work this week
@@ -446,7 +446,7 @@ All assets follow the naming in [Assets Naming](../Guidelines/Assets_Naming.md) 
 
 | Decision | Needed by |
 |---|---|
-| Pinned versions (Unity patch, FishNet, FishySteamworks, Steamworks.NET), URP confirmation | Week 1 |
+| Pinned versions (Unity patch, FishNet, FishySteamworks, Steamworks.NET) | Week 1 |
 | Camera distance / angle | Week 2 |
 | Iron Blade Base Damage, anvil timing values | Week 6 |
 | Lathe mini-game or not; Verdant Core element and Base Damage; distiller values | Week 7 |

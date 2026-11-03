@@ -10,6 +10,7 @@
 | **Architecture** | **GameObjects + MonoBehaviours, no ECS** | Data/runtime split with ScriptableObjects and plain C# domain logic (§3). Jobs + Burst allowed for isolated hot spots. |
 | **Networking** | **FishNet (Fish-Networking) 4.x** | Player-hosted: one player runs server and client in the same process (FishNet host mode). |
 | **Transport** | **FishySteamworks** on **Steamworks.NET** | Steam peer-to-peer through Steam's relay; host IP is never revealed. Steam lobbies for invites and joining. |
+| **Rendering** | **URP** (Universal Render Pipeline 17.x) | Standard Lit shader, metallic workflow; stylization comes from painted textures and lighting, not a toon shader. |
 | **UI** | **uGUI only** (+ TextMeshPro) | Screen Space canvases for menus/HUD, World Space canvases for diegetic UI. UI Toolkit is not used. |
 | **Input** | Unity Input System | Action maps for keyboard/mouse and gamepad; full remapping. |
 | **Platforms** | PC (Steam): Windows; Steam Deck (Linux/Proton) | FishySteamworks supports Windows, macOS, Linux. |
@@ -25,6 +26,14 @@
 ## 2. Target Specifications
 
 - **Target Framerate:** Solid 60 FPS on mid-tier hardware (GTX 1660 / Ryzen 5 3600) and on Steam Deck.
+- **Scene budgets** (for level art and lighting):
+
+  |                     | Desktop (1080p)                      | Steam Deck |
+  | ------------------- | ------------------------------------ | ---------- |
+  | Visible triangles   | ≤ 1,500,000                          | ≤ 800,000  |
+  | Draw calls          | ≤ 1,000                              | ≤ 600      |
+  | Materials per frame | Keep low via trim sheets and atlases |            |
+
 - **Session:** 1–4 players, one of them hosting. Drop-in / drop-out through Steam lobbies.
 - **Network tick:** FishNet `TimeManager` tick rate 30 Hz (initial value; raise if combat feel requires it).
 - **Physics & Interaction:** Kinematic character controller with overlap-based interaction and snap-to-socket placement.

@@ -24,9 +24,11 @@ split into one document per type; route each part and say how it was split.
 - **New mechanic:** write the GDD first, then its section in the owning code
   module's Technical_Design doc (GDD system and module share a name).
   No C# in a GDD, no design rationale in a tech doc; link instead.
-- **Numbers:** a design-facing value (damage, price, lifespan) goes to GDD; a budget
-  or target (ms, KB/s, tick rate, poly count) goes to Technical_Design or Guidelines;
-  a week or deadline goes to Development_Phases.
+- **Numbers:** a design-facing value (damage, price, lifespan) goes to GDD; a
+  runtime or platform budget (frame time, tick rate, bandwidth, draw calls, scene
+  triangles) goes to Technical_Design; a per-asset budget (polygons per model,
+  bones, texel density, texture size) goes to Guidelines; a week or deadline goes
+  to Development_Phases.
 - **Feature rule vs. standard:** a rule for one feature lives in that feature's doc.
   Promote it to Guidelines only when it applies to every asset or script of a kind.
 - **UI:** player-facing layout, states and feedback belong to GDD; categories,

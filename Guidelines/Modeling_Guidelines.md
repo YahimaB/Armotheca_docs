@@ -62,7 +62,7 @@ Character style (Alchemy Factory's semi-realistic people vs Goblin Cleanup's mor
 
 ## 4. Polygon and Rig Budgets
 
-Triangle counts are for the final in-engine mesh (triangulated), LOD0. These are **initial targets**; they will be confirmed by a performance test in Phase 1 against the 60 FPS targets (GTX 1660 desktop, Steam Deck).
+Triangle counts are for the final in-engine mesh (triangulated), LOD0. These are **initial targets**; they will be confirmed by a performance test in Phase 1 against the [target specifications](../Technical_Design/Technical_Overview.md#2-target-specifications).
 
 | Category | Examples | LOD0 triangles |
 |---|---|---|
@@ -81,13 +81,7 @@ Triangle counts are for the final in-engine mesh (triangulated), LOD0. These are
 | **Modular architecture piece** | Wall 2 m / 4 m, floor tile, beam, arch, stairs | 300 – 2,500 |
 | **Foliage** | Grass clump / bush / tree | 50 – 300 / 1,000 – 4,000 / 5,000 – 12,000 |
 
-### Scene budgets (for level art and lighting)
-
-|                     | Desktop (1080p)                      | Steam Deck |
-| ------------------- | ------------------------------------ | ---------- |
-| Visible triangles   | ≤ 1,500,000                          | ≤ 800,000  |
-| Draw calls          | ≤ 1,000                              | ≤ 600      |
-| Materials per frame | Keep low via trim sheets and atlases |            |
+Scene budgets per platform: [Technical Overview §2](../Technical_Design/Technical_Overview.md#2-target-specifications).
 
 ### Rig budgets
 
@@ -115,7 +109,7 @@ Triangle counts are for the final in-engine mesh (triangulated), LOD0. These are
 
 ## 6. Textures & Materials
 
-The project targets **URP with the standard Lit shader (metallic workflow)**; stylization comes from the painted textures and lighting, not from a toon shader. *(Render pipeline to be confirmed in the Technical Overview before production.)*
+The project targets **URP with the standard Lit shader (metallic workflow)**; stylization comes from the painted textures and lighting, not from a toon shader. ([Technical Overview §1](../Technical_Design/Technical_Overview.md#1-technology-stack-decided))
 
 ### Texel density
 
@@ -210,6 +204,5 @@ Asset, folder and in-model names, where delivered files go and where source file
 
 ## 11. Open Questions
 
-- Render pipeline: confirm URP (assumed here) in the Technical Overview.
 - Camera: final third-person distance and angle affect detail budgets; revisit §3–§4 once the camera is locked in the prototype.
 - Character style: closer to Alchemy Factory's semi-realistic people or Goblin Cleanup's more cartoony proportions? Lock this with a character style test.
