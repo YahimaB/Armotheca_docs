@@ -53,7 +53,7 @@ Values in the mockup are illustrative.
 | Reputation header | Label | Shop reputation level and progress | [M_Currencies](../../02_Systems/Progression/M_Currencies.md) |
 | Action bar | Panel | Pin to HUD, Dispatch | [M_Letter_Flow](../../02_Systems/Orders/M_Letter_Flow.md) |
 
-Faction trims: Adventurers Guild brown / bronze, Arcane Academy blue / silver, City Garrison red / brass, SOS flashing crimson, Eccentric Collector gold / purple.
+Each ticket's faction trim colour is set in its client's entity doc ([_Client_Roster](../../03_Entities/NPCs/Clients/_Client_Roster.md)).
 
 ## States
 
