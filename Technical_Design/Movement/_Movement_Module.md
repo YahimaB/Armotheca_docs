@@ -19,7 +19,7 @@ status: Draft
 | [M_Sprint](../../GDD/02_Systems/Movement/M_Sprint.md) | [States](#states) — `GroundedState` |
 | [M_Jump](../../GDD/02_Systems/Movement/M_Jump.md) | [States](#states) — `AirborneState`, coyote / buffer timers |
 | [M_Roll](../../GDD/02_Systems/Movement/M_Roll.md) | [States](#states) — `RollingState`; [Networking](#networking) for host-side i-frames |
-| [Player](../../GDD/03_Entities/Player/Player.md) | [Controller (Context)](#controller-context) |
+| [E_Player](../../GDD/03_Entities/Player/E_Player/E_Player.md) | [Controller (Context)](#controller-context) |
 
 ---
 

@@ -41,8 +41,8 @@ split into one document per type; route each part and say how it was split.
 
 The legacy `Visual_Design/` folder was reformed into these types on 2026-11-02:
 references went to `Guidelines/Art_Direction/References/`, the Main_Character
-concept art and prompt to `GDD/03_Entities/Player/Player_Art.md`, and the prompt
-workflow to `Guidelines/Art_Direction/Concept_Art_Workflow.md`.
+concept art and prompt to `GDD/03_Entities/Player/E_Player/E_Player_Art.md`, and
+the prompt workflow to `Guidelines/Art_Direction/Concept_Art_Workflow.md`.
 
 ## Shared rules (every route)
 
@@ -53,7 +53,7 @@ workflow to `Guidelines/Art_Direction/Concept_Art_Workflow.md`.
   (`Phase_1`) except in numbered IDs (`F01_`, `L02_`, `00_Overview`). Exceptions:
   `README.md`, image files named by their source prefix (`AF_1.jpg`), and the
   skill folders in `.claude/skills/` (kebab-case, required by Claude Code).
-- This rule covers the docs only; Unity asset names keep the CamelCase words set
+- This rule covers the docs only; Unity asset names keep the PascalCase words set
   in `Guidelines/Assets_Naming.md` (`SM_Shop_AssemblyBench`).
 - Documents are English Markdown.
 - Links are relative Markdown links (`[M_Assembly](../GDD/02_Systems/Crafting/M_Assembly.md)`), not

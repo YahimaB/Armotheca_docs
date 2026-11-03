@@ -1,7 +1,7 @@
 # Concept Art Workflow
 
 > How every contributor generates concept art for an entity, from a free-pose concept to the orthographic views a 3D artist models from, and where the results are recorded.
-> **Style:** [3D Modeling Guidelines](../Modeling_Guidelines.md) §1, §3, §6, §8 · **References:** `Art_Direction/References/` · **Example:** [Player_Art](../../GDD/03_Entities/Player/Player_Art.md)
+> **Style:** [3D Modeling Guidelines](../Modeling_Guidelines.md) §1, §3, §6, §8 · **References:** `Art_Direction/References/` · **Example:** [E_Player_Art](../../GDD/03_Entities/Player/E_Player/E_Player_Art.md)
 
 ## 1. Stages
 
@@ -18,8 +18,9 @@ Tools:
 
 ## 2. Recording Results
 
-- Every image that is kept goes into the History of the entity's Art doc (`E_<Name>_Art.md`, or `Player_Art.md`) with its image, AI model and prompt; rejected variants are not recorded.
-- The concept prompt is written for each entity and lives only in that History. The T-Pose and Views prompts below are templates: an entity's History records the prompt as actually sent.
+- Record every image you keep in the History of the entity's Art doc (`E_<Name>_Art.md`), with its AI model and prompt. Rejected variants are not recorded.
+- A generated image records its full prompt. An edited image (T-Pose, Views, or a fix to an earlier version) records only the prompt that changed the version it was made from.
+- The concept prompt is written for each entity and lives only in that History. The T-Pose and Views prompts below are templates: the History records the prompt as actually sent.
 
 ## 3. Concept
 
@@ -34,7 +35,7 @@ Tools:
 
 ### Prompt
 
-Write the prompt in plain paragraphs, in this order: subject, pose and background; face; each clothing or body part in its own paragraph; proportions; style; lighting; exclusions (`No text, no labels, no watermark, no logos, no frame or border.`). See [Player_Art › 01 Male](../../GDD/03_Entities/Player/Player_Art.md#01-male).
+Write the prompt in plain paragraphs, in this order: subject, pose and background; face; each clothing or body part in its own paragraph; proportions; style; lighting; exclusions (`No text, no labels, no watermark, no logos, no frame or border.`). See [E_Player_Art › 01 Male](../../GDD/03_Entities/Player/E_Player/E_Player_Art.md#01-male).
 
 ## 4. T-Pose
 

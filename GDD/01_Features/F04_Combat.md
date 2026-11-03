@@ -41,7 +41,7 @@ Combat is a means to an end: it protects the team while they harvest and it prod
 
 ## Entities
 
-- [Player](../03_Entities/Player/Player.md)
+- [E_Player](../03_Entities/Player/E_Player/E_Player.md)
 - [E_Sword](../03_Entities/Items/Weapons/E_Sword/E_Sword.md), [E_Wand](../03_Entities/Items/Weapons/E_Wand/E_Wand.md), [E_Staff](../03_Entities/Items/Weapons/E_Staff/E_Staff.md)
 - [_Mob_Roster](../03_Entities/Mobs/_Mob_Roster.md)
 

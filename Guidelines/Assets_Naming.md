@@ -7,7 +7,7 @@
 
 ## 1. General Rules
 
-1. **CamelCase words, underscores between parts.** Each part of a name is written in CamelCase (`AssemblyBench`, `StarMetal`); underscores only separate the parts.
+1. **PascalCase words, underscores between parts.** Each part of a name is written in PascalCase (`AssemblyBench`, `StarMetal`); underscores only separate the parts.
 2. **Name pattern:** `Prefix_Zone_AssetName_Variant_Suffix` — use only the parts that apply.
 3. **English only, no spaces**, no special characters except `_`.
 4. **No version tags** (`_final`, `_new`, `_v2`, `_old`). Git keeps the history.
@@ -100,7 +100,7 @@ Assets/
 ```
 
 ### Folder rules
-- Folder names are CamelCase. **Category folders are plural** (`Props`, `Mobs`, `Workstations`); **a folder for one asset is singular** and named after it (`AssemblyBench`, `BrambleStalker`).
+- Folder names are PascalCase. **Category folders are plural** (`Props`, `Mobs`, `Workstations`); **a folder for one asset is singular** and named after it (`AssemblyBench`, `BrambleStalker`).
 - **One folder per asset** in `Art/`: mesh, textures and materials of the asset live together. Add `Textures/` and `Materials/` subfolders only when an asset has more than ~10 files.
 - **Third-party content is never edited.** To modify an Asset Store asset, copy it into `_Project/` and rename it to our conventions.
 - **Source files stay outside `Assets/`** (`.blend`, `.spp`, `.psd`, `.kra`, audio projects) in a separate art-source location. Only exported FBX, PNG/TGA and WAV/OGG files enter `Assets/`.
@@ -188,12 +188,12 @@ Data asset names start with the short type name, followed by the identity. The i
 
 ## 6. Code
 
-- **File name = class name**, CamelCase, one public type per file: `AssemblyBench.cs`.
+- **File name = class name**, PascalCase, one public type per file: `AssemblyBench.cs`.
 - **Interfaces** start with `I`: `IDamageable`, `IContinuousInteractable`.
 - **ScriptableObject classes** end with `Definition`, `Settings`, `Profile`, `Table` or `Recipe` (as in the tech docs).
 - **Namespaces** follow `Armotheca.<Area>` and match the `Scripts/` folder (see §3).
 - **UI view components** are named `<Name><ElementType>` ([UI Composition](UI_Composition.md)): `MainMenuScreen`, `ConfirmPopup`, `LetterWidget`, `LetterQueuePanel`, `LetterBoardWorldUI`.
-- **Private fields** `camelCase`; **properties, methods, events** `CamelCase`; events start with `On`: `OnStateChanged`.
+- **Private fields** `camelCase`; **properties, methods, events** `PascalCase`; events start with `On`: `OnStateChanged`.
 
 ---
 

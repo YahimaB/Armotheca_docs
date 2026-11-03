@@ -1,13 +1,13 @@
 ---
-id: Player_Art
+id: E_Player_Art
 type: entity-art
-entity: Player
+entity: E_Player
 status: Draft
 ---
 
 # Player — Art
 
-> **Entity:** [Player](Player.md)
+> **Entity:** [E_Player](E_Player.md)
 
 ## Description
 
@@ -38,13 +38,13 @@ A mysterious hooded artisan: a weapon-smith from a magical workshop that floats 
 
 | [01 Male](#01-male)    | [02 Female](#02-female)|
 | ---------------------- | ---------------------- |
-| <img src="Art/Player_Art_01_Male.png" alt="01 Male" style="max-width:400px; max-height:400px;"> | <img src="Art/Player_Art_02_Female.png" alt="02 Female" style="max-width:400px; max-height:400px;"> |
+| <img src="Art/E_Player_Art_01_Male.png" alt="01 Male" style="max-width:400px; max-height:400px;"> | <img src="Art/E_Player_Art_02_Female.png" alt="02 Female" style="max-width:400px; max-height:400px;"> |
 
 ## History
 
 ### 02 Female
 
-<img src="Art/Player_Art_02_Female.png" alt="02 Female" style="max-width:400px; max-height:400px;">
+<img src="Art/E_Player_Art_02_Female.png" alt="02 Female" style="max-width:400px; max-height:400px;">
 
 **Model:** Gemini (version not recorded)
 
@@ -52,7 +52,7 @@ Prompt not recorded.
 
 ### 01 Male
 
-<img src="Art/Player_Art_01_Male.png" alt="01 Male" style="max-width:400px; max-height:400px;">
+<img src="Art/E_Player_Art_01_Male.png" alt="01 Male" style="max-width:400px; max-height:400px;">
 
 **Model:** Gemini 4 Argon
 

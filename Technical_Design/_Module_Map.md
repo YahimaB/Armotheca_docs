@@ -35,7 +35,7 @@ Where each GDD entity, location and screen is implemented.
 
 | GDD doc | Module | Section |
 | --- | --- | --- |
-| [Player](../GDD/03_Entities/Player/Player.md) | Movement, Interaction, Combat | [_Movement_Module](Movement/_Movement_Module.md#controller-context) |
+| [E_Player](../GDD/03_Entities/Player/E_Player/E_Player.md) | Movement, Interaction, Combat | [_Movement_Module](Movement/_Movement_Module.md#controller-context) |
 | Mobs ([_Mob_Roster](../GDD/03_Entities/Mobs/_Mob_Roster.md)) | Exploration | [Mob_AI](Exploration/Mob_AI.md) |
 | Clients ([_Client_Roster](../GDD/03_Entities/NPCs/Clients/_Client_Roster.md)) | Orders | [_Orders_Module › Data](Orders/_Orders_Module.md#data) |
 | Weapons and components ([_Item_List](../GDD/03_Entities/Items/_Item_List.md)) | Crafting | [_Crafting_Module](Crafting/_Crafting_Module.md#architecture--implementation-approaches) |

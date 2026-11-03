@@ -31,7 +31,7 @@ GDD/
 │       ├── _<System>_System.md # overview + how its mechanics interact
 │       └── M_<Name>.md         # M_Roll.md, M_Assembly.md
 ├── 03_Entities/
-│   ├── Player/                 # Player.md (the only entity in its category: this is its folder)
+│   ├── Player/                 # E_Player/ (no groups: the entity folder sits in the category)
 │   ├── Mobs/                   # _Mob_Roster.md, Minor_Fauna/, Elemental_Beasts/, Apex_Guardians/
 │   ├── NPCs/Clients/           # _Client_Roster.md, E_Adventurers_Guild/, ...
 │   ├── Items/                  # _Item_List.md, Weapons/, Components/, Catalysts/
@@ -73,7 +73,7 @@ points to a module doc section, or to `_Module_Map.md` for features.
 | Feature | `F<NN>_<Name>` | `01_Features/` | [Feature](templates/Feature.md) |
 | System hub | `_<System>_System` | `02_Systems/<System>/` | [System_Hub](templates/System_Hub.md) |
 | Mechanic | `M_<Name>` | `02_Systems/<System>/` | [Mechanic](templates/Mechanic.md) |
-| Entity | `E_<Name>` (`Player`, `Camera` unprefixed) | `03_Entities/<Category>/<Group>/E_<Name>/` | [Entity](templates/Entity.md) |
+| Entity | `E_<Name>` | `03_Entities/<Category>/<Group>/E_<Name>/` | [Entity](templates/Entity.md) |
 | Entity art | `E_<Name>_Art` | the entity's folder | [Entity_Art](templates/Entity_Art.md) |
 | Roster / list | `_<Category>_Roster`, `_<Category>_List` | category root | [Roster](templates/Roster.md) |
 | Location | `L<NN>_<Name>` | `04_Locations/L<NN>_<Name>/` | [Location](templates/Location.md) |
@@ -87,9 +87,9 @@ points to a module doc section, or to `_Module_Map.md` for features.
 - `F` numbers are stable identifiers, not priority. `L` numbers follow unlock
   order (`L00_Workshop`, then realms by the tier that sells their door).
 - Doc IDs exist only in the docs and are never used as asset names. `M_` and `UI_`
-  are also asset prefixes (`Assets_Naming.md` §4), but assets join CamelCase words
-  after a zone token (`M_Shop_AssemblyBench`) while doc IDs separate every word and
-  carry no zone (`M_Assembly`, `UI_Assembly_Bench`).
+  are also asset prefixes (`Assets_Naming.md` §4); asset names join PascalCase
+  words (`M_Shop_AssemblyBench`, `UI_Icon_Element_Frost`) while doc IDs separate
+  every word (`M_Assembly`, `UI_Assembly_Bench`).
 - Every doc starts with YAML properties (`id`, `type`, `status`, plus the
   template's extra fields), then `# <Title>`, then a `>` line with its parent hub
   and technical counterpart.
@@ -135,12 +135,11 @@ points to a module doc section, or to `_Module_Map.md` for features.
      ``<span style="color:#3A4A61;">■</span> `#3A4A61` ``.
    - **Selected:** a table of the chosen History versions in version order; the
      first row links each heading, the second shows its image.
-   - **History:** one `### <NN> <Short Name>` entry per kept image, newest first,
-     with the image, the AI model and the prompt folded in a quoted
-     `<details><summary>Prompt</summary>` block (see the template). A version
-     is one image that was kept; rejected variants are not recorded. Numbers are
-     two digits and never reused. A generated image records its full prompt; an
-     edited one records the prompt that changed the version it was made from.
+   - **History:** one `### <NN> <Short Name>` entry per recorded image, newest
+     first, with the image, the AI model and the prompt folded in a quoted
+     `<details><summary>Prompt</summary>` block (see the template). Numbers are
+     two digits and never reused. Which images and which prompt are recorded is
+     set in `Guidelines/Art_Direction/Concept_Art_Workflow.md` §2.
    - **Images** live in the entity's `Art/` folder, named
      `E_<Name>_Art_<NN>_<Short_Name>.png` so the file matches its History heading
      (`### 02 Glowing Core` → `E_Void_Slime_Art_02_Glowing_Core.png`).

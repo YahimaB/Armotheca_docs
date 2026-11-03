@@ -8,7 +8,7 @@
 ## 1. General Rules
 
 1. All interfaces are built with **uGUI** (+ TextMeshPro).
-2. **Every UI GameObject is named `<Name>_<ElementType>`**, using the element types in §3–§6, so the hierarchy reads the same way in every screen: `LetterQueue_Panel`, `Dispatch_Button`, `Timer_Value`. The name part is CamelCase, as in [Assets Naming §1](Assets_Naming.md#1-general-rules).
+2. **Every UI GameObject is named `<Name>_<ElementType>`**, using the element types in §3–§6, so the hierarchy reads the same way in every screen: `LetterQueue_Panel`, `Dispatch_Button`, `Timer_Value`. The name part is PascalCase, as in [Assets Naming §1](Assets_Naming.md#1-general-rules).
 3. **A two-digit index**, when needed, goes last: `Backpack_Slot_01`.
 4. **Children whose type already says everything** (`Title`, `Label`, `Fill`, `Content`, `Header`) drop the `<Name>_` part when there is only one of them under the parent.
 5. **Assets follow the same element types:**

@@ -32,7 +32,7 @@ pillars: [Cooperative Synergy]
 
 ## Entities
 
-- [Player](../03_Entities/Player/Player.md)
+- [E_Player](../03_Entities/Player/E_Player/E_Player.md)
 
 ## Locations
 
