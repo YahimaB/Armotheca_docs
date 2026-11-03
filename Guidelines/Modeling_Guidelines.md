@@ -141,7 +141,7 @@ Channel packing:
 
 - The packed texture goes into both the Metallic and the Occlusion slot of the URP Lit material: URP reads metallic from R, smoothness from A and occlusion from G.
 - Maps from generators and bakers often come in another convention. Before packing, Smoothness = 1 − Roughness; a DirectX (Y−) normal map gets its green channel inverted.
-- `Sources/<Entity>/Results/` keeps the separate Metallic, AO and Smoothness or Roughness maps next to the packed texture, so it can be repacked.
+- `Sources/<ID>/Results/` keeps the separate Metallic, AO and Smoothness or Roughness maps next to the packed texture, so it can be repacked.
 
 File suffixes: [Assets Naming §4](Assets_Naming.md#4-asset-prefixes).
 

@@ -109,21 +109,33 @@ Assets/
 
 ### Sources folder
 
-Art source files live in `Sources/` at the root of the Armotheca repository, one folder per entity:
+Art source files live in `Sources/` at the root of the Armotheca repository, one folder per GDD thing that has art, named by its GDD ID:
 
 ```
 Sources/
-└── <Entity>/
-    ├── Art/                    # generated images
-    │   ├── _Concept/<NN>/      # one folder per concept version (01, 02, ...)
-    │   ├── _Character_Sheet/   # full-figure reference sheets
-    │   └── <PartName>_Sheet/   # reference sheets of one part (Hood_Sheet)
-    ├── External/               # inputs and outputs of external services
-    │   ├── Tripo/
-    │   ├── Mixamo/
-    │   └── Moddif/
-    ├── Blender/                # Blender working scenes
-    └── Results/                # final exports ready for Unity, plus the separate channel maps packed into _MAS
+├── E_<Name>/                   # an entity (E_Player)
+├── L<NN>_<Name>/               # a location or level (L01_Verdant_Corruption)
+├── UI_<Name>/                  # a UI doc's art (UI_Assembly_Bench)
+└── _Shared/                    # project-wide work: music, ambience, mixer, shared VFX
+```
+
+Each folder uses the parts of this layout it needs:
+
+```
+<ID>/
+├── Art/                        # generated images
+│   ├── _Concept/<NN>/          # one folder per concept version (01, 02, ...)
+│   ├── _Character_Sheet/       # full-figure reference sheets
+│   └── <PartName>_Sheet/       # reference sheets of one part (Hood_Sheet)
+├── External/                   # inputs and outputs of external services
+│   ├── Tripo/
+│   ├── Mixamo/
+│   └── Moddif/
+├── Blender/                    # Blender working scenes and the helper scripts run inside them
+├── Results/                    # final exports ready for Unity, the separate channel maps packed into _MAS,
+│                               # and the manifests describing them (Animation_Manifest.json, Audio_Manifest.json,
+│                               # UI_Manifest.json, Level_Manifest.json)
+└── Review/                     # captures and evidence records: OFF/ON comparisons, listening captures, verdicts
 ```
 
 Each last-level folder in `Art/` may hold a `prompts.json` that logs its generation requests ([Concept Art Workflow §2](Art_Direction/Concept_Art_Workflow.md#2-recording-results)).
