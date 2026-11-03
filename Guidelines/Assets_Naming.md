@@ -146,8 +146,8 @@ Assets/
 | Suffix | Map |
 |---|---|
 | `_BC` | Base Color (+ alpha if needed) |
-| `_N` | Normal (OpenGL / Y+) |
-| `_MS` | Metallic (R) + Smoothness (A) |
+| `_N` | Normal |
+| `_MS` | Metallic + Smoothness |
 | `_AO` | Ambient Occlusion |
 | `_E` | Emission |
 | `_9S` | UI sprite set up for 9-slicing (appended after the name: `UI_Frame_Parchment_9S`) |

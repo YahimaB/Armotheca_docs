@@ -101,7 +101,7 @@ Triangle counts are for the final in-engine mesh (triangulated), LOD0. These are
 | Small props, weapon components | 100% | — | — | ~1% |
 
 - LODs must keep the silhouette; remove bevels and interior loops first.
-- Name LODs `_LOD0`, `_LOD1`, `_LOD2` inside the FBX so Unity builds the LOD Group automatically.
+- Name LOD meshes per [Assets Naming §4](Assets_Naming.md#4-asset-prefixes) so Unity builds the LOD Group automatically.
 
 ---
 
@@ -119,13 +119,15 @@ The project targets **URP with the standard Lit shader (metallic workflow)**; st
 
 ### Texture sets
 
-| Map | Content | Suffix |
-|---|---|---|
-| Base Color | Hand-painted albedo, soft gradients, subtle edge wear. No baked hard shadows. | `_BC` |
-| Normal | OpenGL format (Y+), as Unity expects | `_N` |
-| Metallic / Smoothness | Metallic in R, Smoothness in A | `_MS` |
-| Ambient Occlusion | Grayscale | `_AO` |
-| Emission (only when needed) | Runes, cores, flasks, portals | `_E` |
+| Map | Content |
+|---|---|
+| Base Color | Hand-painted albedo, soft gradients, subtle edge wear. No baked hard shadows. |
+| Normal | OpenGL format (Y+), as Unity expects |
+| Metallic / Smoothness | Metallic in R, Smoothness in A |
+| Ambient Occlusion | Grayscale |
+| Emission (only when needed) | Runes, cores, flasks, portals |
+
+File suffixes: [Assets Naming §4](Assets_Naming.md#4-asset-prefixes).
 
 ### Resolutions
 
@@ -209,21 +211,9 @@ Weapons are assembled in game from **exactly two parts** (see [Weapon Crafting](
 
 ---
 
-## 9. Naming Conventions
+## 9. Naming and Delivery
 
-All asset, folder and in-model object names follow **[Assets Structure & Naming](Assets_Naming.md)**. The most common ones for 3D work:
-
-| Type | Example |
-|---|---|
-| Static mesh | `SM_Shop_AssemblyBench` |
-| Skeletal mesh | `SK_Mob_BrambleStalker` |
-| Weapon component | `SM_Weapon_Blade_StarMetal` |
-| Texture | `T_Shop_AssemblyBench_BC` (`_BC`, `_N`, `_MS`, `_AO`, `_E`) |
-| Trim sheet | `T_Trim_WoodPlanks_N` |
-| Material | `M_Shop_AssemblyBench` |
-| Inside the FBX | `_LOD0..2`, `Socket_Payload`, `Interact_Point`, `COL_<Name>`, `Part_<Name>` |
-
-Deliver files into `Assets/_Project/Art/<Zone>/...` as described in the naming guide (one folder per asset). Source files (`.blend`, `.spp`, `.psd`) stay outside `Assets/`.
+Asset, folder and in-model names, where delivered files go and where source files stay follow [Assets Structure & Naming](Assets_Naming.md): §3 for folders and sources, §4 for prefixes, texture suffixes and object names inside the FBX.
 
 ---
 
