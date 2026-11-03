@@ -19,6 +19,21 @@
 - Record every image you keep, concepts and reference sheets alike, in the History of the entity's Art doc (`E_<Name>_Art.md`), with its AI model and prompt. Rejected variants are not recorded.
 - A generated image records its full prompt. An edited image (a reference sheet, a view, or a fix to an earlier version) records only the prompt that changed the version it was made from.
 - The concept prompt is written for each entity and lives only in that History.
+- Every generation request is also logged next to its images, in a `prompts.json` in the last-level folder of `Sources/<Entity>/Art/` ([Assets Naming › Sources folder](../Assets_Naming.md#sources-folder)). The file is an array with one object per request, oldest first; `request_id` is `null` when the tool shows none. Rejected images stay in that folder and are not copied into the Art doc.
+
+  ```json
+  [
+    {
+      "name": "01 Male",
+      "date_time": "2026-11-03T14:05:00+01:00",
+      "request_id": "a1b2c3d4-...",
+      "prompt": "A mysterious hooded artisan...",
+      "aspect_ratio": "3:4",
+      "resolution": "2K",
+      "num_images": 4
+    }
+  ]
+  ```
 
 ## 3. Concept
 

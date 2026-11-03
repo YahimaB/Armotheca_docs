@@ -103,9 +103,30 @@ Assets/
 - Folder names are PascalCase. **Category folders are plural** (`Props`, `Mobs`, `Workstations`); **a folder for one asset is singular** and named after it (`AssemblyBench`, `BrambleStalker`).
 - **One folder per asset** in `Art/`: mesh, textures and materials of the asset live together. Add `Textures/` and `Materials/` subfolders only when an asset has more than ~10 files.
 - **Third-party content is never edited.** To modify an Asset Store asset, copy it into `_Project/` and rename it to our conventions.
-- **Source files stay outside `Assets/`** (`.blend`, `.spp`, `.psd`, `.kra`, audio projects) in a separate art-source location. Only exported FBX, PNG/TGA and WAV/OGG files enter `Assets/`.
+- **Source files stay outside `Assets/`** (`.blend`, `.spp`, `.psd`, `.kra`, audio projects), in `Sources/` (see below). Only exported FBX, PNG/TGA and WAV/OGG files enter `Assets/`.
 - **Script folders match namespaces** from the [Module Map](../Technical_Design/_Module_Map.md). Each has an assembly definition named after the namespace: `Scripts/Combat/Armotheca.Combat.asmdef`.
 - **Git:** commit `.meta` files; binaries (fbx, png, tga, psd, wav, ogg) go through Git LFS.
+
+### Sources folder
+
+Art source files live in `Sources/` at the root of the Armotheca repository, one folder per entity:
+
+```
+Sources/
+└── <Entity>/
+    ├── Art/                    # generated images
+    │   ├── _Concept/<NN>/      # one folder per concept version (01, 02, ...)
+    │   ├── _Character_Sheet/   # full-figure reference sheets
+    │   └── <PartName>_Sheet/   # reference sheets of one part (Hood_Sheet)
+    ├── External/               # inputs and outputs of external services
+    │   ├── Tripo/
+    │   ├── Mixamo/
+    │   └── Moddif/
+    ├── Blender/                # Blender working scenes
+    └── Results/                # final exports ready for Unity
+```
+
+Each last-level folder in `Art/` may hold a `prompts.json` that logs its generation requests ([Concept Art Workflow §2](Art_Direction/Concept_Art_Workflow.md#2-recording-results)).
 
 ---
 
