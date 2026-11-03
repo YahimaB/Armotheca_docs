@@ -27,7 +27,7 @@ What the team earns and spends.
 
 ## UI
 
-- [UI_Letter_Commission_Board](../../05_UI/Screens/UI_Letter_Commission_Board.md): reputation display and payout animation.
+- [UI_Letter_Commission_Board](../../05_UI/World/UI_Letter_Commission_Board.md): reputation display and payout animation.
 
 ## Used By
 

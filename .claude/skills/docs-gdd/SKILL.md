@@ -47,19 +47,19 @@ GDD/
 │       └── Maps/               # layout sketches, blockout captures
 ├── 05_UI/
 │   ├── _UI_Flow.md             # screen-to-screen navigation (Mermaid flowchart)
-│   ├── Hud/  Menus/  Screens/  World/  Widgets/
+│   ├── Hud/  Screens/  Windows/  Popups/  Widgets/  World/
 │   └── UI_<Name>.md            # inside the category folder; mockups next to it
 └── 06_Balancing/
     └── <System>.md             # all numbers, one table per kind of thing
 ```
 
-UI categories follow `Prefabs/UI/` in `Guidelines/Assets_Naming.md` §3; `World/`
-holds diegetic, world-space UI. An entity's own concept art belongs to the entity
-(its Art doc); art references, mood boards and the UI visual style guide (fonts,
-colours, icons) are standards owned by `docs-guidelines`
-(`Guidelines/Art_Direction/`), not GDD content. Add a new system, entity category
-or UI category only when no existing one fits, and register it in the matching
-hub.
+UI categories, and which one a UI doc goes in, are defined in
+`Guidelines/UI_Composition.md` §2; `Prefabs/UI/` uses the same folders. An
+entity's own concept art belongs to the entity (its Art doc); art references,
+mood boards and the UI visual style guide (fonts, colours, icons) are standards
+owned by `docs-guidelines` (`Guidelines/Art_Direction/`), not GDD content. Add a
+new system, entity category or UI category only when no existing one fits, and
+register it in the matching hub (a UI category in `UI_Composition.md` §2).
 
 System names equal code module names: `02_Systems/Combat/` is implemented by
 `Technical_Design/Combat/` in `Armotheca.Combat`. A new or renamed system is

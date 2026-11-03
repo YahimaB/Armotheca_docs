@@ -41,7 +41,7 @@ Every strike has a crunch, a chip effect and visible damage on the node.
 
 ## UI
 
-- [UI_Interaction_Prompt](../../05_UI/World/UI_Interaction_Prompt.md)
+- [UI_Interaction_Prompt](../../05_UI/Hud/UI_Interaction_Prompt.md)
 
 ## Dependencies
 

@@ -24,7 +24,7 @@ Arcane lumber is loaded; the player holds the chisel (continuous) while the wood
 
 ## UI
 
-[UI_Interaction_Prompt](../../../../05_UI/World/UI_Interaction_Prompt.md)
+[UI_Interaction_Prompt](../../../../05_UI/Hud/UI_Interaction_Prompt.md)
 
 ## Appears In
 

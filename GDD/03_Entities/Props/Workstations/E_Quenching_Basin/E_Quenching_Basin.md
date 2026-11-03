@@ -24,7 +24,7 @@ The blade is plunged in (instant) to lock it in.
 
 ## UI
 
-[UI_Interaction_Prompt](../../../../05_UI/World/UI_Interaction_Prompt.md)
+[UI_Interaction_Prompt](../../../../05_UI/Hud/UI_Interaction_Prompt.md)
 
 ## Appears In
 

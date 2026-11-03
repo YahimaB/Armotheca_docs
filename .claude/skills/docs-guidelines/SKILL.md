@@ -1,6 +1,6 @@
 ---
 name: docs-guidelines
-description: Write and maintain Armotheca production standards in Guidelines/: asset structure and naming, 3D modeling rules, and art direction (references, concept art workflow). Use for conventions every contributor must follow, whatever the feature.
+description: Write and maintain Armotheca production standards in Guidelines/: asset structure and naming, UI composition, 3D modeling rules, and art direction (references, concept art workflow). Use for conventions every contributor must follow, whatever the feature.
 ---
 
 # Guidelines documents
@@ -14,7 +14,8 @@ feature's GDD or Technical_Design doc instead.
 
 ```
 Guidelines/
-├── Assets_Naming.md            # Assets/ folder layout, prefixes, code naming, UI vocabulary
+├── Assets_Naming.md            # Assets/ folder layout, prefixes, code naming
+├── UI_Composition.md           # UI categories, element vocabulary, hierarchy, layers
 ├── Modeling_Guidelines.md      # 3D style, poly budgets, LODs, textures, export, delivery
 └── Art_Direction/
     ├── Concept_Art_Workflow.md # Stages, prompt settings and templates, common failures
@@ -41,7 +42,7 @@ Add a new guideline file only for a new discipline (e.g. `Audio_Guidelines.md`,
 ## <n+1>. Open Questions
 ```
 
-- Number top-level sections so other docs can cite them (`Assets_Naming.md` §7).
+- Number top-level sections so other docs can cite them (`UI_Composition.md` §2).
 - Prefer tables for budgets, prefixes and per-asset rules; give one correct and,
   where useful, one incorrect example.
 

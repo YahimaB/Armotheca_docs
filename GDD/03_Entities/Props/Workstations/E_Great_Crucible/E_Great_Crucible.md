@@ -24,7 +24,7 @@ Starts and hosts the Uber-Weapon ritual ([M_Forging_Ritual](../../../../02_Syste
 
 ## UI
 
-[UI_Interaction_Prompt](../../../../05_UI/World/UI_Interaction_Prompt.md)
+[UI_Interaction_Prompt](../../../../05_UI/Hud/UI_Interaction_Prompt.md)
 
 ## Appears In
 

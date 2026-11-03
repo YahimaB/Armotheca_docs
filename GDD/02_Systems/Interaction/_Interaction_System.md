@@ -41,7 +41,7 @@ References: **Overcooked / PlateUp!** (one-button pick up / put down, hold-to-ch
 
 ## UI
 
-- [UI_Interaction_Prompt](../../05_UI/World/UI_Interaction_Prompt.md)
+- [UI_Interaction_Prompt](../../05_UI/Hud/UI_Interaction_Prompt.md)
 
 ## Open Questions
 

@@ -29,7 +29,7 @@ A gold multiplier over standard pay and Emergency Tokens, used for instant works
 
 ## UI
 
-[UI_Letter_Commission_Board](../../../../05_UI/Screens/UI_Letter_Commission_Board.md): flashing crimson trim and the SOS critical alert.
+[UI_Letter_Commission_Board](../../../../05_UI/World/UI_Letter_Commission_Board.md): flashing crimson trim and the SOS critical alert.
 
 ## Appears In
 

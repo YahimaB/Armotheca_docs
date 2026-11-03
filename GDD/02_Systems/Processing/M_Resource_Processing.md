@@ -46,7 +46,7 @@ Load and unload: [M_Instant_Interaction](../Interaction/M_Instant_Interaction.md
 
 ## UI
 
-- [UI_Interaction_Prompt](../../05_UI/World/UI_Interaction_Prompt.md)
+- [UI_Interaction_Prompt](../../05_UI/Hud/UI_Interaction_Prompt.md)
 
 ## Dependencies
 

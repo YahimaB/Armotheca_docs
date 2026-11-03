@@ -24,7 +24,7 @@ Heats raw ore into a hot ingot. Ore is loaded (instant); a player works the bell
 
 ## UI
 
-[UI_Interaction_Prompt](../../../../05_UI/World/UI_Interaction_Prompt.md)
+[UI_Interaction_Prompt](../../../../05_UI/Hud/UI_Interaction_Prompt.md)
 
 ## Appears In
 

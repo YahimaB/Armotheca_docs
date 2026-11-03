@@ -49,7 +49,7 @@ Outputs feed [M_Assembly](../Crafting/M_Assembly.md).
 
 ## UI
 
-- [UI_Interaction_Prompt](../../05_UI/World/UI_Interaction_Prompt.md). Mini-game displays are planned in [_UI_Flow](../../05_UI/_UI_Flow.md).
+- [UI_Interaction_Prompt](../../05_UI/Hud/UI_Interaction_Prompt.md). Mini-game displays are planned in [_UI_Flow](../../05_UI/_UI_Flow.md).
 
 ## Open Questions
 

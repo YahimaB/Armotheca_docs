@@ -28,7 +28,7 @@ The game picks one best target in front of the player and names the action befor
 
 ## UI
 
-- [UI_Interaction_Prompt](../../05_UI/World/UI_Interaction_Prompt.md)
+- [UI_Interaction_Prompt](../../05_UI/Hud/UI_Interaction_Prompt.md)
 
 ## Used By
 

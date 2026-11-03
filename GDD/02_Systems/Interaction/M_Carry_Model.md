@@ -38,7 +38,7 @@ Each player has three places to hold things: hands, a weapon slot and a backpack
 
 ## UI
 
-- [UI_Interaction_Prompt](../../05_UI/World/UI_Interaction_Prompt.md). A backpack display is planned in [_UI_Flow](../../05_UI/_UI_Flow.md).
+- [UI_Interaction_Prompt](../../05_UI/Hud/UI_Interaction_Prompt.md). A backpack display is planned in [_UI_Flow](../../05_UI/_UI_Flow.md).
 
 ## Dependencies
 

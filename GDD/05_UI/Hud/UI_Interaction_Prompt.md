@@ -1,7 +1,7 @@
 ---
 id: UI_Interaction_Prompt
 type: ui
-category: World
+category: Hud
 status: Draft
 ---
 

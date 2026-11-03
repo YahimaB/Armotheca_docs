@@ -43,7 +43,7 @@ Price and required tier: [Progression › Doors](../../../../06_Balancing/Progre
 
 ## UI
 
-- [UI_Interaction_Prompt](../../../../05_UI/World/UI_Interaction_Prompt.md): open, enter and the price plaque.
+- [UI_Interaction_Prompt](../../../../05_UI/Hud/UI_Interaction_Prompt.md): open, enter and the price plaque.
 
 ## Art & Audio References
 

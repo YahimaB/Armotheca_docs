@@ -41,7 +41,7 @@ Hold interact.
 
 ## UI
 
-- [UI_Interaction_Prompt](../../05_UI/World/UI_Interaction_Prompt.md): hold prompt and progress fill.
+- [UI_Interaction_Prompt](../../05_UI/Hud/UI_Interaction_Prompt.md): hold prompt and progress fill.
 
 ## Used By
 

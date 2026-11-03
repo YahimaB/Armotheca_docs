@@ -118,7 +118,7 @@ All assets follow the naming in [Assets Naming](../Guidelines/Assets_Naming.md) 
 | Main menu / lobby layout sketch | Design | *Placeholder OK* — functional uGUI is enough; final style comes later. |
 
 ### Work this week
-- `Armotheca.Networking`: Steam lobby create, invite friends (Steam overlay), join by invite, lobby member list (`Screen_Lobby`, `Card_Player`), host starts the game.
+- `Armotheca.Networking`: Steam lobby create, invite friends (Steam overlay), join by invite, lobby member list (`Lobby_Screen`, `Player_Widget`), host starts the game.
 - Disconnect and rejoin flow; host leaving ends the session for everyone (decided default).
 - Lag/packet-loss simulation settings for local tests.
 - Network stats overlay (debug only): RTT, bytes in/out per second, tick.
@@ -146,7 +146,7 @@ All assets follow the naming in [Assets Naming](../Guidelines/Assets_Naming.md) 
 | Item list for Phase 1 with display names (raw → processed → weapon) | Data | See the material table in Week 6–8; can be finalized then. |
 
 ### Work this week
-- `Armotheca.Interaction` per [Technical_Design/Object_Interaction](../Technical_Design/Interaction/_Interaction_Module.md): best-target selection (1.8 m reach, facing bias), single `Prompt_Interact` with verb + object name, invalid-action reasons (`Hands full`, `Wrong part for this socket`).
+- `Armotheca.Interaction` per [Technical_Design/Object_Interaction](../Technical_Design/Interaction/_Interaction_Module.md): best-target selection (1.8 m reach, facing bias), single `Interact_Prompt` with verb + object name, invalid-action reasons (`Hands full`, `Wrong part for this socket`).
 - `ItemDefinition` ScriptableObjects and networked world item prefab.
 - Carry model: **Hands** (1 item), **Weapon Slot** (1 weapon), **Backpack** (6 raw resources).
 - Instant interactions: pick up, drop, place/snap into socket, take, hand over to teammate, generic open/use.
@@ -294,14 +294,14 @@ All assets follow the naming in [Assets Naming](../Guidelines/Assets_Naming.md) 
 |---|---|---|
 | `SM_Shop_MailboxNexus` (arrival tube + board) and `SM_Shop_OutgoingTube` | Static meshes | *Placeholder OK.* |
 | `SM_Common_Letter` | Static mesh | *Placeholder OK.* |
-| Letter Board UI per [Letter Commission Board](../GDD/05_UI/Screens/UI_Letter_Commission_Board.md): `PF_UI_Card_Letter`, frames, `UI_Icon_WeaponType_*`, `UI_Icon_Element_*` | UI sprites / prefabs | *Placeholder OK* (functional layout first). |
+| Letter Board UI per [Letter Commission Board](../GDD/05_UI/World/UI_Letter_Commission_Board.md): `PF_UI_Letter_Widget`, frames, `UI_Icon_WeaponType_*`, `UI_Icon_Element_*` | UI sprites / prefabs | *Placeholder OK* (functional layout first). |
 | **Guild letter data:** 5–10 flavor texts, gold reward per weapon type, lifespan (240–360 s), arrival interval | Data / Writing | Required. |
 | SFX: `SFX_Shop_Mailbox_Arrive_01`, `SFX_Shop_Dispatch_Success_01`, `SFX_Shop_Dispatch_Reject_01` | Audio | *Placeholder OK.* |
 | Gold counter placement on the HUD | Design | *Placeholder OK.* |
 
 ### Work this week
 - `Archetype_AdventurersGuild` data and letter generator (only weapons buildable from Phase 1 materials).
-- `WorldUI_LetterBoard` with letter queue, dossier, timers; pin to `Hud_Gameplay`.
+- `LetterBoard_WorldUI` with letter queue, dossier, timers; pin to `Gameplay_Hud`.
 - Outgoing Tube dispatch: choose a target letter, verify (type, minimum quality tier, element, material) as a pure function with tests; reject returns the weapon to hands with a reason.
 - Shared gold treasury and Flawless +50% bonus.
 
@@ -325,7 +325,7 @@ All assets follow the naming in [Assets Naming](../Guidelines/Assets_Naming.md) 
 | Orb VFX per element used in Phase 1: `VFX_Element_Physical_Orb`, `VFX_Element_Arcane_Orb` (or the Verdant core element), impact `VFX_Hit_Orb`, `VFX_Hit_Sword` | VFX | *Placeholder OK.* |
 | SFX: swing whoosh, sword impact (iron), orb cast, orb impact, player hurt, downed | Audio | *Placeholder OK.* |
 | Training dummy `SM_Common_TrainingDummy` | Static mesh | *Placeholder OK.* |
-| Health bar `Bar_Health` and downed/revive markers | UI | *Placeholder OK.* |
+| Health bar `Health_Bar` and downed/revive markers | UI | *Placeholder OK.* |
 | **Decision:** starter weapons — do players start with a sword/wand so they are never unarmed? | Design | Required: the Phase 1 loop kills a mob before any weapon is crafted. Open question in [Combat](../GDD/02_Systems/Combat/_Combat_System.md). |
 
 ### Work this week

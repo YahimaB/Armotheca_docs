@@ -37,7 +37,7 @@ Source conflicts to resolve: SOS lifespan (60–120 s here vs 90 s in Letter Rul
 
 ## UI Thresholds
 
-Owner: [UI_Letter_Commission_Board](../05_UI/Screens/UI_Letter_Commission_Board.md)
+Owner: [UI_Letter_Commission_Board](../05_UI/World/UI_Letter_Commission_Board.md)
 
 | Parameter | Value | Notes |
 | --- | --- | --- |

@@ -8,7 +8,7 @@ status: Draft
 
 # UI Module
 
-> **Design:** [_UI_Flow](../../GDD/05_UI/_UI_Flow.md) · **Map:** [_Module_Map](../_Module_Map.md) · **Overview:** [Technical Overview](../Technical_Overview.md) · **Naming:** [Assets Naming §7](../../Guidelines/Assets_Naming.md)
+> **Design:** [_UI_Flow](../../GDD/05_UI/_UI_Flow.md) · **Map:** [_Module_Map](../_Module_Map.md) · **Overview:** [Technical Overview](../Technical_Overview.md) · **Composition:** [UI Composition](../../Guidelines/UI_Composition.md)
 
 ## Scope
 
@@ -16,10 +16,10 @@ Views only: every screen reads state from the module that owns it and listens to
 
 | GDD doc | Implemented in |
 | --- | --- |
-| [UI_Letter_Commission_Board](../../GDD/05_UI/Screens/UI_Letter_Commission_Board.md) | [Letter Commission Board](#letter-commission-board) |
+| [UI_Letter_Commission_Board](../../GDD/05_UI/World/UI_Letter_Commission_Board.md) | [Letter Commission Board](#letter-commission-board) |
 | [UI_Pinned_Letter](../../GDD/05_UI/Hud/UI_Pinned_Letter.md) | [Letter Commission Board](#letter-commission-board) |
 | [UI_Assembly_Bench](../../GDD/05_UI/World/UI_Assembly_Bench.md) | [Assembly Bench](#assembly-bench) |
-| [UI_Interaction_Prompt](../../GDD/05_UI/World/UI_Interaction_Prompt.md) | [Interaction Prompt](#interaction-prompt) |
+| [UI_Interaction_Prompt](../../GDD/05_UI/Hud/UI_Interaction_Prompt.md) | [Interaction Prompt](#interaction-prompt) |
 | [UI_Realm_Pressure](../../GDD/05_UI/Hud/UI_Realm_Pressure.md) | [Realm Pressure](#realm-pressure) |
 
 ---
@@ -28,7 +28,7 @@ Views only: every screen reads state from the module that owns it and listens to
 
 - **Framework:** uGUI only, with TextMeshPro. Screen Space canvases for menus and HUD, World Space canvases for diegetic UI; UI Toolkit is not used ([Technical Overview §1](../Technical_Overview.md#1-technology-stack-decided)).
 - **Navigation:** built-in uGUI navigation for gamepad.
-- **Naming and hierarchy:** element vocabulary and layers per [Assets Naming §7](../../Guidelines/Assets_Naming.md).
+- **Naming and hierarchy:** element vocabulary, GameObject names and layers per [UI Composition](../../Guidelines/UI_Composition.md).
 
 ---
 

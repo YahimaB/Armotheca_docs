@@ -1,7 +1,7 @@
 ---
 id: UI_Letter_Commission_Board
 type: ui
-category: Screens
+category: World
 status: Draft
 ---
 
@@ -48,7 +48,7 @@ Values in the mockup are illustrative.
 | Element | Type | Shows | Data source |
 | --- | --- | --- | --- |
 | Letter queue | Panel | Up to the board capacity of ticket cards | [M_Letter_Flow](../../02_Systems/Orders/M_Letter_Flow.md) |
-| Ticket | Card | Faction trim colour, urgency bar, weapon silhouette and element badge, batch counter (`1/3`) | [M_Commission_Criteria](../../02_Systems/Orders/M_Commission_Criteria.md), [_Client_Roster](../../03_Entities/NPCs/Clients/_Client_Roster.md) |
+| Ticket | Widget | Faction trim colour, urgency bar, weapon silhouette and element badge, batch counter (`1/3`) | [M_Commission_Criteria](../../02_Systems/Orders/M_Commission_Criteria.md), [_Client_Roster](../../03_Entities/NPCs/Clients/_Client_Roster.md) |
 | Commission dossier | Panel | Flavour text; criteria (type, foundation material, payload element/material, minimum tier with its numeric threshold); gold (with Flawless bonus), faction reputation, special unlocks; penalty | [M_Commission_Criteria](../../02_Systems/Orders/M_Commission_Criteria.md), [M_Quality](../../02_Systems/Crafting/M_Quality.md), [M_Currencies](../../02_Systems/Progression/M_Currencies.md) |
 | Reputation header | Label | Shop reputation level and progress | [M_Currencies](../../02_Systems/Progression/M_Currencies.md) |
 | Action bar | Panel | Pin to HUD, Dispatch | [M_Letter_Flow](../../02_Systems/Orders/M_Letter_Flow.md) |

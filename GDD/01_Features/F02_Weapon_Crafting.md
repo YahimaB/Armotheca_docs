@@ -59,7 +59,7 @@ Crafting is the tactile core of workshop life. Raw materials hauled from expedit
 ## UI
 
 - [UI_Assembly_Bench](../05_UI/World/UI_Assembly_Bench.md): sockets, preview and incompatibility feedback.
-- [UI_Interaction_Prompt](../05_UI/World/UI_Interaction_Prompt.md): station prompts and progress.
+- [UI_Interaction_Prompt](../05_UI/Hud/UI_Interaction_Prompt.md): station prompts and progress.
 
 ## Scope
 

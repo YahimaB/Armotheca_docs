@@ -29,7 +29,7 @@ High gold; unlocks rare research blueprints and portal stabiliser formulas ([M_C
 
 ## UI
 
-[UI_Letter_Commission_Board](../../../../05_UI/Screens/UI_Letter_Commission_Board.md): blue / silver faction trim.
+[UI_Letter_Commission_Board](../../../../05_UI/World/UI_Letter_Commission_Board.md): blue / silver faction trim.
 
 ## Appears In
 

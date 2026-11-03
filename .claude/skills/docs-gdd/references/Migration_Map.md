@@ -39,7 +39,7 @@ Crafting, Processing, Orders, Progression, Endgame, Exploration).
 | `Master_GDD.md` §6 | `03_Entities/NPCs/Clients/_Client_Roster.md` |
 | `Master_GDD.md` §8 | Link from `Vision.md` to the Technical Overview |
 | `Common/Movement.md` | `02_Systems/Movement/`: `_Movement_System` (State Rules), `M_Walk`, `M_Sprint`, `M_Jump`, `M_Roll`; Initial Tuning Targets → `06_Balancing/Movement.md` |
-| `Common/Object_Interaction.md` | `02_Systems/Interaction/`: `_Interaction_System`, `M_Carry_Model`, `M_Instant_Interaction`, `M_Continuous_Interaction`, `M_Targeting`; prompts → `05_UI/World/UI_Interaction_Prompt.md` |
+| `Common/Object_Interaction.md` | `02_Systems/Interaction/`: `_Interaction_System`, `M_Carry_Model`, `M_Instant_Interaction`, `M_Continuous_Interaction`, `M_Targeting`; prompts → `05_UI/Hud/UI_Interaction_Prompt.md` |
 | `Common/Combat.md` | `02_Systems/Combat/`: `_Combat_System`, `M_Sword_Swing`, `M_Magic_Orb`, `M_Health_And_Downed`; Weapons in Combat → weapon entities; values → `06_Balancing/Combat.md` |
 | `Shop/Weapon_Crafting.md` | `02_Systems/Crafting/`: `_Crafting_System`, `M_Assembly`, `M_Quality`, `M_Weapon_Naming`; Weapon Categories → `03_Entities/Items/Weapons/` (`E_Sword`, `E_Wand`, `E_Staff`) and `Items/Components/`; Material Attributes → `Items/Materials/`; bench → `Props/Workstations/E_Assembly_Bench` |
 | `Shop/Resource_Processing.md` | `02_Systems/Processing/`: `_Processing_System`, `M_Resource_Processing`, `M_Processing_Mini_Game`; stations → `03_Entities/Props/Workstations/` (`E_Smelting_Forge`, `E_Anvil`, `E_Woodworking_Lathe`, `E_Carving_Bench`, `E_Arcane_Extractor`, `E_Distiller`) |
@@ -50,7 +50,7 @@ Crafting, Processing, Orders, Progression, Endgame, Exploration).
 | `Exploration/Realms.md` | `04_Locations/_World_Map.md` (directory, unlock order); `L01_Verdant_Corruption`, `L02_Pyroclastic_Trench`, `L03_Astral_Quarry`, `L04_Frostbite_Cavern`; Realm Structure, Lifetime and Per-Opening Variation → `02_Systems/Exploration/M_Realm_Instancing` |
 | `Exploration/Resource_Gathering.md` | `02_Systems/Exploration/`: `M_Harvesting`, `M_Node_Spawning`; nodes → `03_Entities/Props/Resource_Nodes/`; yields → `06_Balancing/Exploration.md` |
 | `Exploration/Mobs.md` | `03_Entities/Mobs/_Mob_Roster` (categories, archetypes, roster); `Mobs/Common/` (`E_Bramble_Stalker`, `E_Fire_Salamander`, `E_Void_Slime`, `E_Frost_Wraith`); `Mobs/Apex_Guardians/` (`E_Verdant_Elder`, `E_Pyroclastic_Apex`, `E_Astral_Sovereign`, `E_Frost_Wyrm`); Spawning and Realm Pressure → `02_Systems/Exploration/M_Mob_Spawning`, `M_Realm_Pressure`; health, damage, drops → `06_Balancing/Mobs.md` |
-| `../UI_Design/Mailbox/Letter_Commission_Board.md` | `05_UI/Screens/UI_Letter_Commission_Board.md` |
+| `../UI_Design/Mailbox/Letter_Commission_Board.md` | `05_UI/World/UI_Letter_Commission_Board.md` |
 | `../UI_Design/Workstations/Assembly_Bench_UI.md` | `05_UI/World/UI_Assembly_Bench.md` |
 
 ## Inbound references to update

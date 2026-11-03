@@ -1,7 +1,7 @@
 # Assets Structure & Naming
 
-> Single source of truth for how the Unity project's `Assets/` folder is organized and how every asset, GameObject and UI element is named.
-> Related: [3D Modeling Guidelines](Modeling_Guidelines.md) · [Technical Overview](../Technical_Design/Technical_Overview.md) · [UI Design](../GDD/05_UI/Screens/UI_Letter_Commission_Board.md)
+> Single source of truth for how the Unity project's `Assets/` folder is organized and how every asset and GameObject is named. UI elements and their hierarchy follow [UI Composition](UI_Composition.md).
+> Related: [3D Modeling Guidelines](Modeling_Guidelines.md) · [UI Composition](UI_Composition.md) · [Technical Overview](../Technical_Design/Technical_Overview.md)
 
 ---
 
@@ -81,7 +81,7 @@ Assets/
 │   ├── Prefabs/
 │   │   ├── Common/  Shop/  Characters/  Weapons/
 │   │   ├── Realms/Shared/  Realms/<Realm>/
-│   │   ├── UI/                                 # Screens, Windows, Popups, Cards, Hud, World
+│   │   ├── UI/                                 # one folder per UI category (UI Composition §2)
 │   │   └── Network/                            # NetworkManager, bootstrap
 │   ├── Scenes/
 │   │   ├── Boot.unity  MainMenu.unity  Workshop.unity
@@ -130,7 +130,8 @@ Assets/
 | Sound effect | `SFX_` | `SFX_<Zone>_<Source>_<Action>_<Variant>` | `SFX_Shop_Anvil_Strike_01` |
 | Music / Ambience | `MUS_` / `AMB_` | `MUS_<Context>` | `MUS_Workshop_Day`, `AMB_Frost_Cave` |
 | Audio Mixer | `MIX_` | `MIX_<Name>` | `MIX_Master` |
-| UI sprite | `UI_` | `UI_<ElementType>_<Name>` (§7) | `UI_Icon_Element_Frost` |
+| UI prefab | `PF_UI_` | `PF_UI_<Name>_<ElementType>` ([UI Composition §1](UI_Composition.md#1-general-rules)) | `PF_UI_Letter_Widget` |
+| UI sprite | `UI_` | `UI_<ElementType>_<Name>` ([UI Composition §1](UI_Composition.md#1-general-rules)) | `UI_Icon_Element_Frost` |
 | Font asset (TextMeshPro) | `FNT_` | `FNT_<Family>_<Weight>` | `FNT_Parchment_Bold` |
 | Physics material | `PM_` | `PM_<Surface>` | `PM_Ice` |
 | Render texture | `RT_` | `RT_<Purpose>` | `RT_CharacterPreview` |
@@ -191,159 +192,22 @@ Data asset names start with the short type name, followed by the identity. The i
 - **Interfaces** start with `I`: `IDamageable`, `IContinuousInteractable`.
 - **ScriptableObject classes** end with `Definition`, `Settings`, `Profile`, `Table` or `Recipe` (as in the tech docs).
 - **Namespaces** follow `Armotheca.<Area>` and match the `Scripts/` folder (see §3).
-- **UI view components** are named `<Name><ElementType>` (§7): `MainMenuScreen`, `ConfirmPopup`, `LetterCard`, `LetterQueuePanel`, `LetterBoardWorldUI`.
+- **UI view components** are named `<Name><ElementType>` ([UI Composition](UI_Composition.md)): `MainMenuScreen`, `ConfirmPopup`, `LetterWidget`, `LetterQueuePanel`, `LetterBoardWorldUI`.
 - **Private fields** `camelCase`; **properties, methods, events** `CamelCase`; events start with `On`: `OnStateChanged`.
 
 ---
 
-## 7. UI Elements: Vocabulary & Naming
-
-All interfaces are built with **uGUI**. Every UI GameObject is named **`<ElementType>_<Name>`** using the element types below, so the hierarchy reads the same way in every screen. UI prefabs follow `PF_UI_<ElementType>_<Name>`; UI sprites follow `UI_<ElementType>_<Name>`.
-
-### 7.1 Structural elements (from largest to smallest)
-
-| Element type | Definition | Has visuals? | Example |
-|---|---|---|---|
-| **Layer** | A root Canvas that groups UI by draw order and input priority (see 7.4). Exists once per type in the UI root. | No | `Layer_Popup` |
-| **Screen** | A full-screen state of the interface. Only **one Screen is active at a time** within its layer; switching screens replaces the content entirely. | Yes | `Screen_MainMenu`, `Screen_Settings`, `Screen_Lobby` |
-| **Hud** | The always-on in-game overlay (health, pinned letters, pressure distortion). Not a Screen: it lives in its own layer and coexists with the 3D view. | Yes | `Hud_Gameplay` |
-| **Window** | A framed, closable box shown **on top of a Screen or the HUD**. It has its own Title and close action and can be non-modal. | Yes | `Window_LetterDetails`, `Window_Backpack` |
-| **Popup** | A small **modal** Window that blocks input behind it and needs an answer (confirm, error, purchase). | Yes | `Popup_ConfirmPurchase` |
-| **Panel** | A visible region with its own background inside a Screen, Window or Hud, grouping related content. Panels do not close on their own (they may be shown/hidden by their parent). | Yes | `Panel_LetterQueue`, `Panel_Dossier` |
-| **Section** | A titled part of a Panel or Window **without** its own background, separating content visually (often with a Divider). | No | `Section_Rewards` |
-| **Header / Body / Footer** | The three standard parts of a Window, Panel or Card: top (Title, close button), middle (main content), bottom (actions). | Optional | `Header`, `Body`, `Footer` |
-| **Container** | An invisible object whose only job is **layout of several children** (Horizontal/Vertical/Grid Layout Group). | No | `Container_Actions`, `Container_Rewards` |
-| **ScrollView** | A uGUI Scroll Rect. Its children follow Unity's names: `Viewport` → `Content`. | Optional | `ScrollView_Letters` |
-| **Content** | The RectTransform that **holds dynamically spawned or scrollable children** (Cards, Rows). Used for the Scroll Rect content and for any runtime-filled area. Only one per ScrollView. | No | `Content` (inside `Viewport`) |
-| **Wrapper** | An invisible RectTransform around **exactly one child**, used only for positioning, anchoring, masking or animation (e.g. to animate scale without fighting a Layout Group). | No | `Wrapper_Icon` |
-
-### 7.2 Repeatable items
-
-| Element type | Definition | Example |
-|---|---|---|
-| **Card** | A self-contained, repeatable view of **one data object**, usually a prefab spawned into a Content or Container. Has its own frame and can have Header/Body/Footer. | `Card_Letter`, `Card_Player` (lobby), `Card_Recipe` |
-| **Row** | A one-line repeatable item in a list, without its own frame (settings entry, key binding, stat line). | `Row_KeyBinding`, `Row_Reward` |
-| **Slot** | A fixed place that **can hold an item or be empty** (backpack slots, hotbar). Shows an empty state. | `Slot_Backpack_01` |
-| **Tab** | A selectable header that switches the visible Panel inside a TabGroup. | `TabGroup_Settings` → `Tab_Audio` |
-
-### 7.3 Atomic elements
-
-**Text**
-
-| Element type | Definition | Example |
-|---|---|---|
-| **Title** | The main heading of a Screen, Window, Panel, Section or Card. **One per parent.** | `Title` ("Nexus Dispatch Mailbox") |
-| **Subtitle** | Secondary heading under a Title. | `Subtitle` ("Arcane Academy of Oakhaven") |
-| **Label** | Short **static** text that names something: a caption for a value, a control or a field. Changes only with localization. | `Label_Gold` ("Gold"), `Label_Deadline` |
-| **Value** | Short **dynamic** text showing data that changes at runtime: numbers, timers, names. Usually paired with a Label. | `Value_Gold` ("450"), `Value_Timer` ("03:15") |
-| **Text** | Multi-line body or descriptive text (flavor text, descriptions, rejection reasons). | `Text_Flavor`, `Text_Description` |
-
-**Graphics**
-
-| Element type | Definition | Example |
-|---|---|---|
-| **Background** | The fill image behind a Panel, Window, Card or Button. | `Background` |
-| **Frame** | A decorative border/outline image, usually 9-sliced. | `Frame_Faction` |
-| **Icon** | A small symbolic image representing a thing or an action (element, weapon type, currency). | `Icon_Element`, `Icon_WeaponType` |
-| **Image** | A larger illustrative image that is not a symbol (portrait, preview, artwork). | `Image_Portrait` |
-| **Divider** | A thin separator line between Sections or Rows. | `Divider` |
-| **Badge** | A small marker attached to another element to show a **status or count** (Flawless tag, "new" dot, number of unread letters). | `Badge_Quality`, `Badge_Unread` |
-| **Bar** | A progress/amount indicator; its fill child is named `Fill`. | `Bar_Urgency` → `Fill`, `Bar_Health` |
-
-**Controls**
-
-| Element type | Definition | Example |
-|---|---|---|
-| **Button** | Clickable action. Its text child is `Label`, its image child `Icon`. | `Button_Dispatch` → `Label` |
-| **Toggle** | On/off control. | `Toggle_Subtitles` |
-| **Slider** | Value selection along a range. | `Slider_MusicVolume` |
-| **Dropdown** | Choice from a list (TMP Dropdown). | `Dropdown_Resolution` |
-| **InputField** | Text input (TMP Input Field). | `InputField_LobbyName` |
-
-### 7.4 Overlays and world-space elements
-
-| Element type | Definition | Example |
-|---|---|---|
-| **Tooltip** | Hover/focus information next to an element; no interaction. | `Tooltip_Item` |
-| **Toast** | A short, auto-dismissing notification that does not block input. | `Toast_LetterArrived` |
-| **Prompt** | The interaction hint shown for the current target (`[E] Pick up Iron Ore`, see [Object Interaction](../GDD/02_Systems/Interaction/_Interaction_System.md)). | `Prompt_Interact` |
-| **WorldUI** | Root of a World Space canvas that hosts a **full interface on a 3D object** (Letter Board, Assembly Bench hologram). Inside it, the normal structure applies (Header, Panels, Cards…). | `WorldUI_LetterBoard`, `WorldUI_AssemblyBench` |
-| **Marker** | A small world-space indicator above a 3D object or character: nameplate, health above mobs, door price plaque, expedition member list. | `Marker_PlayerName`, `Marker_DoorPrice` |
-| **Overlay** | A full-screen non-interactive effect layer (fades, vignettes, loading curtain). | `Overlay_Fade` |
-
-### 7.5 UI layers and sort order
-
-Each layer is a root Screen Space Canvas with a fixed sort order. World Space canvases (Markers, the Letter Board, the Assembly Bench hologram) live on their 3D objects and are not part of this stack.
-
-| Layer | Sort order | Contains |
-|---|---|---|
-| `Layer_Hud` | 0 | Hud, Prompts |
-| `Layer_Screen` | 100 | Screens (main menu, lobby, settings, pause) |
-| `Layer_Window` | 200 | Windows |
-| `Layer_Popup` | 300 | Popups (modal) |
-| `Layer_Notification` | 400 | Toasts, Tooltips |
-| `Layer_Overlay` | 500 | Overlays (fade, loading) |
-
-### 7.6 Example hierarchy
-
-The Letter Commission Board (see [UI Design](../GDD/05_UI/Screens/UI_Letter_Commission_Board.md)):
-
-```
-WorldUI_LetterBoard                      (World Space canvas on the board)
-├── Header
-│   ├── Title                            "Nexus Dispatch Mailbox"
-│   ├── Label_Reputation                 "Shop Reputation"
-│   └── Value_Reputation                 "Lvl 2 (340/500)"
-├── Body
-│   ├── Panel_LetterQueue
-│   │   ├── Title                        "Pending Letters"
-│   │   └── ScrollView_Letters
-│   │       └── Viewport
-│   │           └── Content
-│   │               └── Card_Letter      (PF_UI_Card_Letter, spawned per letter)
-│   │                   ├── Frame_Faction
-│   │                   ├── Icon_WeaponType
-│   │                   ├── Icon_Element
-│   │                   ├── Title        "Guild: Iron Sword"
-│   │                   ├── Value_Timer  "03:15"
-│   │                   ├── Bar_Urgency
-│   │                   │   └── Fill
-│   │                   └── Badge_Batch  "1/3"
-│   └── Panel_Dossier
-│       ├── Title                        "Active Commission"
-│       ├── Text_Flavor
-│       ├── Section_Requirements
-│       │   ├── Title
-│       │   └── Container_Requirements
-│       │       └── Row_Requirement      (spawned per criterion)
-│       │           ├── Label
-│       │           └── Value
-│       └── Section_Rewards
-│           ├── Title
-│           └── Container_Rewards
-└── Footer
-    └── Container_Actions
-        ├── Button_PinToHud
-        │   └── Label
-        └── Button_Dispatch
-            └── Label
-```
-
-Children whose type already says everything (`Title`, `Label`, `Fill`, `Content`, `Header`) may drop the `_<Name>` part when there is only one of them under the parent.
-
----
-
-## 8. Quick Reference
+## 7. Quick Reference
 
 ```
 Mesh        SM_Shop_AssemblyBench          SK_Mob_BrambleStalker
 Texture     T_Shop_AssemblyBench_BC        T_Trim_WoodPlanks_N
 Material    M_Shop_AssemblyBench
-Prefab      PF_Shop_AssemblyBench          PF_UI_Card_Letter
+Prefab      PF_Shop_AssemblyBench          PF_UI_Letter_Widget
 Animation   A_Player_Roll                  AC_Player
 VFX         VFX_Element_Fire_Orb
 Audio       SFX_Shop_Anvil_Strike_01       MUS_Workshop_Day
 Data        Door_PyroclasticTrench         CraftMaterial_StarMetal
 Scene       Workshop                       Realm_VerdantCorruption
-UI object   Panel_LetterQueue              Button_Dispatch    Value_Timer
+UI object   LetterQueue_Panel              Dispatch_Button    Timer_Value
 ```

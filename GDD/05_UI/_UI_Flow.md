@@ -6,9 +6,9 @@ status: Draft
 
 # UI Flow
 
-> **Overview:** [Glossary](../00_Overview/Glossary.md) · **Naming:** [Assets Naming §7](../../Guidelines/Assets_Naming.md) · **Technical:** [_UI_Module](../../Technical_Design/UI/_UI_Module.md)
+> **Overview:** [Glossary](../00_Overview/Glossary.md) · **Composition:** [UI Composition](../../Guidelines/UI_Composition.md) · **Technical:** [_UI_Module](../../Technical_Design/UI/_UI_Module.md)
 
-Categories: `Hud/` (screen-space overlays during play), `Menus/` (front-end and pause), `Screens/` (full interfaces opened from an object), `World/` (diegetic, world-space UI), `Widgets/` (shared components). Most of *Armotheca*'s UI is diegetic.
+Categories and element types follow [UI Composition §2](../../Guidelines/UI_Composition.md#2-categories). Most of *Armotheca*'s UI is diegetic.
 
 ## Flow
 
@@ -27,11 +27,11 @@ flowchart LR
 
 | ID | Category | Shows | Status |
 | --- | --- | --- | --- |
-| [UI_Letter_Commission_Board](Screens/UI_Letter_Commission_Board.md) | Screens | Letter queue, dossier, pin and dispatch | Draft |
+| [UI_Letter_Commission_Board](World/UI_Letter_Commission_Board.md) | Screens | Letter queue, dossier, pin and dispatch | Draft |
 | [UI_Pinned_Letter](Hud/UI_Pinned_Letter.md) | Hud | Pinned letter criteria | Draft |
 | [UI_Realm_Pressure](Hud/UI_Realm_Pressure.md) | Hud | Current Realm Pressure level | Draft |
 | [UI_Assembly_Bench](World/UI_Assembly_Bench.md) | World | Sockets, preview, incompatibility | Draft |
-| [UI_Interaction_Prompt](World/UI_Interaction_Prompt.md) | World | Button, verb, object, hold progress | Draft |
+| [UI_Interaction_Prompt](Hud/UI_Interaction_Prompt.md) | World | Button, verb, object, hold progress | Draft |
 
 ## Planned
 

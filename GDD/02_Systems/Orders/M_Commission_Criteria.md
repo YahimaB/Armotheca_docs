@@ -28,7 +28,7 @@ Every letter specifies a combination of criteria the delivered weapon must meet.
 
 ## UI
 
-- [UI_Letter_Commission_Board](../../05_UI/Screens/UI_Letter_Commission_Board.md): criteria breakdown.
+- [UI_Letter_Commission_Board](../../05_UI/World/UI_Letter_Commission_Board.md): criteria breakdown.
 - [UI_Pinned_Letter](../../05_UI/Hud/UI_Pinned_Letter.md)
 
 ## Used By

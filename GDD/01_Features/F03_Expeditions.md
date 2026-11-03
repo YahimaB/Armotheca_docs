@@ -59,7 +59,7 @@ Magic Doors are the resource lifeline of *Armotheca*. Each door opens onto a com
 ## UI
 
 - [UI_Realm_Pressure](../05_UI/Hud/UI_Realm_Pressure.md): rising danger without a countdown.
-- [UI_Interaction_Prompt](../05_UI/World/UI_Interaction_Prompt.md): harvest prompts and door plaques.
+- [UI_Interaction_Prompt](../05_UI/Hud/UI_Interaction_Prompt.md): harvest prompts and door plaques.
 
 ## Scope
 

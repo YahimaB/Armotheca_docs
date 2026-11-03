@@ -20,7 +20,7 @@ The way home. One stands in every realm's Entry area and is **always open**.
 
 ## UI
 
-- [UI_Interaction_Prompt](../../../../05_UI/World/UI_Interaction_Prompt.md)
+- [UI_Interaction_Prompt](../../../../05_UI/Hud/UI_Interaction_Prompt.md)
 
 ## Appears In
 

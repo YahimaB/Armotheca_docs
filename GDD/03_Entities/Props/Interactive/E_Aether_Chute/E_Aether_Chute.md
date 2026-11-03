@@ -23,7 +23,7 @@ A chute near the realm entry point that instantly sends deposited resources to a
 
 ## UI
 
-- [UI_Interaction_Prompt](../../../../05_UI/World/UI_Interaction_Prompt.md)
+- [UI_Interaction_Prompt](../../../../05_UI/Hud/UI_Interaction_Prompt.md)
 
 ## Appears In
 

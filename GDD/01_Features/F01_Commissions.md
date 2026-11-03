@@ -48,7 +48,7 @@ Commissions are the commercial pulse and narrative context of *Armotheca*. Inste
 
 ## UI
 
-- [UI_Letter_Commission_Board](../05_UI/Screens/UI_Letter_Commission_Board.md): reviewing, pinning and dispatching.
+- [UI_Letter_Commission_Board](../05_UI/World/UI_Letter_Commission_Board.md): reviewing, pinning and dispatching.
 - [UI_Pinned_Letter](../05_UI/Hud/UI_Pinned_Letter.md): pinned criteria visible at the forge and in realms.
 
 ## Scope

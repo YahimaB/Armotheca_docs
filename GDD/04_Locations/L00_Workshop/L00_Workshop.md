@@ -49,7 +49,7 @@ Cozy and daylit; references in [Modeling Guidelines](../../../Guidelines/Modelin
 
 ## UI
 
-- [UI_Letter_Commission_Board](../../05_UI/Screens/UI_Letter_Commission_Board.md), [UI_Assembly_Bench](../../05_UI/World/UI_Assembly_Bench.md)
+- [UI_Letter_Commission_Board](../../05_UI/World/UI_Letter_Commission_Board.md), [UI_Assembly_Bench](../../05_UI/World/UI_Assembly_Bench.md)
 
 ## Open Questions
 

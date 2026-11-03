@@ -1,7 +1,7 @@
 ---
 id: UI_<Name>
 type: ui
-category: <Hud | Menus | Screens | World | Widgets>
+category: <Hud | Screens | Windows | Popups | Widgets | World>
 status: Draft
 ---
 
@@ -19,7 +19,7 @@ status: Draft
 
 ## Elements
 
-<!-- Element types use the vocabulary in Guidelines/Assets_Naming.md §7. -->
+<!-- Element types use the vocabulary in Guidelines/UI_Composition.md §3–§6. -->
 
 | Element | Type | Shows | Data source |
 | --- | --- | --- | --- |

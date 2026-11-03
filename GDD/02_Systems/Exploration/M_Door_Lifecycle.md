@@ -45,7 +45,7 @@ Sealed doors show a shimmering surface and the names of the members inside.
 
 ## UI
 
-- [UI_Interaction_Prompt](../../05_UI/World/UI_Interaction_Prompt.md)
+- [UI_Interaction_Prompt](../../05_UI/Hud/UI_Interaction_Prompt.md)
 
 ## Dependencies
 

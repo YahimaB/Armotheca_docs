@@ -21,7 +21,7 @@ Shows a pinned letter's criteria in a corner of the HUD, so players at the forge
 
 ## Input & Navigation
 
-Pinned from [UI_Letter_Commission_Board](../Screens/UI_Letter_Commission_Board.md).
+Pinned from [UI_Letter_Commission_Board](../World/UI_Letter_Commission_Board.md).
 
 ## Used By
 

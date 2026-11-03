@@ -29,9 +29,9 @@ split into one document per type; route each part and say how it was split.
   a week or deadline goes to Development_Phases.
 - **Feature rule vs. standard:** a rule for one feature lives in that feature's doc.
   Promote it to Guidelines only when it applies to every asset or script of a kind.
-- **UI:** player-facing layout, states and feedback belong to GDD; element vocabulary
-  and hierarchy naming belong to Guidelines (`Assets_Naming.md`); view bindings and
-  code belong to Technical_Design.
+- **UI:** player-facing layout, states and feedback belong to GDD; categories,
+  element vocabulary and hierarchy naming belong to Guidelines
+  (`UI_Composition.md`); view bindings and code belong to Technical_Design.
 - **Plans quoting specs:** a phase plan links to GDD/Tech sections; it never restates
   their rules. If a plan needs a missing spec, route the spec first.
 - **Art:** an entity's look (description, palette, concept images and their prompts)

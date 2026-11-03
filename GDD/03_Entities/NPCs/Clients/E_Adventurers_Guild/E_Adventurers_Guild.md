@@ -29,7 +29,7 @@ Steady gold and Guild reputation. Masterwork deliveries are eligible for Guild b
 
 ## UI
 
-[UI_Letter_Commission_Board](../../../../05_UI/Screens/UI_Letter_Commission_Board.md): brown / bronze faction trim.
+[UI_Letter_Commission_Board](../../../../05_UI/World/UI_Letter_Commission_Board.md): brown / bronze faction trim.
 
 ## Appears In
 

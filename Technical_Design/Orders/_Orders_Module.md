@@ -18,7 +18,7 @@ status: Draft
 | [M_Letter_Flow](../../GDD/02_Systems/Orders/M_Letter_Flow.md) | [Architecture](#architecture--implementation-approaches) — `OrderManager`; [Networking](#networking) |
 | Clients ([E_Adventurers_Guild](../../GDD/03_Entities/NPCs/Clients/E_Adventurers_Guild/E_Adventurers_Guild.md), [E_Arcane_Academy](../../GDD/03_Entities/NPCs/Clients/E_Arcane_Academy/E_Arcane_Academy.md), [E_City_Garrison](../../GDD/03_Entities/NPCs/Clients/E_City_Garrison/E_City_Garrison.md), [E_SOS_Dispatch](../../GDD/03_Entities/NPCs/Clients/E_SOS_Dispatch/E_SOS_Dispatch.md), [E_Eccentric_Collectors](../../GDD/03_Entities/NPCs/Clients/E_Eccentric_Collectors/E_Eccentric_Collectors.md)) | `ClientArchetypeDefinition` ([Data](#data)) |
 | [E_Mailbox_Nexus](../../GDD/03_Entities/Props/Interactive/E_Mailbox_Nexus/E_Mailbox_Nexus.md) | Outgoing Tube submission RPC ([Networking](#networking)) |
-| [UI_Letter_Commission_Board](../../GDD/05_UI/Screens/UI_Letter_Commission_Board.md), [UI_Pinned_Letter](../../GDD/05_UI/Hud/UI_Pinned_Letter.md) | Events below; views in [_UI_Module](../UI/_UI_Module.md) |
+| [UI_Letter_Commission_Board](../../GDD/05_UI/World/UI_Letter_Commission_Board.md), [UI_Pinned_Letter](../../GDD/05_UI/Hud/UI_Pinned_Letter.md) | Events below; views in [_UI_Module](../UI/_UI_Module.md) |
 
 ---
 

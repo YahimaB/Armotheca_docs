@@ -18,7 +18,7 @@ status: Draft
 | [M_Instant_Interaction](../../GDD/02_Systems/Interaction/M_Instant_Interaction.md) | [Architecture](#architecture--implementation-approaches) — `IInstantInteractable` |
 | [M_Continuous_Interaction](../../GDD/02_Systems/Interaction/M_Continuous_Interaction.md) | [Architecture](#architecture--implementation-approaches) — `IContinuousInteractable`; [Networking](#networking) |
 | [M_Targeting](../../GDD/02_Systems/Interaction/M_Targeting.md) | [Technical Specifications](#technical-specifications) — `PlayerInteractor` targeting |
-| [UI_Interaction_Prompt](../../GDD/05_UI/World/UI_Interaction_Prompt.md) | `InteractionPrompt` here; view in [_UI_Module](../UI/_UI_Module.md) |
+| [UI_Interaction_Prompt](../../GDD/05_UI/Hud/UI_Interaction_Prompt.md) | `InteractionPrompt` here; view in [_UI_Module](../UI/_UI_Module.md) |
 
 ---
 

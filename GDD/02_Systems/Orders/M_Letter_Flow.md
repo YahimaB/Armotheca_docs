@@ -38,11 +38,11 @@ Read, pin, dispatch: [M_Instant_Interaction](../Interaction/M_Instant_Interactio
 
 ## Feedback
 
-Arrival, success and rejection cues: [UI_Letter_Commission_Board](../../05_UI/Screens/UI_Letter_Commission_Board.md#feedback).
+Arrival, success and rejection cues: [UI_Letter_Commission_Board](../../05_UI/World/UI_Letter_Commission_Board.md#feedback).
 
 ## UI
 
-- [UI_Letter_Commission_Board](../../05_UI/Screens/UI_Letter_Commission_Board.md), [UI_Pinned_Letter](../../05_UI/Hud/UI_Pinned_Letter.md)
+- [UI_Letter_Commission_Board](../../05_UI/World/UI_Letter_Commission_Board.md), [UI_Pinned_Letter](../../05_UI/Hud/UI_Pinned_Letter.md)
 
 ## Dependencies
 

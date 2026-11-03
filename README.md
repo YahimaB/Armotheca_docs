@@ -33,7 +33,8 @@ Armotheca_docs/
 │   │                             # Orders, Progression, Endgame, Exploration, UI — _<Module>_Module.md each
 │   └── Exploration/              # + topics: Door_Instances, Realm_Loading, Resource_Nodes, Mob_AI
 ├── Guidelines/
-│   ├── Assets_Naming.md          # Unity Assets folder structure, asset prefixes, UI element vocabulary
+│   ├── Assets_Naming.md          # Unity Assets folder structure, asset prefixes, code naming
+│   ├── UI_Composition.md         # UI categories, element vocabulary, GameObject hierarchy, layers
 │   ├── Modeling_Guidelines.md    # 3D style, poly budgets, textures, export rules for artists
 │   └── Art_Direction/            # Concept_Art_Workflow + References/ (AF_, GC_ screenshots)
 └── Development_Phases/
@@ -80,13 +81,14 @@ Full list with priorities: [_Feature_List](GDD/01_Features/_Feature_List.md).
 ### 🧩 Entities, Locations & UI
 - **Entities:** [Player](GDD/03_Entities/Player/Player.md) · [_Mob_Roster](GDD/03_Entities/Mobs/_Mob_Roster.md) · [_Client_Roster](GDD/03_Entities/NPCs/Clients/_Client_Roster.md) · [_Item_List](GDD/03_Entities/Items/_Item_List.md) · [_Prop_List](GDD/03_Entities/Props/_Prop_List.md)
 - **Locations:** [_World_Map](GDD/04_Locations/_World_Map.md) · [L00_Workshop](GDD/04_Locations/L00_Workshop/L00_Workshop.md)
-- **UI:** [_UI_Flow](GDD/05_UI/_UI_Flow.md) · [UI_Letter_Commission_Board](GDD/05_UI/Screens/UI_Letter_Commission_Board.md) · [UI_Assembly_Bench](GDD/05_UI/World/UI_Assembly_Bench.md)
+- **UI:** [_UI_Flow](GDD/05_UI/_UI_Flow.md) · [UI_Letter_Commission_Board](GDD/05_UI/World/UI_Letter_Commission_Board.md) · [UI_Assembly_Bench](GDD/05_UI/World/UI_Assembly_Bench.md)
 
 ### 🛠️ [Technical Overview](Technical_Design/Technical_Overview.md)
 Tech stack (Unity 6.3 LTS · GameObjects, no ECS · FishNet + FishySteamworks, player-hosted · uGUI), performance targets, architecture principles, engine upgrade plan. Modules: [_Module_Map](Technical_Design/_Module_Map.md) · technical-only modules: [Core](Technical_Design/Core/_Core_Module.md), [Networking](Technical_Design/Networking/_Networking_Module.md), [UI](Technical_Design/UI/_UI_Module.md).
 
 ### 📐 Guidelines
-- **[Assets Structure & Naming](Guidelines/Assets_Naming.md)** - `Assets/` folder layout, zone tokens, asset and data-asset prefixes, code naming, UI element vocabulary (Screen, Window, Panel, Container, Card, Label, Value...) and UI layers.
+- **[Assets Structure & Naming](Guidelines/Assets_Naming.md)** - `Assets/` folder layout, zone tokens, asset and data-asset prefixes, code naming.
+- **[UI Composition](Guidelines/UI_Composition.md)** - UI categories shared by `GDD/05_UI` and `Prefabs/UI`, element vocabulary (Screen, Window, Panel, Container, Widget, Label, Value...), `<Name>_<ElementType>` GameObject names, UI layers and an example hierarchy.
 - **[3D Modeling Guidelines](Guidelines/Modeling_Guidelines.md)** - Target look, reference breakdown (`Guidelines/Art_Direction/References`), polygon budgets, LODs, textures, pivots, modular weapon sockets and delivery checklist.
 - **[Concept Art Workflow](Guidelines/Art_Direction/Concept_Art_Workflow.md)** - Concept → T-pose → views stages, prompt settings and templates, common failures; results go to each entity's Art doc ([Player_Art](GDD/03_Entities/Player/Player_Art.md)).
 

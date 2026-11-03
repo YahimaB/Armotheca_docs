@@ -34,7 +34,7 @@ Hold interact on the price plaque ([M_Continuous_Interaction](../Interaction/M_C
 
 ## UI
 
-- [UI_Interaction_Prompt](../../05_UI/World/UI_Interaction_Prompt.md): price plaque prompt.
+- [UI_Interaction_Prompt](../../05_UI/Hud/UI_Interaction_Prompt.md): price plaque prompt.
 
 ## Dependencies
 

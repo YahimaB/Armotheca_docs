@@ -25,7 +25,7 @@ A magical pneumatic tube / portal where commission letters arrive from factions 
 
 ## UI
 
-- [UI_Letter_Commission_Board](../../../../05_UI/Screens/UI_Letter_Commission_Board.md)
+- [UI_Letter_Commission_Board](../../../../05_UI/World/UI_Letter_Commission_Board.md)
 
 ## Appears In
 
