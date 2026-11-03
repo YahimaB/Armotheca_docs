@@ -1,7 +1,7 @@
 # Assets Structure & Naming
 
 > Single source of truth for how the Unity project's `Assets/` folder is organized and how every asset and GameObject is named. UI elements and their hierarchy follow [UI Composition](UI_Composition.md).
-> Related: [3D Modeling Guidelines](Modeling_Guidelines.md) · [UI Composition](UI_Composition.md) · [Technical Overview](../Technical_Design/Technical_Overview.md)
+> **Modeling:** [3D Modeling Guidelines](Modeling_Guidelines.md) · **UI:** [UI Composition](UI_Composition.md) · **Tech stack:** [Technical Overview](../Technical_Design/Technical_Overview.md)
 
 ---
 
@@ -211,3 +211,9 @@ Data        Door_PyroclasticTrench         CraftMaterial_StarMetal
 Scene       Workshop                       Realm_VerdantCorruption
 UI object   LetterQueue_Panel              Dispatch_Button    Timer_Value
 ```
+
+---
+
+## 8. Open Questions
+
+-

@@ -34,16 +34,18 @@ Add a new guideline file only for a new discipline (e.g. `Audio_Guidelines.md`,
 ## Guideline document template
 
 ```markdown
-# <Discipline> Guidelines
+# <Title>
 
 > <One line: who must follow this and what it guarantees.>
-> **Naming:** [Assets Naming](Assets_Naming.md) · **Game context:** [Vision](../GDD/00_Overview/Vision.md) · **Tech stack:** [Technical Overview](../Technical_Design/Technical_Overview.md)
+> **<Label>:** [<Doc>](<path>) · **<Label>:** [<Doc>](<path>)   <!-- the docs this one builds on: Naming, Modeling, Game context, Tech stack... -->
 
 ## 1. <Numbered sections: rules, budgets, conventions>
-## <n>. Quick Reference or Delivery Checklist
+## <n>. Quick Reference or Delivery Checklist   <!-- optional: when contributors need a one-glance summary -->
 ## <n+1>. Open Questions
 ```
 
+- The title names the subject in plain words; the context line is bold-labelled
+  links. Every guideline ends with Open Questions.
 - Number top-level sections so other docs can cite them (`UI_Composition.md` §2).
 - Prefer tables for budgets, prefixes and per-asset rules; give one correct and,
   where useful, one incorrect example.
